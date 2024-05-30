@@ -4,48 +4,43 @@ using HUFLITCOFFEE.Models;
 
 namespace HUFLITCOFFEE.Controllers;
 
-public class HomeController : Controller
+public class AdminController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly ILogger<AdminController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+   
+    public AdminController(ILogger<AdminController> logger)
     {
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public IActionResult Overview()
     {
         return View();
     }
+   
+     public IActionResult Order()
+    {
+        return View();
+    }
+       public IActionResult Shipping()
+    {
+        return View();
+    }
+       public IActionResult Productlist()
+    {
+        return View();
+    }
+       public IActionResult Customer()
+    {
+        return View();
+    }
+       public IActionResult Staff()
+    {
+        return View();
+    }
+    
 
-    public IActionResult Caffee()
-    {
-        return View();
-    }
-     public IActionResult Product()
-    {
-        return View();
-    }
-     public IActionResult Share()
-    {
-        return View();
-    }
-     public IActionResult Recruitment()
-    {
-        return View();
-    }
-    public IActionResult Aboutus()
-    {
-        return View();
-    }
-     public IActionResult Terms()
-    {
-        return View();
-    }
-     public IActionResult Policy()
-    {
-        return View();
-    }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
