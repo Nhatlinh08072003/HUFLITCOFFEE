@@ -8,7 +8,7 @@ public class RoleController : Controller
 {
     private readonly ILogger<RoleController> _logger;
 
-   
+
     public RoleController(ILogger<RoleController> logger)
     {
         _logger = logger;
@@ -18,12 +18,12 @@ public class RoleController : Controller
     {
         return View();
     }
-   
-     public IActionResult Customer()
+
+    public IActionResult Customer()
     {
         return View();
     }
-   
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
