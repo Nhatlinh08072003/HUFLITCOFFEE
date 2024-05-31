@@ -1,1 +1,111 @@
-<header></header>
+<script src="~/js/homepage.js"></script>
+<header>
+    <div class="Home_menu_show_behind">
+        <div class="Home_menu_show">
+            <li class="Home_title_option_show" style="list-style-type: none;">
+                <img src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png" loading="lazy" alt="Close "
+                    title="Close " width="12" height="12" id="Home_icon_close">
+            </li>
+            <ul class="Home_menu_show_list">
+                <li class="Home_title_option_show"><a href="index" class="Home_title_option" title="Trang chủ">
+                        Trang chủ
+                    </a>
+                </li>
+                <li class="Home_title_option_show"> <a class="Home_title_option" href="/caffee">
+                        Cà phê
+                    </a></li>
+                <li class="Home_title_option_show"> <a class="Home_title_option" href="/product">
+                        sản phẩm
+                    </a></li>
+                <li class="Home_title_option_show"> <a class="Home_title_option" href="/share">
+                        chia sẻ
+                    </a></li>
+                <li class="Home_title_option_show"> <a class="Home_title_option" href="/recruitment">
+                        Tuyển dụng
+                    </a></li>
+                <li class="Home_title_option_show"> <a class="Home_title_option" href="/aboutus">
+                        Về chúng tôi
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+    <header class="Home_layout_header">
+        <div class="Home_vertical_container">
+            <div class="Home_logo">
+                <img src="https://banner2.cleanpng.com/20180212/kkq/kisspng-cafe-logo-restaurant-coffee-house-logo-vector-5a81718b398aa2.2858583815184326512357.jpg"
+                    loading="lazy" alt="Logo Shop " title="Shopping cart " width="64" height="64">
+            </div>
+            <div class="Home_register_cart">
+                @if (ViewBag.Phone != null)
+                {
+                    <div>
+                        <span style="color:#000;text-decoration: none;">
+                            Welcome, @ViewBag.Phone
+                        </span>
+                    </div>
+                }
+                else
+                {
+                    <div>
+                        <a href="/login" style="color:#000;text-decoration: none;">
+                            Đăng nhập
+                        </a>
+                    </div>
+                }
+                <div class="Home_shopping_cart">
+                    <div>
+                        Giỏ hàng
+                    </div>
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/128/3144/3144456.png" loading="lazy"
+                            alt="Shopping cart " title="Shopping cart " width="20" height="20">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Home_toolbar_options">
+            <a href="index" class="Home_title_option" title="Trang chủ">
+                Trang chủ
+            </a>
+            <a href="/caffee" class="Home_title_option">
+                Cà phê
+            </a>
+            <a href="/product" class="Home_title_option" id="Home_products">
+                sản phẩm
+            </a>
+            <a href="/share" class="Home_title_option">
+                chia sẻ
+            </a>
+            <a href="/recruitment" class="Home_title_option">
+                Tuyển dụng
+            </a>
+            <a href="/aboutus" class="Home_title_option">
+                Về chúng tôi
+            </a>
+        </div>
+        <div class="Home_menu_hidden">
+            <div class="Home_menu_hidden_element" style="margin-left:20px">
+                <img src="https://cdn-icons-png.flaticon.com/128/1828/1828859.png" loading="lazy" alt="Menu "
+                    title="Menu " width="24" height="24" id="Home_icon_menu">
+            </div>
+            <div class="Home_menu_hidden_element" style="margin-left:0px; width:20%">
+                The Coffee House
+            </div>
+        </div>
+        <div class="Home_menu_products">
+            <ul class="Home_menu_products_list">
+                <li class="Home_menu_products_list_item">
+                    <a class="Home_menu_title">Tất cả</a>
+                </li>
+                <li class="Home_menu_products_list_item"><a class="Home_menu_title">Cà phê</a></li>
+                <li class="Home_menu_products_list_item"><a class="Home_menu_title">Trà</a></li>
+                <li class="Home_menu_products_list_item"><a class="Home_menu_title">Cloud</a></li>
+                <li class="Home_menu_products_list_item"><a class="Home_menu_title">Hi-tea healthy</a></li>
+                <li class="Home_menu_products_list_item"><a class="Home_menu_title">Trà xanh - Chocolate</a></li>
+                <li class="Home_menu_products_list_item"><a class="Home_menu_title">Thức uống đá xay</a></li>
+                <li class="Home_menu_products_list_item"><a class="Home_menu_title">Bánh và snack</a></li>
+                <li class="Home_menu_products_list_item" style="width: 100%;"><a class="Home_menu_title">Thưởng thức tại
+                        nhà</a></li>
+            </ul>
+        </div>
+    </header>

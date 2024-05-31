@@ -1,12 +1,12 @@
-D:\HUFLITCOFFEE\bin\Debug\net8.0\HUFLITCOFFEE.exe
-D:\HUFLITCOFFEE\bin\Debug\net8.0\HUFLITCOFFEE.dll
 D:\HUFLITCOFFEE\bin\Debug\net8.0\appsettings.Development.json
 D:\HUFLITCOFFEE\bin\Debug\net8.0\appsettings.json
 D:\HUFLITCOFFEE\bin\Debug\net8.0\package-lock.json
 D:\HUFLITCOFFEE\bin\Debug\net8.0\package.json
 D:\HUFLITCOFFEE\bin\Debug\net8.0\HUFLITCOFFEE.staticwebassets.runtime.json
+D:\HUFLITCOFFEE\bin\Debug\net8.0\HUFLITCOFFEE.exe
 D:\HUFLITCOFFEE\bin\Debug\net8.0\HUFLITCOFFEE.deps.json
 D:\HUFLITCOFFEE\bin\Debug\net8.0\HUFLITCOFFEE.runtimeconfig.json
+D:\HUFLITCOFFEE\bin\Debug\net8.0\HUFLITCOFFEE.dll
 D:\HUFLITCOFFEE\bin\Debug\net8.0\HUFLITCOFFEE.pdb
 D:\HUFLITCOFFEE\obj\Debug\net8.0\HUFLITCOFFEE.GeneratedMSBuildEditorConfig.editorconfig
 D:\HUFLITCOFFEE\obj\Debug\net8.0\HUFLITCOFFEE.AssemblyInfoInputs.cache

@@ -5,8 +5,20 @@
       "PackagePath": "staticwebassets\\HUFLITCOFFEE.bundle.scp.css"
     },
     {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\Product.css",
+      "PackagePath": "staticwebassets\\css\\Product.css"
+    },
+    {
       "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\homepage.css",
       "PackagePath": "staticwebassets\\css\\homepage.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\input.css",
+      "PackagePath": "staticwebassets\\css\\input.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\output.css",
+      "PackagePath": "staticwebassets\\css\\output.css"
     },
     {
       "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\site.css",
@@ -15,6 +27,10 @@
     {
       "Id": "D:\\HUFLITCOFFEE\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\js\\homepage.js",
+      "PackagePath": "staticwebassets\\js\\homepage.js"
     },
     {
       "Id": "D:\\HUFLITCOFFEE\\wwwroot\\js\\site.js",
