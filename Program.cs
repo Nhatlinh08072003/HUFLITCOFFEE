@@ -129,4 +129,14 @@ app.MapControllerRoute(
     pattern: "/profile",
     defaults: new { controller = "Account", action = "Profile" }
 );
+app.MapControllerRoute(
+name: " Admin faffafaf",
+pattern: "/admin",
+defaults: new { controller = "Role", action = "Admin" }
+);
+app.MapControllerRoute(
+name: " Role User faffafaf",
+pattern: "/user",
+defaults: new { controller = "Role", action = "Customer" }
+);
 app.Run();

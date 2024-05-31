@@ -5,8 +5,24 @@
       "PackagePath": "staticwebassets\\HUFLITCOFFEE.bundle.scp.css"
     },
     {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\Product.css",
+      "PackagePath": "staticwebassets\\css\\Product.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\admin.css",
+      "PackagePath": "staticwebassets\\css\\admin.css"
+    },
+    {
       "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\homepage.css",
       "PackagePath": "staticwebassets\\css\\homepage.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\input.css",
+      "PackagePath": "staticwebassets\\css\\input.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\output.css",
+      "PackagePath": "staticwebassets\\css\\output.css"
     },
     {
       "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\site.css",
@@ -15,6 +31,50 @@
     {
       "Id": "D:\\HUFLITCOFFEE\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\BanhMi.webp",
+      "PackagePath": "staticwebassets\\images\\BanhMi.webp"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\CoffeeHatRang.jpg",
+      "PackagePath": "staticwebassets\\images\\CoffeeHatRang.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\CoffeeSuaDa.webp",
+      "PackagePath": "staticwebassets\\images\\CoffeeSuaDa.webp"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\CouterService.jpg",
+      "PackagePath": "staticwebassets\\images\\CouterService.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\Desk.webp",
+      "PackagePath": "staticwebassets\\images\\Desk.webp"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\DoiThoai.webp",
+      "PackagePath": "staticwebassets\\images\\DoiThoai.webp"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\HaiCaPhe.jpg",
+      "PackagePath": "staticwebassets\\images\\HaiCaPhe.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\LogoCoffeeHouse.jpg",
+      "PackagePath": "staticwebassets\\images\\LogoCoffeeHouse.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\MoChi.webp",
+      "PackagePath": "staticwebassets\\images\\MoChi.webp"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\hinh-tach-ca-phe-va-hat.jpg",
+      "PackagePath": "staticwebassets\\images\\hinh-tach-ca-phe-va-hat.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\js\\homepage.js",
+      "PackagePath": "staticwebassets\\js\\homepage.js"
     },
     {
       "Id": "D:\\HUFLITCOFFEE\\wwwroot\\js\\site.js",
