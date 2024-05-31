@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cIChOooBYYcWCoViol+Rae/m/vKsb4zHrt2V3dDd7MY=",
+  "Hash": "kQWrJBkjVGPKj43Wk6KWhw+nMlPKnnXC/a67FY0mW00=",
   "Source": "HUFLITCOFFEE",
   "BasePath": "_content/HUFLITCOFFEE",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\admin.css"
+    },
+    {
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\caffee.css",
+      "SourceId": "HUFLITCOFFEE",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
+      "BasePath": "_content/HUFLITCOFFEE",
+      "RelativePath": "css/caffee.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\caffee.css"
     },
     {
       "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\homepage.css",

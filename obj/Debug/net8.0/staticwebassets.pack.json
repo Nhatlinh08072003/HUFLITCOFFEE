@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\admin.css"
     },
     {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\caffee.css",
+      "PackagePath": "staticwebassets\\css\\caffee.css"
+    },
+    {
       "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\homepage.css",
       "PackagePath": "staticwebassets\\css\\homepage.css"
     },
