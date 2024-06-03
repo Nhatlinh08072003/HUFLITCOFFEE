@@ -19,13 +19,13 @@
                     title="Right arrow " width="10" height="10">
             </li>
             <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/679/679720.png"
-                    loading="lazy" alt="Box " title="Box " width="20" height="20">Sản phẩm <img
-                    src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
-                    title="Right arrow " width="10" height="10"></li>
+                    loading="lazy" alt="Box " title="Box " width="20" height="20"><span id="Admin_product">Sản
+                    phẩm</span> <img src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy"
+                    alt="Right arrow " title="Right arrow " width="10" height="10"></li>
             <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/1077/1077063.png"
-                    loading="lazy" alt="User " title="User " width="20" height="20">Khách hàng <img
-                    src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
-                    title="Right arrow " width="10" height="10"></li>
+                    loading="lazy" alt="User " title="User " width="20" height="20"><span id="Admin_customer">Khách
+                    hàng</span> <img src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy"
+                    alt="Right arrow " title="Right arrow " width="10" height="10"></li>
             <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/2329/2329087.png"
                     loading="lazy" alt="Dashboard " title="Dashboard " width="20" height="20">Báo cáo <img
                     src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
@@ -511,23 +511,165 @@
             </div>
         </div>
     </div>
+    @* Sản Phẩm *@
+    <div Class="Admin_product" style="padding: 30px;">
+        <div style="border: 1px solid black; border-radius: 5px;">
+            <div style="display: flex; justify-content: space-between; padding:10px">
+                <div Class="Admin_product_title"> Danh Sách Sản Phẩm</div>
+                <div><img src="https://cdn-icons-png.flaticon.com/128/9641/9641897.png"
+                        data-src="https://cdn-icons-png.flaticon.com/128/9641/9641897.png" alt="Plus" title="Plus"
+                        width="50" height="50" class="lzy lazyload--done"
+                        srcset="https://cdn-icons-png.flaticon.com/128/9641/9641897.png 4x"></div>
+            </div>
+            <table Class="Admin_content_result_order">
+                <thead style="background-color: #ccc;">
+                    <tr>
+                        <th>Mã sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Hình ảnh sản phẩm</th>
+                        <th>Giá sản phẩm</th>
+                        <th>Mô tả sản phẩm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SP01</td>
+                        <td>Plin sửa tươi bánh Flan</td>
+                        <td><img class=" lazyloaded"
+                                src="//product.hstatic.net/1000075078/product/1686716537_dd-latte_785591205184481597a2a79b9331e03b_large.jpg"
+                                width="100px" style="border-radius: 10px"></td>
+                        <td>49.000 đ</td>
+                        <td>Tỉnh tức thì cùng cà phê Robusta pha phin đậm đà và bánh flan núng nính. Uống là tỉnh, ăn là
+                            dính, xứng đáng là highlight trong ngày của bạn.</td>
+                    </tr>
+                    <tr>
+                        <td>SP01</td>
+                        <td>Plin sửa tươi bánh Flan</td>
+                        <td><img class=" lazyloaded"
+                                src="//product.hstatic.net/1000075078/product/1686716537_dd-latte_785591205184481597a2a79b9331e03b_large.jpg"
+                                width="100px" style="border-radius: 10px"></td>
+                        <td>49.000 đ</td>
+                        <td>Tỉnh tức thì cùng cà phê Robusta pha phin đậm đà và bánh flan núng nính. Uống là tỉnh, ăn là
+                            dính, xứng đáng là highlight trong ngày của bạn.</td>
+                    </tr>
+                    <tr>
+                        <td>SP01</td>
+                        <td>Plin sửa tươi bánh Flan</td>
+                        <td><img class=" lazyloaded"
+                                src="//product.hstatic.net/1000075078/product/1686716537_dd-latte_785591205184481597a2a79b9331e03b_large.jpg"
+                                width="100px" style="border-radius: 10px"></td>
+                        <td>49.000 đ</td>
+                        <td>Tỉnh tức thì cùng cà phê Robusta pha phin đậm đà và bánh flan núng nính. Uống là tỉnh, ăn là
+                            dính, xứng đáng là highlight trong ngày của bạn.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    @* khách hàng *@
+    <div Class="Admin_customer" style="padding: 30px;width:90%">
+        <div style="border: 1px solid black; border-radius: 5px; ">
+            <div Class="Admin_product_title"> Danh sách khách hàng</div>
+            <table Class="Admin_content_result_order">
+                <thead style="background-color: #ccc;">
+                    <tr>
+                        <th>Mã khách hàng</th>
+                        <th>Ngày tạo</th>
+                        <th>Tên khách hàng</th>
+                        <th>Email</th>
+                        <th>Số điện thoại</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>KH01</td>
+                        <td>1/05/2024</td>
+                        <td>Hồng Hữu</td>
+                        <td>luuhonghuu530@gmail.com</td>
+                        <td>092345678</td>
+                    </tr>
+                    <tr>
+                        <td>KH01</td>
+                        <td>1/05/2024</td>
+                        <td>Hồng Hữu</td>
+                        <td>luuhonghuu530@gmail.com</td>
+                        <td>092345678</td>
+                    </tr>
+                    <tr>
+                        <td>KH01</td>
+                        <td>1/05/2024</td>
+                        <td>Hồng Hữu</td>
+                        <td>luuhonghuu530@gmail.com</td>
+                        <td>092345678</td>
+                    </tr>
+                    <tr>
+                        <td>KH01</td>
+                        <td>1/05/2024</td>
+                        <td>Hồng Hữu</td>
+                        <td>luuhonghuu530@gmail.com</td>
+                        <td>092345678</td>
+                    </tr>
+                    <tr>
+                        <td>KH01</td>
+                        <td>1/05/2024</td>
+                        <td>Hồng Hữu</td>
+                        <td>luuhonghuu530@gmail.com</td>
+                        <td>092345678</td>
+                    </tr>
+                    <tr>
+                        <td>KH01</td>
+                        <td>1/05/2024</td>
+                        <td>Hồng Hữu</td>
+                        <td>luuhonghuu530@gmail.com</td>
+                        <td>092345678</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 <script>
     document.getElementById('Admin_overview').addEventListener('click', function () {
         document.querySelector('.Admin_view_screen_overview').style.display = 'block';
         document.querySelector('.Admin_view_screen_order').style.display = 'none';
         document.querySelector('.Admin_view_screen_transport').style.display = 'none';
+        document.querySelector('.Admin_product').style.display = 'none';
+        document.querySelector('.Admin_customer').style.display = 'none';
+
+
     });
 
     document.getElementById('Admin_order').addEventListener('click', function () {
         document.querySelector('.Admin_view_screen_overview').style.display = 'none';
         document.querySelector('.Admin_view_screen_order').style.display = 'block';
         document.querySelector('.Admin_view_screen_transport').style.display = 'none';
+        document.querySelector('.Admin_product').style.display = 'none';
+        document.querySelector('.Admin_customer').style.display = 'none';
+
+
     });
     document.getElementById('Admin_transport').addEventListener('click', function () {
         document.querySelector('.Admin_view_screen_overview').style.display = 'none';
         document.querySelector('.Admin_view_screen_order').style.display = 'none';
         document.querySelector('.Admin_view_screen_transport').style.display = 'block';
+        document.querySelector('.Admin_product').style.display = 'none';
+        document.querySelector('.Admin_customer').style.display = 'none';
+
+    });
+    document.getElementById('Admin_product').addEventListener('click', function () {
+        document.querySelector('.Admin_view_screen_overview').style.display = 'none';
+        document.querySelector('.Admin_view_screen_order').style.display = 'none';
+        document.querySelector('.Admin_view_screen_transport').style.display = 'none';
+        document.querySelector('.Admin_product').style.display = 'block';
+        document.querySelector('.Admin_customer').style.display = 'none';
+    });
+    document.getElementById('Admin_customer').addEventListener('click', function () {
+        document.querySelector('.Admin_view_screen_overview').style.display = 'none';
+        document.querySelector('.Admin_view_screen_order').style.display = 'none';
+        document.querySelector('.Admin_view_screen_transport').style.display = 'none';
+        document.querySelector('.Admin_product').style.display = 'none';
+        document.querySelector('.Admin_customer').style.display = 'block';
+
     });
 
 </script>
