@@ -84,3 +84,25 @@
    width: 90%;
    display: none;
 }
+.Admin_product {
+   width: 90%;
+   display: none;
+}
+.Admin_product_title {
+   font-size: 25px;
+   font-weight: 500;
+   padding: 10px;
+}
+table {
+   width: 100%;
+   border-collapse: collapse;
+}
+th,
+td {
+   border: 1px solid black;
+   padding: 8px;
+   text-align: center;
+}
+.Admin_customer {
+   display: none;
+}
