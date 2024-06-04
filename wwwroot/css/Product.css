@@ -1,3 +1,640 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.tab-button {
+    border: none; 
+    font-weight: 900;
+    background-color: #fff;
+    font-family: ui-rounded;
+white-space: nowrap;
+margin-right: 5px;
+ }
+.tab-btn{
+   border: 0px;
+}
+.cffff1{
+   border-bottom: 2px solid #000;
+}
+#t1{
+   margin-right: 10px;
+ }
+ #t1 .tab-button {
+   font-size: 20px; 
+ }
+ #t1 .tab-button:hover {
+   font-size: 23px; 
+ }
+ 
+ #t1 .tab-button:active {
+   font-size: 24px;
+ }
+ #t2{
+   margin-right: 10px;
+   position: relative;
+ }
+ #t2 .tab-button {
+   font-size: 20px; 
+   transition: font-size 0.3s ease; 
+ }
+ #t2 .tab-button:hover {
+   font-size: 23px; 
+ }
+ 
+ #t2 .tab-button:active {
+   font-size: 24px; 
+ }
+.list-ct2 {
+   display: none;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   padding: 0px;
+   background-color: white;
+   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+   z-index: 1;
+   border: 1px solid #000;
+   border-radius: 10px;
+}
+.list-ct2 .tab-btn {
+   display: block;
+   width: 100%;
+   padding: 10px;
+   text-align: left;
+   border: none;
+   background-color: transparent;
+   cursor: pointer;
+   white-space: nowrap;      
+   overflow: hidden;        
+   text-overflow: ellipsis; 
+}
+#t2:hover .list-ct2 {
+   display: block;
+}
+
+.menu-product-list li:hover .list-ct2 {
+   background-color: #fff;
+}
+#t3{
+   margin-right: 10px;
+}
+#t3:hover .list-ct2 {
+   display: block;
+}
+#t3 .tab-button {
+   font-size: 20px;
+   transition: font-size 0.3s ease;
+ }
+ #t3 .tab-button:hover {
+   font-size: 23px; 
+ }
+ 
+ #t3 .tab-button:active {
+   font-size: 24px;
+ }
+
+.menu-product-list li:hover .list-ct2 {
+   background-color: #fff;
+}
+#t4:hover .list-ct2 {
+   display: block;
+}
+#t4 .tab-button {
+   font-size: 20px; 
+   transition: font-size 0.3s ease; 
+ }
+ #t4 .tab-button:hover {
+   font-size: 23px; 
+ }
+ 
+ #t4 .tab-button:active {
+   font-size: 24px; 
+ }
+
+.menu-product-list li:hover .list-ct2 {
+   background-color: #fff;
+}
+#t5:hover .list-ct2 {
+   display: block;
+}
+#t5 .tab-button {
+   font-size: 20px; 
+   transition: font-size 0.3s ease; 
+ }
+ #t5 .tab-button:hover {
+   font-size: 23px; 
+ }
+ 
+ #t5 .tab-button:active {
+   font-size: 24px; 
+ }
+
+.menu-product-list li:hover .list-ct2 {
+   background-color: #fff;
+}
+#t6:hover .list-ct2 {
+   display: block;
+}
+#t6 .tab-button {
+   font-size: 20px; 
+   transition: font-size 0.3s ease; 
+ }
+ #t6 .tab-button:hover {
+   font-size: 23px; 
+ }
+ 
+ #t6 .tab-button:active {
+   font-size: 24px;
+ }
+.menu-product-list li:hover .list-ct2 {
+   background-color: #fff;
+}
+#t7:hover .list-ct2 {
+   display: block;
+}
+#t7 .tab-button {
+   font-size: 20px; 
+   transition: font-size 0.3s ease; 
+}
+ 
+ #t .tab-button:hover {
+   font-size: 23px; 
+ }
+ #t7 .tab-button:active {
+   font-size: 24px; 
+ }
+
+.menu-product-list li:hover .list-ct2 {
+   background-color: #fff;
+}
+.icon-xxx{
+   transform: rotate(90deg); 
+}
+ .active-tab {
+    color: rgb(216, 34, 34);
+ }
+ .tab-button:hover {
+    color: rgb(216, 34, 34);
+ }
+
+ .btn-img-close {
+    display: none;
+ }
+ .menu-product-main {
+    margin-bottom: 50px;
+ }
+ .menu-product-list {
+    margin-top: 40px;
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    width: 120%; 
+    border: 1px solid #ccc;
+    border-radius: 20px;
+   
+ }
+ .menu-product-list li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-grow: 1; 
+ }
+ .menu-product-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-image: none;
+    background-size: cover;
+    transition: background-image 0.3s ease;
+ }
+ aside.menu-product-list.t1 {
+   background-color: red;
+}
+ /* .menu-product-list li:hover::before {
+    background-image: url("https://cdn-icons-png.flaticon.com/128/556/556232.png");
+ } */
+ /* .menu-product-container {
+    display: flex;
+ } */
+ .menu-product-box-list {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 50px;
+ }
+ img {
+    border-radius: 10px;
+ }
+ .container {
+    padding-left: 50px;
+ }
+ 
+ /* coffee */
+ .menu-cf-product {
+    width: 80%;
+ }
+ 
+ .menu-cf-vn {
+    margin-top: 50px;
+ }
+ 
+ .cf-item {
+    flex: 0 0 auto;
+    margin-right: 30px;
+ }
+ .cf-vn-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+    gap: 40px;
+ }
+ 
+ .cf-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 210px;
+    height: 210px;
+    margin-top: 40px;
+ }
+ .cf-title {
+    font-size: 30px;
+    color: chocolate;
+ }
+ 
+ .cf-info {
+    margin-top: 20px;
+    font-size: 16px;
+ }
+ 
+ .cf-img img {
+    transition: transform 0.3s ease;
+    width: 100%;
+ }
+ .cf-img:hover img {
+    transform: scale(1.1);
+ }
+ 
+ /* tea */
+ .menu-tea-product {
+    width: 80%;
+ }
+ 
+ .menu-tea-vn {
+    margin-top: 50px;
+ }
+ 
+ .tea-item {
+    flex: 0 0 auto;
+    margin-right: 30px;
+ }
+ .tea-vn-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+ }
+ .tea-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 210px;
+    height: 210px;
+    margin-top: 40px;
+ }
+ .tea-title {
+    font-size: 30px;
+    color: chocolate;
+ }
+ .tea-info {
+    margin-top: 20px;
+    font-size: 16px;
+ }
+ 
+ .tea-img img {
+    transition: transform 0.3s ease;
+    width: 100%;
+ }
+ .tea-img:hover img {
+    transform: scale(1.1);
+ }
+ 
+ /* Cloud */
+ .menu-cloud-product {
+    width: 80%;
+ }
+ 
+ .menu-cloud-vn {
+    margin-top: 50px;
+ }
+ 
+ .cloud-item {
+    flex: 0 0 auto;
+    margin-right: 30px;
+ }
+ .cloud-vn-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+ }
+ 
+ .cloud-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 210px;
+    height: 210px;
+    margin-top: 40px;
+ }
+ .cloud-title {
+    font-size: 30px;
+    color: chocolate;
+ }
+ 
+ .cloud-info {
+    margin-top: 20px;
+    font-size: 16px;
+ }
+ 
+ .cloud-img img {
+    transition: transform 0.3s ease;
+    width: 100%;
+ }
+ .cloud-img:hover img {
+    transform: scale(1.1);
+ }
+ 
+ /* hi-tea */
+ .menu-hitea-product {
+    width: 80%;
+ }
+ 
+ .menu-hitea-vn {
+    margin-top: 50px;
+ }
+ 
+ .hitea-item {
+    flex: 0 0 auto;
+    margin-right: 30px;
+ }
+ .hitea-vn-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+ }
+ 
+ .hitea-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 210px;
+    height: 210px;
+    margin-top: 40px;
+ }
+ .hitea-title {
+    font-size: 30px;
+    color: chocolate;
+ }
+ 
+ .hitea-info {
+    margin-top: 20px;
+    font-size: 16px;
+ }
+ 
+ .hitea-img img {
+    transition: transform 0.3s ease;
+    width: 100%;
+ }
+ .hitea-img:hover img {
+    transform: scale(1.1);
+ }
+ 
+ /* greentea */
+ .menu-greentea-product {
+    width: 80%;
+ }
+ 
+ .menu-greentea-vn {
+    margin-top: 50px;
+ }
+ 
+ .greentea-item {
+    flex: 0 0 auto;
+    margin-right: 30px;
+ }
+ .greentea-vn-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+ }
+ 
+ .greentea-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 210px;
+    height: 210px;
+    margin-top: 40px;
+ }
+ .greentea-title {
+    font-size: 30px;
+    color: chocolate;
+ }
+ 
+ .greentea-info {
+    margin-top: 20px;
+    font-size: 16px;
+ }
+ 
+ .greentea-img img {
+    transition: transform 0.3s ease;
+    width: 100%;
+ }
+ .greentea-img:hover img {
+    transform: scale(1.1);
+ }
+ 
+ /* drink */
+ .menu-drink-product {
+    width: 80%;
+ }
+ 
+ .menu-drink-vn {
+    margin-top: 50px;
+ }
+ 
+ .drink-item {
+    flex: 0 0 auto;
+    margin-right: 30px;
+ }
+ .drink-vn-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+ }
+ 
+ .drink-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 210px;
+    height: 210px;
+    margin-top: 40px;
+ }
+ .drink-title {
+    font-size: 30px;
+    color: chocolate;
+ }
+ 
+ .drink-info {
+    margin-top: 20px;
+    font-size: 16px;
+ }
+ 
+ .drink-img img {
+    transition: transform 0.3s ease;
+    width: 100%;
+ }
+ .drink-img:hover img {
+    transform: scale(1.1);
+ }
+ 
+ /* snacks */
+ .menu-snack-product {
+    width: 80%;
+ }
+ 
+ .menu-snack-vn {
+    margin-top: 50px;
+ }
+ 
+ .snack-item {
+    flex: 0 0 auto;
+    margin-right: 30px;
+ }
+ .snack-vn-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+ }
+ 
+ .snack-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 210px;
+    height: 210px;
+    margin-top: 40px;
+ }
+ .snack-title {
+    font-size: 30px;
+    color: chocolate;
+ }
+ 
+ .snack-info {
+    margin-top: 20px;
+    font-size: 16px;
+ }
+ 
+ .snack-img img {
+    transition: transform 0.3s ease;
+    width: 100%;
+ }
+ .snack-img:hover img {
+    transform: scale(1.1);
+ }
+ 
+ /* InHome */
+ .menu-home-product {
+    width: 80%;
+ }
+ 
+ .menu-home-vn {
+    margin-top: 50px;
+ }
+ 
+ .home-item {
+    flex: 0 0 auto;
+    margin-right: 30px;
+ }
+ .home-vn-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+ }
+ 
+ .home-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 210px;
+    height: 210px;
+    margin-top: 40px;
+ }
+ .home-title {
+    font-size: 30px;
+    color: chocolate;
+ }
+ 
+ .home-info {
+    margin-top: 20px;
+    font-size: 16px;
+ }
+ 
+ .home-img img {
+    transition: transform 0.3s ease;
+    width: 100%;
+ }
+ .home-img:hover img {
+    transform: scale(1.1);
+ }
+ 
+ .active-tab {
+    color: red; /* Màu chữ cho nút được chọn */
+ }
+ @media (max-width: 992px) {
+    .container {
+       border: 0;
+    }
+    .menu-product-box-list {
+       display: none;
+    }
+    .cf-img:hover img {
+       transform: scale(1.1);
+    }
+    .menu-product-box-list {
+       width: 20%;
+       position: sticky;
+       height: 50%;
+       top: 0;
+    }
+ }
+ @media (max-width: 500px) {
+    .container {
+       margin-left: -20px;
+    }
+    .cf-img {
+       width: 150px;
+       height: 150px;
+    }
+    .cf-img:hover img {
+       transform: scale(0.5.0.5);
+    }
+ 
+    .home-item {
+       width: 150px;
+       height: 150px;
+       margin-top: 43px;
+    }
+ }
+ 
+ .producst-item {
+    width: 50%;
+ }
+ .cf-info-title {
+    font-size: 16px;
+ }
+ 
