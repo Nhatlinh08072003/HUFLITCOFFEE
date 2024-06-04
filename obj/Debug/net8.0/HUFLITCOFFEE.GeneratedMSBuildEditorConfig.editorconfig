@@ -9,131 +9,131 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HUFLITCOFFEE
 build_property.RootNamespace = HUFLITCOFFEE
-build_property.ProjectDir = D:\Git\HUFLITCOFFEE\
+build_property.ProjectDir = D:\NewHuflitCoffe\HUFLITCOFFEE\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Git\HUFLITCOFFEE
+build_property.MSBuildProjectDirectory = D:\NewHuflitCoffe\HUFLITCOFFEE
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Git/HUFLITCOFFEE/Partials/Footer.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Partials/Footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFydGlhbHNcRm9vdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Partials/Header.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Partials/Header.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFydGlhbHNcSGVhZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Account/Historybuy.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Account/Historybuy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxIaXN0b3J5YnV5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Account/Login.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Account/Profile.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Account/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Account/Register.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Admin/Customer.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Admin/Customer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3VzdG9tZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Admin/Order.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Admin/Order.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cT3JkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Admin/Overview.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Admin/Overview.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cT3ZlcnZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Admin/Productlist.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Admin/Productlist.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvZHVjdGxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Admin/Shipping.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Admin/Shipping.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2hpcHBpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Admin/Staff.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Admin/Staff.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU3RhZmYuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Home/Aboutus.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Home/Aboutus.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dHVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Home/Caffee.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Home/Caffee.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYWZmZWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Home/Index.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Home/Policy.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Home/Policy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQb2xpY3kuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Home/Product.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Home/Product.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Home/Recruitment.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Home/Recruitment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWNydWl0bWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Home/Share.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Home/Share.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaGFyZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Home/Terms.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Home/Terms.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZXJtcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Product/Cart.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Product/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Product/Detail.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Product/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Product/Sale.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Product/Sale.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxTYWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Product/Shipping.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Product/Shipping.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxTaGlwcGluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Role/Admin.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Role/Admin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Shared/Error.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/_ViewImports.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/_ViewStart.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git/HUFLITCOFFEE/Views/Shared/_Layout.cshtml]
+[D:/NewHuflitCoffe/HUFLITCOFFEE/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-hdma9q9tqx

@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.title_share {
+  font-size: xx-large;
+  text-align: center;
+}
+.share_introduce {
+  text-align: center;
+  font-size: large;
+  margin: 20px 360px;
+}
+.body_content {
+  margin: 100px 20px;
+  display: flex;
+}
+.content_left {
+  width: 45%;
+}
+
+.content_left img {
+  width: 100%;
+  margin: 20px 0px;
+  border-radius: 10px;
+}
+.date_atblog {
+  font-weight: 200;
+  margin: 5px 0px;
+}
+.content_right {
+  width: 55%;
+  margin-left: 20px;
+}
+.content_right img {
+  width: 100%;
+  border-radius: 10px;
+}
+.holic_content {
+  margin-left: 50px;
+  margin-bottom: 40px;
+}
+.main_holic {
+  width: 50%;
+}
+.left_content {
+}
+.main_holic img {
+  width: 40%;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+.main_holic ul li {
+  display: flex;
+  margin: 20px 0;
+}
+.holic_showmore {
+  text-align: center;
+}
+.holic_showmore a {
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #faf5f5;
+  padding: 5px 50px;
+}
+a:hover {
+  color: #ea8025;
+}
