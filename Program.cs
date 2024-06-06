@@ -87,12 +87,12 @@ app.MapControllerRoute(
 app.MapControllerRoute(
     name: "Cart",
     pattern: "/cart",
-    defaults: new { controller = "Products", action = "Cart" }
+    defaults: new { controller = "Product", action = "Cart" }
 );
 app.MapControllerRoute(
     name: "Detail",
     pattern: "/detail",
-    defaults: new { controller = "Products", action = "Detail" }
+    defaults: new { controller = "Product", action = "Detail" }
 );
 app.MapControllerRoute(
     name: "Products",
