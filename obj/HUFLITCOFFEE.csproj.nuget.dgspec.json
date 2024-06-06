@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\NewHuflitCoffe\\HUFLITCOFFEE\\HUFLITCOFFEE.csproj": {}
+    "D:\\HUFLITCOFFEE\\HUFLITCOFFEE.csproj": {}
   },
   "projects": {
-    "D:\\NewHuflitCoffe\\HUFLITCOFFEE\\HUFLITCOFFEE.csproj": {
+    "D:\\HUFLITCOFFEE\\HUFLITCOFFEE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NewHuflitCoffe\\HUFLITCOFFEE\\HUFLITCOFFEE.csproj",
+        "projectUniqueName": "D:\\HUFLITCOFFEE\\HUFLITCOFFEE.csproj",
         "projectName": "HUFLITCOFFEE",
-        "projectPath": "D:\\NewHuflitCoffe\\HUFLITCOFFEE\\HUFLITCOFFEE.csproj",
+        "projectPath": "D:\\HUFLITCOFFEE\\HUFLITCOFFEE.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\NewHuflitCoffe\\HUFLITCOFFEE\\obj\\",
+        "outputPath": "D:\\HUFLITCOFFEE\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
