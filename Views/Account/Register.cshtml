@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="~/css/Register.css">
+<div class="Register_container">
+    <form action="action_page.php" method="post">
+        <div class="Register_imgcontainer">
+            <img src="~/images/LogoCoffeeHouse.jpg" alt="Avatar" class="Register_avatar">
+            <h4>ĐĂNG KÝ</h4>
+            <p class="Register_greeting">TheCoffee xin chào!</p>
+        </div>
+
+        <div style="width:95%; align-items: center; margin-left:auto; margin-right:auto;">
+            <div class="Register_innercontainer">
+                <div class="Register_input-container">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1077/1077114.png" alt="Name Icon"
+                        class="Register_icon">
+                    <input class="Register_input-container_input" type="text" placeholder="Họ và Tên" name="fullname"
+                        required>
+                </div>
+
+                <div class="Register_input-container">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1077/1077114.png" alt="Username Icon"
+                        class="Register_icon">
+                    <input class="Register_input-container_input" type="text" placeholder="Tên Đăng Nhập"
+                        name="username" required>
+                </div>
+
+                <div class="Register_input-container">
+                    <img src="https://cdn-icons-png.flaticon.com/128/542/542689.png" alt="Email Icon"
+                        class="Register_icon">
+                    <input class="Register_input-container_input" type="email" placeholder="Email" name="email"
+                        required>
+                </div>
+
+                <div class="Register_input-container">
+                    <img src="https://cdn-icons-png.flaticon.com/128/126/126341.png" alt="Phone Icon"
+                        class="Register_icon">
+                    <input class="Register_input-container_input" type="text" placeholder="Số Điện Thoại" name="phone"
+                        required>
+                </div>
+
+                <div class="Register_input-container">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3064/3064155.png" alt="Password Icon"
+                        class="Register_icon">
+                    <input class="Register_input-container_input" type="password" placeholder="Mật khẩu" name="psw"
+                        required>
+                </div>
+
+                <div class="Register_input-container">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3064/3064155.png" alt="Confirm Password Icon"
+                        class="Register_icon">
+                    <input class="Register_input-container_input" type="password" placeholder="Nhập lại Mật khẩu"
+                        name="psw-repeat" required>
+                </div>
+            </div>
+            <hr>
+            <p class="agree-text">Bằng cách nhấp vào Đăng ký, bạn đồng ý với Điều khoản sử dụng và Chính sách bảo mật
+                thông tin của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ lúc
+                nào.</p>
+            <div style="width:100%; display:flex; flex-direction:column; justify-content: center; align-items: center;">
+                <button type="submit" style="width:40%">Đăng Ký</button>
+            </div>
+        </div>
+    </form>
+</div>
