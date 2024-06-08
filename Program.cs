@@ -45,6 +45,21 @@ app.MapControllerRoute(
     defaults: new { controller = "Home", action = "Aboutus" }
 );
 app.MapControllerRoute(
+    name: "Job",
+    pattern: "/job",
+    defaults: new { controller = "Home", action = "Job" }
+);
+app.MapControllerRoute(
+    name: "Translation",
+    pattern: "/translation",
+    defaults: new { controller = "Home", action = "Translation" }
+);
+app.MapControllerRoute(
+    name: "Roots",
+    pattern: "/roots",
+    defaults: new { controller = "Home", action = "Roots" }
+);
+app.MapControllerRoute(
     name: "Policy",
     pattern: "/policy",
     defaults: new { controller = "Home", action = "Policy" }
