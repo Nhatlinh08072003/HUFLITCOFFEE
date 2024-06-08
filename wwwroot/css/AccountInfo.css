@@ -1,0 +1,106 @@
+.AccountInfo_container {
+   border-radius: 15px;
+   border: 1px solid #ccc;
+   padding: 20px;
+   width: 90%;
+   height: 400px;
+   max-width: 400px;
+   margin: 40px auto;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   box-sizing: border-box;
+}
+
+.AccountInfo_imgcontainer {
+   text-align: center;
+}
+
+.AccountInfo_avatar {
+   width: 90px; /* Điều chỉnh kích thước avatar */
+   height: 80px;
+   border-radius: 50%;
+   margin-bottom: 10px; /* Khoảng cách giữa avatar và form */
+}
+
+.AccountInfo_innercontainer {
+   padding: 16px;
+}
+
+.AccountInfo_input-container {
+   display: flex;
+   align-items: center;
+   margin: 8px 0;
+}
+
+.AccountInfo_icon {
+   width: 30px;
+   margin-right: 10px;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+   width: calc(100% - 40px); /* Trừ đi chiều rộng của icon và margin */
+   padding: 12px 20px;
+   border: 1px solid #ccc;
+   border-radius: 10px; /* Bo tròn các góc của ô điền */
+   box-sizing: border-box;
+   margin: 10px 0; /* Khoảng cách trên dưới giữa các ô input */
+}
+
+button {
+   background-color: red;
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+   border-radius: 15px; /* Bo tròn các góc của nút */
+   transition: background-color 0.3s; /* Thêm hiệu ứng hover */
+}
+
+button:hover {
+   background-color: #45a049; /* Thay đổi màu khi hover */
+   opacity: 0.8;
+}
+
+.AccountInfo_checkbox-container {
+   display: flex;
+   align-items: center;
+   margin-top: 8px;
+}
+
+.checkbox-label {
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   margin-right: 20px;
+}
+
+.checkbox-label:hover input + .checkbox-custom {
+   background-color: #e7e7e7; /* Thay đổi màu khi hover */
+}
+
+.checkbox-custom {
+   position: relative;
+   height: 25px;
+   width: 25px;
+   background-color: #ddd;
+   border-radius: 5px;
+   margin-right: 10px;
+   cursor: pointer;
+}
+
+.checkbox-custom:after {
+   content: '';
+   position: absolute;
+   display: none;
+}
+
+.checkbox-custom input {
+   display: none;
+}
+
+.checkbox-custom input:checked + .checkbox-checkmark:after {
+   display: block;
+}

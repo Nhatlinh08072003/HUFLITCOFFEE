@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\HUFLITCOFFEE.bundle.scp.css"
     },
     {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\AccountInfo.css",
+      "PackagePath": "staticwebassets\\css\\AccountInfo.css"
+    },
+    {
       "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\Login.css",
       "PackagePath": "staticwebassets\\css\\Login.css"
     },

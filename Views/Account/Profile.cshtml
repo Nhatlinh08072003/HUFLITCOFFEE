@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="~/css/AccountInfo.css">
+<div class="AccountInfo_imgcontainer">
+    <img src="https://cdn-icons-png.flaticon.com/128/4874/4874892.png" alt="Avatar" class="AccountInfo_avatar">
+</div>
+<div class="AccountInfo_container">
+    <form action="update_account.php" method="post">
+        <div class="AccountInfo_innercontainer">
+            <div class="AccountInfo_input-container">
+                <img src="https://cdn-icons-png.flaticon.com/128/15494/15494722.png" alt="Avatar"
+                    class="AccountInfo_icon">
+                <input type="text" placeholder="Họ và Tên" name="fullname" required>
+            </div>
+
+            <div class="AccountInfo_input-container">
+                <img src="https://cdn-icons-png.flaticon.com/128/11870/11870524.png" alt="Avatar"
+                    class="AccountInfo_icon">
+                <input type="text" placeholder="Số Điện Thoại" name="phone" required>
+            </div>
+
+            <div class="AccountInfo_input-container">
+                <img src="https://cdn-icons-png.flaticon.com/128/482/482138.png" alt="Avatar" class="AccountInfo_icon">
+                <input type="email" placeholder="Email" name="email" required>
+            </div>
+
+            <div class="AccountInfo_input-container">
+                <img src="https://cdn-icons-png.flaticon.com/128/819/819865.png" alt="Avatar" class="AccountInfo_icon">
+                <input type="text" placeholder="Địa chỉ" name="address" required>
+            </div>
+
+            <button type="submit">Cập nhật</button>
+        </div>
+    </form>
+</div>
