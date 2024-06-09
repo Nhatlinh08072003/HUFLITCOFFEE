@@ -46,6 +46,18 @@ public class HomeController : Controller
     {
         return View();
     }
+     public IActionResult Roots()
+    {
+        return View();
+    }
+     public IActionResult Translation()
+    {
+        return View();
+    }
+     public IActionResult Job()
+    {
+        return View();
+    }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
