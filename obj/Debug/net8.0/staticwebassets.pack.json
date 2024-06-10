@@ -45,13 +45,10 @@
       "PackagePath": "staticwebassets\\css\\policy.css"
     },
     {
-<<<<<<< HEAD
       "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\roots.css",
       "PackagePath": "staticwebassets\\css\\roots.css"
     },
     {
-=======
->>>>>>> 3676fd6aade783a80e7c6f6900fae7b746f260c2
       "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\share.css",
       "PackagePath": "staticwebassets\\css\\share.css"
     },
