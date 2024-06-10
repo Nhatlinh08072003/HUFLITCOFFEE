@@ -1,6 +1,10 @@
 {
   "Version": 1,
-  "Hash": "xGeMUxWOfjomeyGZQYrq35yblUyxOTuqNkSb1wXGyHQ=",
+<<<<<<< HEAD
+  "Hash": "MIVik7c2S5ZoArhXxoy2DUXHx1NxrJIjljqB7oWtx3s=",
+=======
+  "Hash": "ZyowzmzS7K6T83Kb+z0FSe65GZ2Hh4o5QJjy2dVrsBM=",
+>>>>>>> 3676fd6aade783a80e7c6f6900fae7b746f260c2
   "Source": "HUFLITCOFFEE",
   "BasePath": "_content/HUFLITCOFFEE",
   "Mode": "Default",
@@ -169,6 +173,25 @@
       "OriginalItemSpec": "wwwroot\\css\\input.css"
     },
     {
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\Login.css",
+      "SourceId": "HUFLITCOFFEE",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
+      "BasePath": "_content/HUFLITCOFFEE",
+      "RelativePath": "css/Login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Login.css"
+    },
+    {
       "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\output.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
@@ -226,6 +249,7 @@
       "OriginalItemSpec": "wwwroot\\css\\Product.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\roots.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
@@ -249,6 +273,12 @@
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
+=======
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\share.css",
+      "SourceId": "HUFLITCOFFEE",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
+>>>>>>> 3676fd6aade783a80e7c6f6900fae7b746f260c2
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "css/share.css",
       "AssetKind": "All",
