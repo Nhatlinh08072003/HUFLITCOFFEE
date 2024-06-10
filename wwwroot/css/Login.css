@@ -1,3 +1,6 @@
+#Homepage_login {
+   display: none;
+}
 .Login_container {
    border-radius: 15px;
    border: 1px solid #ccc;
@@ -45,8 +48,8 @@
    margin-right: 10px;
 }
 
-input[type='text'],
-input[type='password'] {
+input[type="text"],
+input[type="password"] {
    width: 100%;
    padding: 12px 20px;
    display: inline-block;

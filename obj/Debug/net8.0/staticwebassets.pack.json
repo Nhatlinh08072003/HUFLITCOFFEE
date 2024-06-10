@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\HUFLITCOFFEE.bundle.scp.css"
     },
     {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\AccountInfo.css",
+      "PackagePath": "staticwebassets\\css\\AccountInfo.css"
+    },
+    {
       "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\Login.css",
       "PackagePath": "staticwebassets\\css\\Login.css"
     },
     {
       "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\Product.css",
       "PackagePath": "staticwebassets\\css\\Product.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\Register.css",
+      "PackagePath": "staticwebassets\\css\\Register.css"
     },
     {
       "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\aboutus.css",
