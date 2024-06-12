@@ -8,7 +8,7 @@ public class ProductController : Controller
 {
     private readonly ILogger<ProductController> _logger;
 
-   
+
     public ProductController(ILogger<ProductController> logger)
     {
         _logger = logger;
@@ -22,11 +22,15 @@ public class ProductController : Controller
     {
         return View();
     }
-      public IActionResult Products()
+    public IActionResult Products()
     {
         return View();
     }
-     public IActionResult Sale()
+    public IActionResult Sale()
+    {
+        return View();
+    }
+    public IActionResult Shipping()
     {
         return View();
     }

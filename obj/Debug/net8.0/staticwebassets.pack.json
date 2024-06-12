@@ -1,351 +1,359 @@
 {
   "Files": [
     {
-      "Id": "D:\\HUFLITCOFFEE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HUFLITCOFFEE.bundle.scp.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HUFLITCOFFEE.bundle.scp.css",
       "PackagePath": "staticwebassets\\HUFLITCOFFEE.bundle.scp.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\AccountInfo.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\AccountInfo.css",
       "PackagePath": "staticwebassets\\css\\AccountInfo.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\Login.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\Login.css",
       "PackagePath": "staticwebassets\\css\\Login.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\Product.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\Product.css",
       "PackagePath": "staticwebassets\\css\\Product.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\Register.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\Register.css",
       "PackagePath": "staticwebassets\\css\\Register.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\aboutus.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\aboutus.css",
       "PackagePath": "staticwebassets\\css\\aboutus.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\admin.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\admin.css",
       "PackagePath": "staticwebassets\\css\\admin.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\caffee.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\caffee.css",
       "PackagePath": "staticwebassets\\css\\caffee.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\detail.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\cart.css",
+      "PackagePath": "staticwebassets\\css\\cart.css"
+    },
+    {
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\detail.css",
       "PackagePath": "staticwebassets\\css\\detail.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\homepage.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\homepage.css",
       "PackagePath": "staticwebassets\\css\\homepage.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\input.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\input.css",
       "PackagePath": "staticwebassets\\css\\input.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\output.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\output.css",
       "PackagePath": "staticwebassets\\css\\output.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\policy.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\policy.css",
       "PackagePath": "staticwebassets\\css\\policy.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\roots.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\roots.css",
       "PackagePath": "staticwebassets\\css\\roots.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\share.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\share.css",
       "PackagePath": "staticwebassets\\css\\share.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\site.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\shipping.css",
+      "PackagePath": "staticwebassets\\css\\shipping.css"
+    },
+    {
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\terms.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\terms.css",
       "PackagePath": "staticwebassets\\css\\terms.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\favicon.ico",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\BanhMi.webp",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\images\\BanhMi.webp",
       "PackagePath": "staticwebassets\\images\\BanhMi.webp"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\CoffeeHatRang.jpg",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\images\\CoffeeHatRang.jpg",
       "PackagePath": "staticwebassets\\images\\CoffeeHatRang.jpg"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\CoffeeSuaDa.webp",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\images\\CoffeeSuaDa.webp",
       "PackagePath": "staticwebassets\\images\\CoffeeSuaDa.webp"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\CouterService.jpg",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\images\\CouterService.jpg",
       "PackagePath": "staticwebassets\\images\\CouterService.jpg"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\Desk.webp",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\images\\Desk.webp",
       "PackagePath": "staticwebassets\\images\\Desk.webp"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\DoiThoai.webp",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\images\\DoiThoai.webp",
       "PackagePath": "staticwebassets\\images\\DoiThoai.webp"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\HaiCaPhe.jpg",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\images\\HaiCaPhe.jpg",
       "PackagePath": "staticwebassets\\images\\HaiCaPhe.jpg"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\LogoCoffeeHouse.jpg",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\images\\LogoCoffeeHouse.jpg",
       "PackagePath": "staticwebassets\\images\\LogoCoffeeHouse.jpg"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\MoChi.webp",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\images\\MoChi.webp",
       "PackagePath": "staticwebassets\\images\\MoChi.webp"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\hinh-tach-ca-phe-va-hat.jpg",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\images\\hinh-tach-ca-phe-va-hat.jpg",
       "PackagePath": "staticwebassets\\images\\hinh-tach-ca-phe-va-hat.jpg"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\js\\homepage.js",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\js\\homepage.js",
       "PackagePath": "staticwebassets\\js\\homepage.js"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\js\\site.js",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

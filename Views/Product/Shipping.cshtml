@@ -1,0 +1,118 @@
+<link rel="stylesheet" href="~/css/shipping.css">
+<div class="shipping-main">
+    <div class="shipping-container">
+        <div class="shipping-header">
+            <div class="sh-titlee">
+                <h2 class="aacacac"><a style="text-decoration: none; color:#000" href="/home">The Coffee /</a></h1>
+            </div>
+            <div class="sh-hd">
+                <h3 class="hd-ssh">Xác nhận đơn hàng</h3>
+            </div>
+        </div>
+        <div class="shipping-pro">
+            <div class="address-sh">
+                <form action="add-ship">
+                    <div class="mapping-sh">
+                        <h2> Thông tin giao hàng</h2>
+                    </div>
+                    <div class="form-total">
+                        <div class="form-group">
+                            @* <label for="name">Tên người đặt hàng:</label> *@
+                            <input type="text" id="name" name="name" placeholder="Nhập tên của bạn" required>
+                        </div>
+                        <div class="phone-sh">
+                            @* <label for="address">Nhập số điện thoại: </label> *@
+                            <input type="text" id="number-phone" name="number-phone"
+                                placeholder="Nhập số điện thoại của bạn" required>
+                        </div>
+                        <div class="address-txt">
+                            @* <label for="address">Nhập địa chỉ giao hàng:</label> *@
+                            <input type="text" id="address" name="address" placeholder="Nhập địa chỉ  của bạn" required>
+                        </div>
+                    </div>
+                    <div class="uyretrad">
+                        <div class="ghsdsja">
+                            <h3 class="trrowew">Phương thức thanh toán</h3>
+                        </div>
+                        <div class="form-group">
+                            <input type="radio" id="cash" name="payment" class="custom-radio"
+                                onchange="togglePayment(this)" checked>
+                            <label for="cash" style="margin-left: 5px;">Thanh toán tiền mặt</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="radio" id="transfer" name="payment" class="custom-radio"
+                                onchange="togglePayment(this)">
+                            <label for="transfer" style="margin-left: 5px;">Chuyển khoản</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="pro pro-det">
+                <div class="ship-tlttttt">
+                    <h2>Các món đã chọn</h2>
+                    <button style="background: burlywood; font-weight: bold;color:#000"><a
+                            style=" text-decoration: none;" class="add-pro" href="/product">Thêm món</a>
+                    </button>
+                </div>
+                <div class="ship-detail-pro">
+                    <p class="name-asasasas" style="font-weight: bold;">
+                        Tên sản phẩm
+                    </p>
+                    <p class="pro-price-sp" style="font-weight: bold;">
+                        Đơn giá
+                    </p>
+                    <p class="pro-quantity-sp" style="font-weight: bold;">
+                        Số lượng
+                    </p>
+                    <p class="pro-total-sp" style="font-weight: bold;">
+                        Thành tiền
+                    </p>
+                </div>
+                <div class="ship-detail-pro">
+                    <p class="name-cbcbcbc">
+                        Cà phê sữa tươi bánh Plan
+                    </p>
+                    <p class="pro-price-sp-dei">
+                        49.000
+                    </p>
+                    <p class="pro-quantity-sp-quan">
+                        1
+                    </p>
+                    <p class="pro-total-sp-tt">
+                        49.000
+                    </p>
+                </div>
+
+                <div class="text-note-pro">
+                    <textarea placeholder="Viết ghi chú ở đây..."></textarea>
+                </div>
+                <div class="tt-total">
+                    <div class="tt-pri-all">
+                        <h3>Tổng thanh toán : <span>12345 đ</span></h3>
+                    </div>
+                </div>
+
+                <div class="total-pro-all">
+                    <div class="tt-all">
+                        <button class="btn-delete-all">Xoá tất cả</button>
+                        <button class="btn-order-dei" style="float: right;">Đặt hàng</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<script>
+    function checkOnlyOne(clickedCheckbox) {
+        var checkboxes = document.querySelectorAll('input[type="checkbox"][name="payment"]');
+        checkboxes.forEach(function (checkbox) {
+            if (checkbox !== clickedCheckbox) {
+                checkbox.checked = false;
+            }
+        });
+    }
+</script>
