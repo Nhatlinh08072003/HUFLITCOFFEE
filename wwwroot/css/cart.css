@@ -179,3 +179,47 @@
 .cart-rlt-info-price{
     font-size: 15px;
 }
+@media screen and (max-width : 800px){
+    .cart-pro-box {
+        width: 70%;
+       
+    }
+    .delete-all-detail {     
+        width: 60%;     
+    }
+    .cart-related-products-list{
+        width: 85%;
+       
+       
+    }
+}
+@media screen and (max-width : 500px){
+    .cart-pro-box {
+        width: 90%;
+       
+    }
+    .delete-all-detail {     
+        width: 90%;     
+    }
+    .cart-related-products-list{
+        width: 100%;
+    }
+    .cart-pro-quantity{
+        width: 17%;  
+    }
+    .btn-dele{
+        font-size: 16px;
+    }
+    .ct-title{
+        font-size: 15px;
+    }
+    .txt-tt{
+        font-size: 15px;
+    }
+    .pay-detail{
+        font-size: 14px;
+    }
+    .sgshdasa{
+        width: 80%;
+    }
+}
