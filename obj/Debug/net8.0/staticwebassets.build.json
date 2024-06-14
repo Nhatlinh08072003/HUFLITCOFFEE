@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "It1wwhM4qpk+ySUSmban5e3MVsxk/v3NBSu+gIfupTI=",
+  "Hash": "pncPwlbUn6hC0WYLlvtmqxjbGfBzXSni5EQVzXFzkkU=",
   "Source": "HUFLITCOFFEE",
   "BasePath": "_content/HUFLITCOFFEE",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "HUFLITCOFFEE\\wwwroot",
       "Source": "HUFLITCOFFEE",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\HUFLITCOFFEE.styles.css",
+      "Identity": "D:\\HUFLITCOFFEE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\HUFLITCOFFEE.styles.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "HUFLITCOFFEE.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Git\\HUFLITCOFFEE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\HUFLITCOFFEE.styles.css"
+      "OriginalItemSpec": "D:\\HUFLITCOFFEE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\HUFLITCOFFEE.styles.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HUFLITCOFFEE.bundle.scp.css",
+      "Identity": "D:\\HUFLITCOFFEE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HUFLITCOFFEE.bundle.scp.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "HUFLITCOFFEE.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Git\\HUFLITCOFFEE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HUFLITCOFFEE.bundle.scp.css"
+      "OriginalItemSpec": "D:\\HUFLITCOFFEE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HUFLITCOFFEE.bundle.scp.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\aboutus.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\aboutus.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "css/aboutus.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\css\\aboutus.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\AccountInfo.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\AccountInfo.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "css/AccountInfo.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\css\\AccountInfo.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\admin.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\admin.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "css/admin.css",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\css\\admin.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\caffee.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\caffee.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "css/caffee.css",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\css\\caffee.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\cart.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\cart.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "css/cart.css",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\css\\cart.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\detail.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\detail.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "css/detail.css",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\css\\detail.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\homepage.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\homepage.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "css/homepage.css",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\css\\homepage.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\input.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\input.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "css/input.css",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\css\\input.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\Login.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\Login.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "css/Login.css",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Login.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\output.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\output.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "css/output.css",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\css\\output.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\policy.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\policy.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "css/policy.css",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\css\\policy.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\Product.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\Product.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "css/Product.css",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Product.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\Register.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\Register.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "css/Register.css",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Register.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\roots.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\roots.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "css/roots.css",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\css\\roots.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\share.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\share.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "css/share.css",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\css\\share.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\shipping.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\shipping.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "css/shipping.css",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\css\\shipping.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\site.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\site.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\css\\terms.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\css\\terms.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "css/terms.css",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\css\\terms.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\favicon.ico",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\favicon.ico",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\images\\BanhMi.webp",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\BanhMi.webp",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "images/BanhMi.webp",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\images\\BanhMi.webp"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\images\\CoffeeHatRang.jpg",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\CoffeeHatRang.jpg",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "images/CoffeeHatRang.jpg",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\images\\CoffeeHatRang.jpg"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\images\\CoffeeSuaDa.webp",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\CoffeeSuaDa.webp",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "images/CoffeeSuaDa.webp",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\images\\CoffeeSuaDa.webp"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\images\\CouterService.jpg",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\CouterService.jpg",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "images/CouterService.jpg",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\images\\CouterService.jpg"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\images\\Desk.webp",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\Desk.webp",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "images/Desk.webp",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Desk.webp"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\images\\DoiThoai.webp",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\DoiThoai.webp",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "images/DoiThoai.webp",
       "AssetKind": "All",
@@ -530,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\images\\DoiThoai.webp"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\images\\HaiCaPhe.jpg",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\HaiCaPhe.jpg",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "images/HaiCaPhe.jpg",
       "AssetKind": "All",
@@ -549,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\images\\HaiCaPhe.jpg"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\images\\hinh-tach-ca-phe-va-hat.jpg",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\hinh-tach-ca-phe-va-hat.jpg",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "images/hinh-tach-ca-phe-va-hat.jpg",
       "AssetKind": "All",
@@ -568,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\images\\hinh-tach-ca-phe-va-hat.jpg"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\images\\LogoCoffeeHouse.jpg",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\LogoCoffeeHouse.jpg",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "images/LogoCoffeeHouse.jpg",
       "AssetKind": "All",
@@ -587,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\images\\LogoCoffeeHouse.jpg"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\images\\MoChi.webp",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\MoChi.webp",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "images/MoChi.webp",
       "AssetKind": "All",
@@ -606,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\images\\MoChi.webp"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\js\\homepage.js",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\js\\homepage.js",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "js/homepage.js",
       "AssetKind": "All",
@@ -625,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\js\\homepage.js"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\js\\site.js",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\js\\site.js",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -644,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -682,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -701,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -720,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -739,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -758,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -777,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -796,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -834,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -853,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -872,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -891,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -910,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -929,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -948,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -967,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -1005,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -1024,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -1043,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -1062,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -1081,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -1100,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -1119,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -1138,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1157,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -1176,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -1195,10 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -1214,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -1233,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -1252,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -1271,10 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -1290,10 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -1328,10 +1328,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -1347,10 +1347,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -1366,10 +1366,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -1385,10 +1385,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -1404,10 +1404,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1423,10 +1423,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -1442,10 +1442,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1461,10 +1461,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1480,10 +1480,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1499,10 +1499,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1518,10 +1518,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1537,10 +1537,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -1556,10 +1556,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1575,10 +1575,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1594,10 +1594,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1613,10 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1651,10 +1651,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1670,10 +1670,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1689,10 +1689,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1708,10 +1708,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\HUFLITCOFFEE\\wwwroot\\",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
