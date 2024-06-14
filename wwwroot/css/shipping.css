@@ -1,0 +1,188 @@
+
+.shipping-main{
+    width: 95%;
+    margin-left: 10px;
+}
+.shipping-header .sh-titlee,
+.shipping-header .sh-hd {
+    display: inline-block;
+    margin-left: 10px;
+   
+}
+
+
+.shipping-pro{
+    display: flex;
+}
+.ship-tlttttt{
+    display: flex;
+    border-bottom: 1px solid#000;
+}
+.address-sh{
+    width: 50%;
+}
+.pro-det{
+   margin-bottom: 50px;
+    width: 50%;
+}
+
+.ship-tlttttt button {
+    margin-left: auto; /* Đẩy nút sang bên phải */
+}
+.ship-detail-pro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc; /* Viền ngoài cùng của bảng */
+}
+
+.ship-detail-pro p {
+    margin: 0;
+    padding: 10px; /* Khoảng cách bên trong mỗi ô */
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #ccc; /* Viền phải cho mỗi ô */
+}
+
+.ship-detail-pro p:last-child {
+    border-right: none; 
+}
+
+.name-asasasas {
+    flex: 2;
+}
+
+.address-sh {
+    display: flex;
+    flex-direction: column; /* Đảm bảo các phần tử bên trong được sắp xếp theo chiều dọc */
+    padding: 20px; /* Khoảng cách bên trong để không bị dính vào viền */
+    box-sizing: border-box;
+}
+
+form {
+    width: 100%;
+    max-width: 600px; /* Đặt chiều rộng tối đa cho form */
+    background: #f9f9f9; /* Màu nền cho form */
+    padding: 20px; /* Khoảng cách bên trong form */
+    border-radius: 10px; /* Bo tròn các góc */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho form */
+}
+.form-group{
+    display: flex;
+    
+}
+.form-group, .phone-sh, .address-txt, .uyretrad {
+    margin-bottom: 15px;
+}
+
+.form-group label, .phone-sh label, .address-txt label, .uyretrad label {
+    display: block;
+    margin: 5px 0px;
+}
+
+.form-group input[type="text"], .phone-sh input[type="text"], .address-txt input[type="text"], .custom-checkbox {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.custom-checkbox {
+    display: none; /* Ẩn checkbox mặc định */
+}
+
+.custom-checkbox + label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+}
+
+.custom-checkbox + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border: 2px solid #ccc;
+    border-radius: 50%; /* Tạo hình tròn */
+    background: white;
+}
+
+.custom-checkbox:checked + label:before {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.custom-checkbox:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.text-note-pro textarea {
+    border-radius: 10px;
+    margin-top: 30px;
+    width: 100%;
+    box-sizing: border-box; /* Đảm bảo kích thước bao gồm cả border và padding */
+   padding-top: 5px;
+   padding-left: 10px;
+}
+.btn-order-dei{
+    width: 30%;
+    height: 6vh;
+    border-radius: 15px;
+    background: darkgoldenrod;
+}
+.btn-delete-all{
+    width: 30%;
+    height: 6vh;
+    border-radius: 15px;
+    background: darkgoldenrod;
+}
+
+.add-pro{
+    text-decoration: none;
+}
+
+.tt-total{
+    text-align: center;
+    padding: 10px 0px;
+}
+@media (max-width: 991px){
+    .shipping-pro{
+        display: block;
+    }
+    .address-sh{
+        width: 100%;
+    }
+    
+form {
+    width: 100%;
+    max-width: 800px; /* Đặt chiều rộng tối đa cho form */
+    background: #f9f9f9; /* Màu nền cho form */
+    padding: 20px; /* Khoảng cách bên trong form */
+    border-radius: 10px; /* Bo tròn các góc */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho form */
+}
+.pro-det{
+    margin-bottom: 50px;
+     width: 100%;
+ }
+}
+@media (max-width: 500px){
+    .aacacac{
+        display: none;
+        
+    }
+    .hd-ssh{
+        font-size: 20px;
+    }
+}

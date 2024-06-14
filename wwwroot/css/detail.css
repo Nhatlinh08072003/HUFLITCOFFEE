@@ -1,8 +1,3 @@
-
-.pro-detail-main{
-    width: 100%;
-   
-}
 .breadcrumb {
     list-style: none; 
     padding-left: 0; 
@@ -31,25 +26,29 @@
 }
 
 .pro-product-img{
-    width: 40%;
+    width: 50%;
     overflow: hidden;
     display: inline-block;
     border-radius: 20px;
+    display: flex; /* Sử dụng flexbox để căn giữa */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center;
 }
 .img_pro {
-    width: 100%;
+    width: 50%;
     transition: transform 0.5s;
     border-radius: 20px;
+    text-align: center;
 }
 
 .img_pro:hover {
     transform: scale(1.1);
 }
 .pro-prodcut-title{
-    margin-left: 20px;
+  width: 40%;
 }
 .titleee{
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 700;
 }
 .pro-price{
@@ -58,8 +57,9 @@
     color: red;
 }
 .size-text-tit{
-    font-size: 28px;
+    font-size: 20px;
     margin-left: -20px;
+    font-weight: 600;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -68,16 +68,18 @@
     gap: 10px; /* Khoảng cách giữa các thẻ */
 }
 .size-zzz{
-    width: 80%;
-    flex: 1;
+    width: 100%;
     padding: 10px 0px;
     background-color: #f0f0f0; 
     border-radius: 5px; 
-    text-align: center; 
     border: 1px solid black;
-    font-size: 15px;
+    font-size: 13px;
+    text-align: center;
     cursor: pointer; 
     transition: background-color 0.3s, color 0.3s;
+}
+.size-zzz {
+    flex: 1;
 }
 /* .size-zzz:hover {
     background-color: #e78585; 
@@ -117,10 +119,11 @@
     transition: background-color 0.3s, color 0.3s, transform 0s; /* Chắc chắn không có chuyển đổi nào ảnh hưởng đến vị trí */
 }
 .topping-text{
+    font-size: 13px;
     padding: 10px 0px;
 }
 .pro-topping-title{
-    font-size: 28px;
+    font-size: 22px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -167,7 +170,7 @@
     align-items: center;
     width: 97%;
     height: 50px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     margin-left: 10px;
     background-color: #dd9a1d;
@@ -183,7 +186,7 @@
    
 }
 .des-title{
-    font-size: 27px;
+    font-size: 24px;
     font-weight: bold;
 }
 .des-text{
@@ -200,7 +203,7 @@
     margin-top: 10px;
 }
 .title-rlt {
-    margin-left: 30px;
+    margin-left: 24px;
     font-size: 25px;
 }
 .related-img img {
@@ -234,7 +237,7 @@
 }
 .pro-quantity{
   margin-left: 150px;
-    font-size: 30px;
+    font-size: 25px;
 }
 .pro-prevous{
     width: 40px;
@@ -261,58 +264,66 @@
 .method-pro{
     display: flex;
 }
-@media screen and (max-width: 991px) {
-    .pro-product {
-        display: block; 
-        justify-content: center;
-    }
-    .pro-product-img{
-        width: 78%;
-        overflow: hidden;
-        display: inline-block;
-        border-radius: 20px;
-        margin-left: 50px;
-       
-    }
-    .related-title .tttl {
-        font-weight: 500;
-        font-size: 18px;
-    }
-    .related-price{
-        font-size: 16px;
-    }
-}
-@media screen and (max-width : 470px){
-    .pro-product-img{
-        width: 78%;
-        margin-left: 25px;
-       
-    }
+@media screen and (max-width : 991px){
     .pro-product{
-        margin-left: 0px;   
+        display: block;
+    }
+    .pro-product-img{
+        width: 100%;
+    }
+    .img_pro{
+        width: 50%;
     }
     .pro-prodcut-title{
-        margin-left: 0px;
+        width: 100%;
+    }
+    .pro-title{
+        text-align: center;
+    }
+}
+@media screen and (max-width : 500px){
+    .titleee{
+        font-size: 15px;
     }
     .size-text-tit{
-        font-size: 20px;
+        font-weight: 600;
+        font-size: 14px;
     }
     .pro-topping-title{
-        font-size: 20px;
+        font-size: 14px;
+        font-weight: 600;
     }
-    .related-title .tttl {
-        font-weight: 500;
-        font-size: 13px;
+    .size-zzz{
+        font-size: 10px;
     }
-     .related-price{
-        font-size: 13px;
+    .topping-text{
+        font-size: 10px;
     }
     .btn-des{
-        font-size: 18px;
+        font-size: 15px;
     }
-}
-@media screen and (max-width : 355px){
-.pro-quantity{
-    margin-left: 80px;
-}
+    .pro-quantity{
+        margin-left: 30px;
+        font-size: 20px;
+    }
+    .method-pro{
+        display: block;
+    }
+    .pro-product{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .related-title .tttl {
+        font-weight: 0;
+        font-size: 10px;
+    }
+    .related-price{
+        font-size: 10px;
+    }
+    .des-title{
+        font-size: 20px;
+    }
+    .title-rlt{
+        font-size: 20px;
+    }
 }
