@@ -1,10 +1,14 @@
+using HUFLITCOFFEE.web.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddDbContext<CoffeeDBContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("CoffeeDBConnectionString")));
 var app = builder.Build();
-
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
