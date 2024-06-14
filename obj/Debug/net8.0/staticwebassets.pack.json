@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\css\\caffee.css"
     },
     {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\cart.css",
+      "PackagePath": "staticwebassets\\css\\cart.css"
+    },
+    {
       "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\detail.css",
       "PackagePath": "staticwebassets\\css\\detail.css"
     },
@@ -59,6 +63,10 @@
     {
       "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\share.css",
       "PackagePath": "staticwebassets\\css\\share.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\shipping.css",
+      "PackagePath": "staticwebassets\\css\\shipping.css"
     },
     {
       "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\site.css",
