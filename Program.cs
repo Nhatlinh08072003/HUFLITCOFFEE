@@ -1,12 +1,31 @@
 using HUFLITCOFFEE.web.Data;
+using HUFLITCOFFEE.Models.Main;
 using Microsoft.EntityFrameworkCore;
-
+using Newtonsoft.Json;
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<CoffeeDBContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("CoffeeDBConnectionString")));
+builder.Services.AddDbContext<HuflitcoffeeContext>(options =>
+    {
+        options.UseSqlServer(builder.Configuration.GetConnectionString("CoffeeDBConnectionString"));
+        options.EnableSensitiveDataLogging(false);
+    }
+);
+
+// config session
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(120);
+});
+
+JsonConvert.DefaultSettings = () => new JsonSerializerSettings
+{
+    Formatting = Formatting.Indented,
+    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+};
 var app = builder.Build();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 // Configure the HTTP request pipeline.
@@ -110,7 +129,7 @@ app.MapControllerRoute(
 );
 app.MapControllerRoute(
     name: "Detail",
-    pattern: "/detail",
+    pattern: "/detail/{id}",
     defaults: new { controller = "Product", action = "Detail" }
 );
 app.MapControllerRoute(

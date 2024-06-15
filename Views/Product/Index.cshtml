@@ -1,0 +1,759 @@
+@model List<HUFLITCOFFEE.Models.Main.Product>;
+@{
+    string curPage = ViewBag.CurPage;
+}
+<link rel="stylesheet" href="~/css/output.css">
+<link rel="stylesheet" href="~/css/product.css">
+<div class="menu-product-main">
+    <div class="menu-product-container">
+        <aside class="menu-product-box-list">
+            <ul class="menu-product-list">
+                <li id="t1">
+                    <button class="tab-button" data="all">Tất cả</button>
+                </li>
+                <li id="t2">
+                    <div class="tt2">
+                        <button class="tab-button" data="cf">Cà phê</button>
+                        <img class="icon-xxx" style="width:20px;height:20px"
+                            src="https://cdn-icons-png.flaticon.com/128/2989/2989988.png">
+                    </div>
+                    <ul class="list-ct2">
+                        <li class="cffff1">
+                            <button class="tab tab-btn" data="cf1">Cà phê Việt Nam</button>
+                        </li>
+
+                        <li>
+                            <button class="tab tab-btn" data="cf2">Cà phê máy</button>
+                        </li>
+                    </ul>
+                </li>
+                <li id="t2">
+                    <div class="tt2">
+                        <button class="tab-button" data="tea">Trà</button>
+                        <img class="icon-xxx" style="width:20px;height:20px"
+                            src="https://cdn-icons-png.flaticon.com/128/2989/2989988.png">
+                    </div>
+                    <ul class="list-ct2">
+                        <li class="cffff1">
+                            <button class="tab tab-btn" data="tea1">Trà trái cây</button>
+                        </li>
+
+                        <li>
+                            <button class="tab tab-btn" data="tea2">Trà sữa Macchiato</button>
+                        </li>
+                    </ul>
+                </li>
+                <li id="t4">
+                    <div class="tt2">
+                        <button class="tab-button" data="hitea">Hi-tea Healthy</button>
+                        <img class="icon-xxx" style="width:20px;height:20px"
+                            src="https://cdn-icons-png.flaticon.com/128/2989/2989988.png">
+                    </div>
+                    <ul class="list-ct2">
+                        <li>
+                            <button class="tab tab-btn" data="hitea1">Hitea Trà</button>
+                        </li>
+                    </ul>
+                </li>
+                <li id="t5">
+                    <div class="tt2">
+                        <button class="tab-button" data="greentea">Trà xanh-Chocolate</button>
+                        <img class="icon-xxx" style="width:20px;height:20px"
+                            src="https://cdn-icons-png.flaticon.com/128/2989/2989988.png">
+                    </div>
+                    <ul class="list-ct2">
+                        <li class="cffff1">
+                            <button class="tab tab-btn" data="greentea1">Trà xanh Tây Bắc</button>
+                        </li>
+                        <li>
+                            <button class="tab tab-btn" data="greentea2">Chocolate</button>
+                        </li>
+                    </ul>
+                </li>
+                <li id="t6">
+                    <div class="tt2">
+                        <button class="tab-button" data="drink">Thức uống đá xay</button>
+                        <img class="icon-xxx" style="width:20px;height:20px"
+                            src="https://cdn-icons-png.flaticon.com/128/2989/2989988.png">
+                    </div>
+                    <ul class="list-ct2">
+                        <li>
+                            <button class="tab tab-btn" data="drink1">Đá xay Frosty</button>
+                        </li>
+                    </ul>
+                </li>
+                <li id="t7">
+                    <div class="tt2">
+                        <button class="tab-button" data="snack">Bánh và Snacks</button>
+                        <img class="icon-xxx" style="width:20px;height:20px"
+                            src="https://cdn-icons-png.flaticon.com/128/2989/2989988.png">
+                    </div>
+                    <ul class="list-ct2">
+                        <li class="cffff1">
+                            <button class="tab tab-btn" data="snack1">Bánh mặn</button>
+                        </li>
+                        <li class="cffff1">
+                            <button class="tab tab-btn" data="snack2">Bánh ngọt</button>
+                        </li>
+                        <li class="cffff1">
+                            <button class="tab tab-btn" data="snack1">Snack</button>
+                        </li>
+                        <li>
+                            <button class="tab tab-btn" data="snack2">Bánh pastry</button>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="container">
+            @* Coffee *@
+            <div id="cf" class="tab menu-cf-product">
+                <div class="menu-cf-item">
+                      <!-- Cà pheeeeee -->
+                    <div class="menu-cf-vn">
+                        <h3 class="cf-title">
+                            Cà phê Highlight
+                        </h3>
+                         <div class="cf-vn-item">
+                        @if (Model != null && Model.Count > 0)
+                        {
+                           var firstProduct = Model.FirstOrDefault(p => p.CategoryId == 1);
+                           if (firstProduct != null)
+                            {
+                               
+                                    <div class="cf-item">
+                                        <div class="cf-img">
+                                            <a href="/detail/@firstProduct.ProductId"> <img class="producst-item" src="@firstProduct.ImgProduct"></a>
+                                        </div>
+                                        <div class="cf-info">
+                                            <h3 class="cf-info-title">@firstProduct.NameProduct</h3>
+                                            <div class="cf-info-price">@firstProduct.PriceProduct</div>
+                                        </div>
+                                    </div>
+                            }
+                        }
+                            </div>
+                    </div>
+                    <div class="menu-cf-vn">
+                        <h3 class="cf-title">
+                            Cà phê Việt Nam
+                        </h3>
+                        <div class="cf-vn-item">
+                         @if (Model != null && Model.Count > 0)  
+{
+    var products = Model.Where(p => p.CategoryId == 1).Skip(3).Take(24).ToList();
+    for (int i = 0; i < products.Count; i += 3)
+    {
+        var item = products[i];
+        <div class="cf-item">
+            <div class="cf-img">
+                <a href="/detail/@item.ProductId"> <img class="producst-item" src="@item.ImgProduct"></a>
+            </div>
+            <div class="cf-info">
+                <h3 class="cf-info-title">@item.NameProduct</h3>
+                <div class="cf-info-price">@item.PriceProduct</div>
+            </div>
+        </div>
+    }
+}
+
+                        </div>
+                    </div>
+
+
+                    <div id="cf" class="menu-cf-vn">
+                        <h3 class="cf-title">
+                            Cà phê Máy
+                        </h3>
+                        <div class="cf-vn-item">
+                           @if (Model != null && Model.Count > 0)  
+{
+    var products = Model.Where(p => p.CategoryId == 1).Skip(27).Take(33).ToList();
+    for (int i = 0; i < products.Count; i += 3)
+    {
+        var item = products[i];
+        <div class="cf-item">
+            <div class="cf-img">
+                <a href="/detail/@item.ProductId"> <img class="producst-item" src="@item.ImgProduct"></a>
+            </div>
+            <div class="cf-info">
+                <h3 class="cf-info-title">@item.NameProduct</h3>
+                <div class="cf-info-price">@item.PriceProduct</div>
+            </div>
+        </div>
+    }
+}
+                        </div>
+                    </div>
+   <div id="cf" class="menu-cf-vn">
+                        <h3 class="cf-title">
+                            Cold Brew
+                        </h3>
+                        <div class="cf-vn-item">
+                           @if (Model != null && Model.Count > 0)  
+{
+    var products = Model.Where(p => p.CategoryId == 1).Skip(60).Take(12).ToList();
+    for (int i = 0; i < products.Count; i += 3)
+    {
+        var item = products[i];
+        <div class="cf-item">
+            <div class="cf-img">
+                <a href="/detail/@item.ProductId"> <img class="producst-item" src="@item.ImgProduct"></a>
+            </div>
+            <div class="cf-info">
+                <h3 class="cf-info-title">@item.NameProduct</h3>
+                <div class="cf-info-price">@item.PriceProduct</div>
+            </div>
+        </div>
+    }
+}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            @* Tea *@
+            <div id="tea" class="tab menu-tea-product" style="display: none;">
+                <div class="menu-tea-item">
+
+                    <div class="menu-tea-vn">
+                        <h3 class="tea-title">
+                            Trà trái cây
+                        </h3>
+                        <div class="tea-vn-item">
+                            <div class="tea-item">
+                                <div class="tea-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="tea-info">
+                                    <h3 class="tea-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="tea-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                            <div class="tea-item">
+                                <div class="tea-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="tea-info">
+                                    <h3 class="tea-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="tea-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tea" class="menu-tea-vn">
+                        <h3 class="tea-title">
+                            Trà sữa Macchiato
+                        </h3>
+                        <div class="tea-vn-item">
+                            <div class="tea-item">
+                                <div class="tea-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="tea-info">
+                                    <h3 class="tea-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="tea-info-price">49.000đ</div>
+                                </div>
+                            </div>
+
+                            <div class="tea-item">
+                                <div class="tea-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="tea-info">
+                                    <h3 class="tea-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="tea-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            @* Cloud *@
+            <div id="cloud" class="tab menu-cloud-product" style="display: none;">
+                <div class="menu-cloud-item">
+
+
+                    <!-- Cà pheeeeee -->
+                    <div id="coffee" class="menu-cloud-vn">
+                        <h3 class="cloud-title">
+                            CloudFee
+                        </h3>
+                        <div class="cloud-vn-item">
+                            <div class="cloud-item">
+                                <div class="cloud-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="cloud-info">
+                                    <h3 class="cloud-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="cloud-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                            <div class="cloud-item">
+                                <div class="cloud-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="cloud-info">
+                                    <h3 class="cloud-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="cloud-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="cloud" class="menu-cloud-vn">
+                        <h3 class="cloud-title">
+                            CloudTea Mochi
+                        </h3>
+                        <div class="cloud-vn-item">
+                            <div class="cloud-item">
+                                <div class="cloud-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="cloud-info">
+                                    <h3 class="cloud-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="cloud-info-price">49.000đ</div>
+                                </div>
+                            </div>
+
+                            <div class="cloud-item">
+                                <div class="cloud-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="cloud-info">
+                                    <h3 class="cloud-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="cloud-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @* Hi-tea Healthy *@
+            <div id="hitea" class="tab menu-hitea-product" style="display: none;">
+                <div class="menu-hitea-item">
+
+
+
+                    <div class="menu-hitea-vn">
+                        <h3 class="hitea-title">
+                            Hi-tea trà
+                        </h3>
+                        <div class="hitea-vn-item">
+                            <div class="hitea-item">
+                                <div class="hitea-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="hitea-info">
+                                    <h3 class="hitea-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="hitea-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                            <div class="hitea-item">
+                                <div class="hitea-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="hitea-info">
+                                    <h3 class="hitea-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="hitea-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="hitea" class="menu-hitea-vn">
+                        <h3 class="hitea-title">
+                            Hi-tea đá tuyết
+                        </h3>
+                        <div class="hitea-vn-item">
+                            <div class="hitea-item">
+                                <div class="hitea-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="hitea-info">
+                                    <h3 class="hitea-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="hitea-info-price">49.000đ</div>
+                                </div>
+                            </div>
+
+                            <div class="hitea-item">
+                                <div class="hitea-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="hitea-info">
+                                    <h3 class="hitea-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="hitea-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @* Trà xanh - chocolate *@
+            <div id="greentea" class="tab menu-greentea-product" style="display: none;">
+                <div class="menu-greentea-item">
+
+
+
+                    <div id="coffee" class="menu-greentea-vn">
+                        <h3 class="greentea-title">
+                            Trà xanh Tây Bắc
+                        </h3>
+                        <div class="greentea-vn-item">
+                            <div class="greentea-item">
+                                <div class="greentea-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="greentea-info">
+                                    <h3 class="greentea-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="greentea-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                            <div class="greentea-item">
+                                <div class="greentea-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="greentea-info">
+                                    <h3 class="greentea-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="greentea-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="greentea" class="menu-greentea-vn">
+                        <h3 class="greentea-title">
+                            Chocolate
+                        </h3>
+                        <div class="greentea-vn-item">
+                            <div class="greentea-item">
+                                <div class="greentea-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="greentea-info">
+                                    <h3 class="greentea-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="greentea-info-price">49.000đ</div>
+                                </div>
+                            </div>
+
+                            <div class="greentea-item">
+                                <div class="greentea-img">
+                                    <img class="producst-item"
+                                        src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg">
+                                </div>
+                                <div class="greentea-info">
+                                    <h3 class="greentea-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="greentea-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @* Thức uống đá xay *@
+            <div id="drink" class="tab menu-drink-product" style="display: none;">
+                <div class="menu-drink-item">
+
+
+
+                    <div class="menu-drink-vn">
+                        <h3 class="drink-title">
+                            Đá xay Frosty
+                        </h3>
+                        <div class="drink-vn-item">
+                            <div class="drink-item">
+                                <div class="drink-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="drink-info">
+                                    <h3 class="drink-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="drink-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                            <div class="drink-item">
+                                <div class="drink-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="drink-info">
+                                    <h3 class="drink-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="drink-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @* bánh & snacks *@
+            <div id="snack" class="tab menu-snack-product" style="display: none;">
+                <div class="menu-snack-item">
+
+
+
+                    <div id="coffee" class="menu-snack-vn">
+                        <h3 class="snack-title">
+                            Bánh mặn
+                        </h3>
+                        <div class="snack-vn-item">
+                            <div class="snack-item">
+                                <div class="snack-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="snack-info">
+                                    <h3 class="snack-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="snack-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                            <div class="snack-item">
+                                <div class="snack-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="snack-info">
+                                    <h3 class="snack-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="snack-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="snack" class="menu-snack-vn">
+                        <h3 class="snack-title">
+                            Bánh ngọt
+                        </h3>
+                        <div class="snack-vn-item">
+                            <div class="snack-item">
+                                <div class="snack-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="snack-info">
+                                    <h3 class="snack-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="snack-info-price">49.000đ</div>
+                                </div>
+                            </div>
+
+                            <div class="snack-item">
+                                <div class="snack-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="snack-info">
+                                    <h3 class="snack-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="snack-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="snack" class="menu-snack-vn">
+                        <h3 class="snack-title">
+                            Snacks
+                        </h3>
+                        <div class="snack-vn-item">
+                            <div class="snack-item">
+                                <div class="snack-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="snack-info">
+                                    <h3 class="snack-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="snack-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                            <div class="snack-item">
+                                <div class="snack-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="snack-info">
+                                    <h3 class="snack-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="snack-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="coffee" class="menu-snack-vn">
+                        <h3 class="snack-title">
+                            Pastry
+                        </h3>
+                        <div class="snack-vn-item">
+                            <div class="snack-item">
+                                <div class="snack-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="snack-info">
+                                    <h3 class="snack-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="snack-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                            <div class="snack-item">
+                                <div class="snack-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="snack-info">
+                                    <h3 class="snack-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="snack-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @* Thức uống tại nhà *@
+            <div id="home" class="tab menu-home-product" style="display: none;">
+                <div class="menu-home-item">
+
+
+
+                    <div class="menu-home-vn">
+                        <h3 class="home-title">
+                            Cà phê tại nhà
+                        </h3>
+                        <div class="home-vn-item">
+                            <div class="home-item">
+                                <div class="home-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="home-info">
+                                    <h3 class="home-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="home-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                            <div class="home-item">
+                                <div class="home-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="home-info">
+                                    <h3 class="home-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="home-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="home" class="menu-home-vn">
+                        <h3 class="home-title">
+                            Chai Fresh không đá
+                        </h3>
+                        <div class="home-vn-item">
+                            <div class="home-item">
+                                <div class="home-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="home-info">
+                                    <h3 class="home-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="home-info-price">49.000đ</div>
+                                </div>
+                            </div>
+
+                            <div class="home-item">
+                                <div class="home-img">
+                                    <a href="/detail"> <img class="producst-item"
+                                            src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg"></a>
+                                </div>
+                                <div class="home-info">
+                                    <h3 class="home-info-title">Phin sữa tưới bánh Flan</h3>
+                                    <div class="home-info-price">49.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const tabs = document.querySelectorAll('.tab');
+    const mediaQuery = window.matchMedia('(min-width: 992px)');
+
+    function handleButtonClick(button) {
+        const data = button.getAttribute('data');
+        tabs.forEach(tab => {
+            if (data === 'all') { // Nếu click vào nút "Tất cả"
+                tab.style.display = 'block'; // Hiển thị tất cả các tab
+            } else if (tab.getAttribute('id') === data) {
+                tab.style.display = 'block';
+                window.scrollTo(0, 0); // Cuộn lên đầu trang khi một tab được chọn
+            } else {
+                tab.style.display = 'none';
+            }
+        });
+    }
+
+    function handleMediaQueryChange(mediaQuery) {
+        if (mediaQuery.matches) {
+            buttons.forEach(button => {
+                button.onclick = () => {
+                    handleButtonClick(button);
+                };
+            });
+        } else {
+            buttons.forEach(button => {
+                button.onclick = null;
+            });
+            tabs.forEach(tab => {
+                tab.style.display = 'block'; // Hiển thị tất cả các tab khi không còn sử dụng JavaScript
+            });
+        }
+    }
+
+    handleMediaQueryChange(mediaQuery); // Thực hiện kiểm tra ban đầu
+
+    mediaQuery.addListener(handleMediaQueryChange); // Theo dõi thay đổi của media query
+</script>
+<script>
+    // Đoạn mã JavaScript mới
+    // Lấy tất cả các nút tab
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabBtn = document.querySelectorAll('.tab-btn');
+
+    // Lặp qua mỗi nút tab và gắn sự kiện lắng nghe click cho mỗi nút
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Loại bỏ lớp active từ tất cả các nút tab
+            tabButtons.forEach(btn => btn.classList.remove('active-tab'));
+            // Thêm lớp active cho nút được click
+            button.classList.add('active-tab');
+        });
+    });
+
+
+</script>
