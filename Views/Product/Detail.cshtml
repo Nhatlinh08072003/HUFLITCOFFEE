@@ -1,3 +1,7 @@
+@model HUFLITCOFFEE.Models.Main.DetailViewModel;
+@{
+    string curPage = ViewBag.CurPage;
+}
 <link rel="stylesheet" href="~/css/detail.css">
 <div class="pro-detail-main">
     <div class="pro-detail-container">
@@ -30,17 +34,15 @@
 
         <div class="pro-product">
             <div class="pro-product-img">
-                <img class="img_pro"
-                    src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg">
+                <img class="img_pro" src="@Model.MainProduct?.ImgProduct">
             </div>
-
-            <div class="pro-prodcut-title">
+            <div class=" pro-prodcut-title">
                 <div class="pro-title">
                     <div class="titleee">
-                        <p>Cà phê sữa tươi bánh Plan</p>
+                        <p>@Model.MainProduct?.NameProduct @Model.MainProduct?.Dvt</p>
                     </div>
                     <div class="pro-price">
-                        <span>49.000 đ</span>
+                        <span>@Model.MainProduct?.PriceProduct</span>
                     </div>
                 </div>
 
@@ -48,15 +50,15 @@
                     <p class="size-text-tit">Chọn size ( bắt buộc) </p>
                     <div class="size-size">
                         <div class="size-zzz">
-                            <div class="circle">Nhỏ + 0 đ</div>
+                            <div class="circle" onclick="redirectToSize('small')">Nhỏ + 0 đ</div>
                         </div>
 
                         <div class="size-zzz">
-                            <div class="circle">Vừa + 6000 đ</div>
+                            <div class="circle" onclick="redirectToSize('medium')">Vừa + 6000 đ</div>
                         </div>
 
                         <div class="size-zzz">
-                            <div class="circle">Lớn + 10000 đ</div>
+                            <div class="circle" onclick="redirectToSize('large')">Lớn + 10000 đ</div>
                         </div>
                     </div>
                 </div>
@@ -66,17 +68,23 @@
                     <div class="topping-option">
                         <div class="checkbox-topping">
                             <div class="topping-name">
-                                <p class="topping-text">Shot espresso + 10.000 đ</p>
+                                <p class="topping-text">@Model.RelatedProducts?.FirstOrDefault(p => p.ProductId ==
+                                    73)?.NameProduct +@Model.RelatedProducts?.FirstOrDefault(p => p.ProductId ==
+                                    73)?.PriceProduct đ</p>
                             </div>
                         </div>
                         <div class="checkbox-topping">
                             <div class="topping-name">
-                                <p class="topping-text">Trân châu trắng + 10.000 đ</p>
+                                <p class="topping-text">@Model.RelatedProducts?.FirstOrDefault(p => p.ProductId ==
+                                    74)?.NameProduct +@Model.RelatedProducts?.FirstOrDefault(p => p.ProductId ==
+                                    74)?.PriceProduct đ</p>
                             </div>
                         </div>
                         <div class="checkbox-topping">
                             <div class="topping-name">
-                                <p class="topping-text">Sốt caramel + 10.000 đ </p>
+                                <p class="topping-text">@Model.RelatedProducts?.FirstOrDefault(p => p.ProductId ==
+                                    75)?.NameProduct +@Model.RelatedProducts?.FirstOrDefault(p => p.ProductId ==
+                                    75)?.PriceProduct đ</p>
                             </div>
                         </div>
                     </div>
@@ -124,7 +132,7 @@
         <div class="pro-describe">
             <div class="describe">
                 <h4 class="des-title">Mô tả sản phẩm</h4>
-                <p class="des-text">Đây là 1 loại cà phê</p>
+                <p class="des-text">@Model.MainProduct?.DescriptionProduct</p>
 
             </div>
         </div>
@@ -267,4 +275,68 @@
             counter.textContent = currentValue + 1;
         });
     });
+    function getCurrentSize(productId) {
+        if (productId % 3 === 1) {
+            return 'small';
+        } else if (productId % 3 === 2) {
+            return 'medium';
+        } else {
+            return 'large';
+        }
+    }
+
+    function redirectToSize(targetSize) {
+        // Lấy URL hiện tại
+        const currentUrl = window.location.href;
+
+        // Lấy ID sản phẩm từ URL hiện tại
+        const urlParts = currentUrl.split('/');
+        const currentIdIndex = urlParts.indexOf('detail') + 1; // Giả định URL dạng /detail/id
+        let productId = parseInt(urlParts[currentIdIndex]);
+
+        // Kiểm tra nếu ID sản phẩm không phải là số thì không làm gì cả
+        if (isNaN(productId)) {
+            return;
+        }
+
+        // Xác định kích thước hiện tại
+        const currentSize = getCurrentSize(productId);
+
+        // Kiểm tra nếu kích thước hiện tại và kích thước mục tiêu giống nhau thì không làm gì cả
+        if (currentSize === targetSize) {
+            return;
+        }
+
+        // Tính toán ID mới dựa trên kích thước hiện tại và kích thước mục tiêu
+        if (currentSize === 'small' && targetSize === 'medium') {
+            productId += 1;
+        } else if (currentSize === 'small' && targetSize === 'small') {
+            productId += 0;
+        }
+        else if (currentSize === 'small' && targetSize === 'large') {
+            productId += 2;
+        } else if (currentSize === 'medium' && targetSize === 'small') {
+            productId -= 1;
+        }
+        else if (currentSize === 'medium' && targetSize === 'medium') {
+            productId -= 0;
+        }
+        else if (currentSize === 'medium' && targetSize === 'large') {
+            productId += 1;
+        } else if (currentSize === 'large' && targetSize === 'medium') {
+            productId -= 1;
+        } else if (currentSize === 'large' && targetSize === 'small') {
+            productId -= 2;
+        }
+        else if (currentSize === 'large' && targetSize === 'large') {
+            productId -= 0;
+        }
+
+        // Điều hướng đến trang chi tiết sản phẩm với ID mới
+        urlParts[currentIdIndex] = productId;
+        const newUrl = urlParts.join('/');
+        window.location.href = newUrl;
+    }
+
+
 </script>
