@@ -143,11 +143,13 @@
    color: white; /* Thay đổi màu chữ nếu cần */
 }
 
-.topping-name.selected {
+.topping-name:hover {
    background-color: #dd9a1d;
    color: white; /* Thay đổi màu chữ nếu cần */
 }
-
+.topping-name {
+   padding: 10px;
+}
 .pro-cart {
    width: 100%;
 }

@@ -42,8 +42,12 @@
                         <p>@Model.MainProduct?.NameProduct @Model.MainProduct?.Dvt</p>
                     </div>
                     <div class="pro-price">
-                        <span>@Model.MainProduct?.PriceProduct</span>
+                        <span id="mainProductPrice" data-base-price="@Model.MainProduct?.PriceProduct">
+                            @Model.MainProduct?.PriceProduct đ
+                        </span>
                     </div>
+                    <div id="Name_Topping"></div>
+                    <div id="Price_Topping"></div>
                 </div>
 
                 <div class="option-size">
@@ -68,23 +72,35 @@
                     <div class="topping-option">
                         <div class="checkbox-topping">
                             <div class="topping-name">
-                                <p class="topping-text">@Model.RelatedProducts?.FirstOrDefault(p => p.ProductId ==
-                                    73)?.NameProduct +@Model.RelatedProducts?.FirstOrDefault(p => p.ProductId ==
-                                    73)?.PriceProduct đ</p>
+                                <input type="checkbox" id="topping73" class="topping-checkbox"
+                                    data-name="@Model.RelatedProducts?.FirstOrDefault(p => p.ProductId == 73)?.NameProduct"
+                                    data-price="@Model.RelatedProducts?.FirstOrDefault(p => p.ProductId == 73)?.PriceProduct"
+                                    onclick="updateToppingDetails()">
+                                <label for="topping73" class="topping-text">@Model.RelatedProducts?.FirstOrDefault(p =>
+                                    p.ProductId == 73)?.NameProduct + @Model.RelatedProducts?.FirstOrDefault(p =>
+                                    p.ProductId == 73)?.PriceProduct đ</label>
                             </div>
                         </div>
                         <div class="checkbox-topping">
                             <div class="topping-name">
-                                <p class="topping-text">@Model.RelatedProducts?.FirstOrDefault(p => p.ProductId ==
-                                    74)?.NameProduct +@Model.RelatedProducts?.FirstOrDefault(p => p.ProductId ==
-                                    74)?.PriceProduct đ</p>
+                                <input type="checkbox" id="topping74" class="topping-checkbox"
+                                    data-name="@Model.RelatedProducts?.FirstOrDefault(p => p.ProductId == 74)?.NameProduct"
+                                    data-price="@Model.RelatedProducts?.FirstOrDefault(p => p.ProductId == 74)?.PriceProduct"
+                                    onclick="updateToppingDetails()">
+                                <label for="topping74" class="topping-text">@Model.RelatedProducts?.FirstOrDefault(p =>
+                                    p.ProductId == 74)?.NameProduct + @Model.RelatedProducts?.FirstOrDefault(p =>
+                                    p.ProductId == 74)?.PriceProduct đ</label>
                             </div>
                         </div>
                         <div class="checkbox-topping">
                             <div class="topping-name">
-                                <p class="topping-text">@Model.RelatedProducts?.FirstOrDefault(p => p.ProductId ==
-                                    75)?.NameProduct +@Model.RelatedProducts?.FirstOrDefault(p => p.ProductId ==
-                                    75)?.PriceProduct đ</p>
+                                <input type="checkbox" id="topping75" class="topping-checkbox"
+                                    data-name="@Model.RelatedProducts?.FirstOrDefault(p => p.ProductId == 75)?.NameProduct"
+                                    data-price="@Model.RelatedProducts?.FirstOrDefault(p => p.ProductId == 75)?.PriceProduct"
+                                    onclick="updateToppingDetails()">
+                                <label for="topping75" class="topping-text">@Model.RelatedProducts?.FirstOrDefault(p =>
+                                    p.ProductId == 75)?.NameProduct + @Model.RelatedProducts?.FirstOrDefault(p =>
+                                    p.ProductId == 75)?.PriceProduct đ</label>
                             </div>
                         </div>
                     </div>
@@ -263,17 +279,44 @@
         const counter = document.getElementById('counter');
         const prevButton = document.querySelector('.pro-prevous');
         const nextButton = document.querySelector('.pro-next');
+        const basePrice = parseFloat(document.getElementById('mainProductPrice').getAttribute('data-base-price'));
 
         prevButton.addEventListener('click', function () {
             let currentValue = parseInt(counter.textContent, 10);
-            if (currentValue > 0) {
-                counter.textContent = currentValue - 1;
+            if (currentValue > 1) {
+                currentValue--; // Giảm giá trị số lượng
+                counter.textContent = currentValue; // Cập nhật số lượng trên giao diện
+                updateTotalPrice(currentValue);
+            } else if (currentValue === 1) { // Nếu giá trị hiện tại là 1
+                counter.textContent = currentValue; // Cập nhật số lượng trên giao diện (để giữ nguyên số lượng 1)
+                updateTotalPrice(currentValue);
             }
         });
+
         nextButton.addEventListener('click', function () {
             let currentValue = parseInt(counter.textContent, 10);
-            counter.textContent = currentValue + 1;
+            currentValue++; // Tăng giá trị số lượng
+            counter.textContent = currentValue; // Cập nhật số lượng trên giao diện
+            updateTotalPrice(currentValue);
         });
+
+        // Hàm cập nhật tổng giá sản phẩm dựa trên số lượng và topping
+        function updateTotalPrice(quantity) {
+            let totalToppingPrice = calculateTotalToppingPrice(); // Tính tổng giá của các topping đã chọn
+            let totalPrice = basePrice * quantity + totalToppingPrice; // Tính tổng giá sản phẩm
+            document.getElementById('mainProductPrice').textContent = totalPrice.toLocaleString('vi-VN') + ' .000 đ'; // Hiển thị giá sản phẩm
+        }
+
+        // Hàm tính tổng giá của các topping đã chọn
+        function calculateTotalToppingPrice() {
+            let totalToppingPrice = 0;
+            document.querySelectorAll('.topping-checkbox:checked').forEach(function (item) {
+                let price = parseFloat(item.getAttribute('data-price'));
+                totalToppingPrice += price;
+            });
+            return totalToppingPrice;
+        }
+
     });
     function getCurrentSize(productId) {
         if (productId % 3 === 1) {
@@ -337,6 +380,26 @@
         const newUrl = urlParts.join('/');
         window.location.href = newUrl;
     }
+    // Hàm cập nhật chi tiết topping khi thay đổi
+    function updateToppingDetails() {
+        var selectedToppingNames = [];
+        var totalToppingPrice = 0;
+        var quantity = parseInt(counter.textContent, 10); // Lấy số lượng hiện tại
+
+        document.querySelectorAll('.topping-checkbox:checked').forEach(function (item) {
+            selectedToppingNames.push(item.getAttribute('data-name'));
+            var price = parseFloat(item.getAttribute('data-price'));
+            totalToppingPrice += price * 1; // Nhân giá của từng topping cho số lượng
+        });
+
+        document.getElementById('Name_Topping').innerText = selectedToppingNames.join(', ');
+
+        var basePrice = parseFloat(document.getElementById('mainProductPrice').getAttribute('data-base-price'));
+        var totalPrice = basePrice * quantity + totalToppingPrice; // Tính tổng giá sản phẩm
+        document.getElementById('mainProductPrice').innerText = totalPrice.toLocaleString('vi-VN') + ' .000 đ'; // Hiển thị giá sản phẩm
+    }
+
+
 
 
 </script>
