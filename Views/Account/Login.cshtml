@@ -1,40 +1,37 @@
+@model HUFLITCOFFEE.ViewModels.LoginViewModel
 <link rel="stylesheet" href="~/css/Login.css">
 <div class="Login_container">
-    <form action="action_page.php" method="post">
+    <form asp-action="Login" asp-controller="Account" method="post">
         <div class="Login_imgcontainer">
             <img src="~/images/LogoCoffeeHouse.jpg" alt="Avatar" class="Login_avatar">
             <h4>ĐĂNG NHẬP</h4>
             <p class="Login_greeting">TheCoffee xin chào!</p>
         </div>
 
-        <div style="width:90%;align-items: center; margin-left:10px">
-            <div class="Login_innercontainer">
-                <!--       <label for="Phone"><b>Phone Number</b></label> -->
-                <div class="Login_input-container">
-                    <img src="https://w7.pngwing.com/pngs/768/505/png-transparent-mobile-phones-telephone-handset-computer-icons-icon-telefon-text-telephone-call-hand-thumbnail.png"
-                        alt="Phone Icon" class="Login_icon">
-                    <input class="Login_input-container_input" type="text" placeholder="Số điện thoại: " name="uname"
-                        required>
-                </div>
-
-                <!--       <label for="psw"><b>Password</b></label> -->
-                <div class="Login_input-container">
-                    <img src="https://w7.pngwing.com/pngs/975/821/png-transparent-password-manager-computer-icons-password-strength-password-safe-chang-miscellaneous-password-strength-password-safe-thumbnail.png"
-                        alt="Password Icon" class="Login_icon">
-                    <input type="password" placeholder="Enter Password" name="psw" required style="border-radius:20px;">
-                </div>
-            </div>
-            <div style="width:100%; display:flex; flex-direction:column; justify-content: center; align-items: center;">
-                <button type="submit" style="width:40%">Đăng Nhập</button>
-                <a class="Login_psw" href="#">Bạn quên mật khẩu?</a>
-                <hr>
-                <a href="/register" class="Login_cancelbtn"
-                    style="display:inline-block; padding:10px 20px; background-color:#FAFAD2; color:black; text-align:center; border:none; border-radius:20px; text-decoration:none;">Tạo
-                    Tài khoản</a>
+        <div class="Login_innercontainer">
+            <div class="Login_input-container">
+                <img src="https://w7.pngwing.com/pngs/768/505/png-transparent-mobile-phones-telephone-handset-computer-icons-icon-telefon-text-telephone-call-hand-thumbnail.png"
+                    alt="Phone Icon" class="Login_icon">
+                <input asp-for="Email" style="padding:10px 20px ;width:100%" class="Login_input-container_input"
+                    placeholder="Email" required>
+                <span asp-validation-for="Email" class="text-danger"></span>
             </div>
 
+            <div class="Login_input-container">
+                <img src="https://w7.pngwing.com/pngs/975/821/png-transparent-password-manager-computer-icons-password-strength-password-safe-chang-miscellaneous-password-strength-password-safe-thumbnail.png"
+                    alt="Password Icon" class="Login_icon">
+                <input asp-for="Password" type="password" class="Login_input-container_input" placeholder="Mật khẩu"
+                    required>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
 
+            <button type="submit">Đăng Nhập</button>
 
+            <a class="Login_psw" href="#">Bạn quên mật khẩu?</a>
+            <hr>
+            <div class="Register" style="width: 50%;margin:auto">
+                <a href="/register" class="Login_cancelbtn">Tạo Tài khoản</a>
+            </div>
         </div>
     </form>
 </div>
