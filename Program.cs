@@ -2,18 +2,37 @@ using HUFLITCOFFEE.web.Data;
 using HUFLITCOFFEE.Models.Main;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Authentication.Cookies;
+
 var builder = WebApplication.CreateBuilder(args);
 
+// Thêm DbContext
+builder.Services.AddDbContext<HuflitcoffeeContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<HuflitcoffeeContext>(options =>
-    {
-        options.UseSqlServer(builder.Configuration.GetConnectionString("CoffeeDBConnectionString"));
-        options.EnableSensitiveDataLogging(false);
-    }
-);
 
-// config session
+builder.Services.AddDbContext<HuflitcoffeeContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CoffeeDBConnectionString"));
+    options.EnableSensitiveDataLogging(false);
+});
+
+// Cấu hình xác thực
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.Cookie.HttpOnly = true;
+        options.Cookie.SameSite = SameSiteMode.Strict;
+        options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
+        options.LoginPath = "/Account/Login";
+        options.LogoutPath = "/Account/Logout";
+        options.AccessDeniedPath = "/Account/AccessDenied";
+    });
+
+builder.Services.AddControllersWithViews();
+
+// Cấu hình session
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
@@ -26,18 +45,22 @@ JsonConvert.DefaultSettings = () => new JsonSerializerSettings
     Formatting = Formatting.Indented,
     ReferenceLoopHandling = ReferenceLoopHandling.Ignore
 };
+
 var app = builder.Build();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
 }
+
+app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
@@ -167,34 +190,14 @@ app.MapControllerRoute(
     pattern: "/profile",
     defaults: new { controller = "Account", action = "Profile" }
 );
-// tổng quan admin
 app.MapControllerRoute(
 name: " Admin faffafaf",
 pattern: "/admin",
-defaults: new { controller = "Admin", action = "Index" }
+defaults: new { controller = "Role", action = "Admin" }
 );
-// đơn hàng admin
 app.MapControllerRoute(
-name: "AdminOrder",
-pattern: "/adminorder",
-defaults: new { controller = "Admin", action = "AdminOrder" }
-);
-// giao hàng admin
-app.MapControllerRoute(
-name: "AdminDelivery",
-pattern: "/admindelivery",
-defaults: new { controller = "Admin", action = "AdminDelivery" }
-);
-// sản phẩm admin
-app.MapControllerRoute(
-name: "AdminProduct",
-pattern: "/adminproduct",
-defaults: new { controller = "Admin", action = "AdminProduct" }
-);
-// khách hàng admin
-app.MapControllerRoute(
-name: "AdminCustomer",
-pattern: "/admincustomer",
-defaults: new { controller = "Admin", action = "AdminCustomer" }
+name: " Role User faffafaf",
+pattern: "/user",
+defaults: new { controller = "Role", action = "Customer" }
 );
 app.Run();

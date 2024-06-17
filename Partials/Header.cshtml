@@ -33,18 +33,20 @@
                 loading="lazy" alt="Logo Shop " title="Shopping cart " width="64" height="64">
         </div>
         <div class="Home_register_cart">
-            @if (ViewBag.Phone != null)
+            @if (User.Identity.IsAuthenticated)
             {
                 <div>
                     <span style="color:#000;text-decoration: none;">
-                        Welcome, @ViewBag.Phone
+                        Welcome, @User.Identity.Name
                     </span>
                 </div>
+
+
             }
             else
             {
                 <div>
-                    <a id="Homepage_login" href="/login" style="color:#000;text-decoration: none;">
+                    <a id="Homepage_login" href="/Account/Login" style="color:#000;text-decoration: none;">
                         Đăng nhập
                     </a>
                 </div>
