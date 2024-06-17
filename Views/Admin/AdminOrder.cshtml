@@ -1,0 +1,228 @@
+<link rel="stylesheet" href="~/css/admin.css">
+<div class="Admin_vertical_all">
+    <div class="Admin_toolbar">
+        <h1 style="text-align: center;">Coffee</h1>
+        <ul class="Admin_list_toolbar">
+            <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/2550/2550264.png"
+                    loading="lazy" alt="Home " title="Home " width="20" height="20"> <span id="Admin_overview"><a
+                        href="/admin">Tổng
+                        quan</a></span> </li>
+            <li class="Admin_list_toolbar_item"> <img src="https://cdn-icons-png.flaticon.com/128/888/888034.png"
+                    loading="lazy" alt="Document " title="Document " width="20" height="20">
+                <Span id="Admin_order"><a href="/admin/adminorder">Đơn hàng</a></Span> <img
+                    src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
+                    title="Right arrow " width="10" height="10">
+            </li>
+            <li class="Admin_list_toolbar_item"> <img src="https://cdn-icons-png.flaticon.com/128/3128/3128841.png"
+                    loading="lazy" alt="Motorbike " title="Motorbike " width="20" height="20">
+                <span id="Admin_transport"><a href="/admin/admindelivery">Giao hàng</a></span> <img
+                    src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
+                    title="Right arrow " width="10" height="10">
+            </li>
+            <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/679/679720.png"
+                    loading="lazy" alt="Box " title="Box " width="20" height="20"><span id="Admin_product"><a
+                        href="/admin/adminproduct">Sản
+                        phẩm</a></span> <img src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy"
+                    alt="Right arrow " title="Right arrow " width="10" height="10"></li>
+            <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/1077/1077063.png"
+                    loading="lazy" alt="User " title="User " width="20" height="20"><span id="Admin_customer"><a
+                        href="/admin/admincustomer">Khách
+                        hàng</a></span> <img src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy"
+                    alt="Right arrow " title="Right arrow " width="10" height="10"></li>
+            <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/2329/2329087.png"
+                    loading="lazy" alt="Dashboard " title="Dashboard " width="20" height="20">Báo cáo <img
+                    src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
+                    title="Right arrow " width="10" height="10"></li>
+            <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/702/702455.png"
+                    loading="lazy" alt="Warehouse " title="Warehouse " width="20" height="20">Kho <img
+                    src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
+                    title="Right arrow " width="10" height="10"></li>
+            <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/5402/5402931.png"
+                    loading="lazy" alt="Recipe book " title="Recipe book " width="20" height="20">Công thức <img
+                    src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
+                    title="Right arrow " width="10" height="10"></li>
+        </ul>
+    </div>
+    @* đơn hàng *@
+    <div class="Admin_view_screen_order">
+        <div class="Admin_view_tilter">
+            <div>Đơn hàng</div>
+            <div class="Admin_name_user">
+                <Span style="text-decoration: underline;">Tên tài khoản
+                </Span>
+                <a style="color: red;">(Đăng xuất)</a>
+            </div>
+        </div>
+
+        <div Class="Admin_status_order">
+            <div Class="Admin_status_title"> Đơn hàng chờ xử lý</div>
+            <div Class="Admin_content_status" style="border-bottom:1px solid #ccc;">
+                <div Class="Admin_content_status_tem">
+                    <img src="https://cdn-icons-png.flaticon.com/128/833/833602.png" loading="lazy" alt="Wall clock "
+                        title="Wall clock " width="30" height="30"> Chờ duyệt
+                </div>
+                <span style="border-right:1px solid #ccc;"></span>
+                <div Class="Admin_content_status_tem">
+                    <img src="https://cdn-icons-png.flaticon.com/128/411/411760.png" loading="lazy" alt="Delivery "
+                        title="Delivery " width="30" height="30"> Đang giao hàng
+                </div>
+            </div>
+            <div Class="Admin_content_status">
+                <div Class="Admin_content_status_tem">
+                    <img src="https://cdn-icons-png.flaticon.com/128/4213/4213181.png" loading="lazy"
+                        alt="Pay per click " title="Pay per click " width="30" height="30"> Chờ thanh toán
+                </div>
+                <span style="border-right:1px solid #ccc;"></span>
+                <div Class="Admin_content_status_tem">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3503/3503607.png" loading="lazy" alt="Calendar "
+                        title="Calendar " width="30" height="30"> Đơn giờ hẹn
+                </div>
+            </div>
+        </div>
+        <div class="Admin_result">
+            <div class="Admin_result_title">Danh sách đơn hàng</div>
+            <div>
+                <table Class="Admin_content_result_order">
+                    <thead style="background-color: #ccc;">
+                        <tr>
+                            <th>Mã đơn hàng</th>
+                            <th>Ngày tạo đơn</th>
+                            <th>Tên khách hàng</th>
+                            <th>Trạng thái đơn hàng</th>
+                            <th>Khách phải trả</th>
+                            <th>Trạng thái thanh toán</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Huflit01</td>
+                            <td>1/05/2024 8:34</td>
+                            <td>Hồng Hữu</td>
+                            <td>
+                                <div
+                                    style="background-color: #8b8484;border-radius: 5px;width:50%;margin: auto;color:rgb(114, 215, 114)">
+                                    Hoàn
+                                    thành</div>
+                            </td>
+                            <td>150.000đ</td>
+                            <td><img src="https://cdn-icons-png.flaticon.com/128/5291/5291043.png" loading="lazy"
+                                    alt="Check mark " title="Check mark " width="20" height="20"></td>
+                        </tr>
+                        <tr>
+                            <td>Huflit02</td>
+                            <td>1/05/2024 9:25</td>
+                            <td>Gia Bảo</td>
+                            <td>
+                                <div
+                                    style="background-color: #8b8484;border-radius: 5px;width:50%;margin: auto;color:rgb(114, 215, 114)">
+                                    Hoàn
+                                    thành</div>
+                            </td>
+                            <td>300.000đ</td>
+                            <td><img src="https://cdn-icons-png.flaticon.com/128/5291/5291043.png" loading="lazy"
+                                    alt="Check mark " title="Check mark " width="20" height="20"></td>
+                        </tr>
+                        <tr>
+                            <td>Huflit03</td>
+                            <td>1/05/2024 9:25</td>
+                            <td>Nhất Linh</td>
+                            <td>
+                                <div
+                                    style="background-color: #8b8484;border-radius: 5px;width:50%;margin: auto;color:rgb(114, 215, 114)">
+                                    Hoàn
+                                    thành</div>
+                            </td>
+                            <td>250.000đ</td>
+                            <td><img src="https://cdn-icons-png.flaticon.com/128/5291/5291043.png" loading="lazy"
+                                    alt="Check mark " title="Check mark " width="20" height="20"></td>
+                        </tr>
+                        <tr>
+                            <td>Huflit04</td>
+                            <td>1/05/2024 9:25</td>
+                            <td>Minh Tiến</td>
+                            <td>
+                                <div
+                                    style="background-color: #8b8484;border-radius: 5px;width:50%;margin: auto;color:rgb(114, 215, 114)">
+                                    Hoàn
+                                    thành</div>
+                            </td>
+                            <td>140.000đ</td>
+                            <td><img src="https://cdn-icons-png.flaticon.com/128/5291/5291043.png" loading="lazy"
+                                    alt="Check mark " title="Check mark " width="20" height="20"></td>
+                        </tr>
+                        <tr>
+                            <td>Huflit05</td>
+                            <td>1/05/2024 9:25</td>
+                            <td>Anh Quân</td>
+                            <td>
+                                <div
+                                    style="background-color: #8b8484;border-radius: 5px;width:50%;margin: auto;color:rgb(114, 215, 114)">
+                                    Hoàn
+                                    thành</div>
+                            </td>
+                            <td>600.000đ</td>
+                            <td><img src="https://cdn-icons-png.flaticon.com/128/5291/5291043.png" loading="lazy"
+                                    alt="Check mark " title="Check mark " width="20" height="20"></td>
+                        </tr>
+                        <tr>
+                            <td>Huflit06</td>
+                            <td>1/05/2024 9:25</td>
+                            <td>Anh Khoa</td>
+                            <td>
+                                <div
+                                    style="background-color: #8b8484;border-radius: 5px;width:50%;margin: auto;color:rgb(114, 215, 114)">
+                                    Hoàn
+                                    thành</div>
+                            </td>
+                            <td>780.000đ</td>
+                            <td><img src="https://cdn-icons-png.flaticon.com/128/5291/5291043.png" loading="lazy"
+                                    alt="Check mark " title="Check mark " width="20" height="20"></td>
+                        </tr>
+                        <tr>
+                            <td>Huflit07</td>
+                            <td>1/05/2024 9:25</td>
+                            <td>Trần Kha</td>
+                            <td>
+                                <div
+                                    style="background-color: #8b8484;border-radius: 5px;width:50%;margin: auto;color:rgb(114, 215, 114)">
+                                    Hoàn
+                                    thành</div>
+                            </td>
+                            <td>100.000đ</td>
+                            <td><img src="https://cdn-icons-png.flaticon.com/128/5291/5291043.png" loading="lazy"
+                                    alt="Check mark " title="Check mark " width="20" height="20"></td>
+                        </tr>
+                        <tr>
+                            <td>Huflit08</td>
+                            <td>1/05/2024 9:25</td>
+                            <td>Kim Lân</td>
+                            <td>
+                                <div
+                                    style="background-color: #8b8484;border-radius: 5px;width:50%;margin: auto;color:rgb(114, 215, 114)">
+                                    Chưa
+                                    hoàn
+                                    thành</div>
+                            </td>
+                            <td>100.000.000đ</td>
+                            <td><img src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png" loading="lazy"
+                                    alt="Close " title="Close " width="20" height="20"></td>
+                        </tr>
+                        <tr>
+                            <td>Huflit09</td>
+                            <td>1/05/2024 9:25</td>
+                            <td>Việt Mỹ</td>
+                            <td>
+                                <div
+                                    style="background-color: #d2a7b6;border-radius: 5px;width:50%;margin: auto;color:rgb(211, 47, 121)">
+                                    Đặt hàng</div>
+                            </td>
+                            <td>170.000đ</td>
+                            <td><img src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png" loading="lazy"
+                                    alt="Close " title="Close " width="20" height="20"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
