@@ -19,7 +19,6 @@
 }
 .Admin_view_screen_order {
    width: 90%;
-   display: none;
 }
 .Admin_view_tilter {
    display: flex;
@@ -82,11 +81,10 @@
 }
 .Admin_view_screen_transport {
    width: 90%;
-   display: none;
 }
 .Admin_product {
    width: 90%;
-   display: none;
+   position: relative;
 }
 .Admin_product_title {
    font-size: 25px;
@@ -103,6 +101,80 @@ td {
    padding: 8px;
    text-align: center;
 }
-.Admin_customer {
+.Admin_product_add_hidden {
+   border: 2px solid black;
+   padding: 20px;
+   border-radius: 10px;
+   width: 60%;
+   position: absolute;
+   background-color: #fff;
+   left: 20%;
    display: none;
+}
+.Admin_product_add_hidden_Row1 {
+   display: flex;
+   justify-content: space-between;
+   padding: 10px;
+}
+.Admin_product_add_hidden_Row2 {
+   display: flex;
+   padding: 10px;
+}
+.Admin_product_add_hidden_add_image {
+   padding: 40px;
+   border: 1px solid black;
+   border-radius: 10px;
+   box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.3);
+   height: 50%;
+}
+.Admin_add_detail_product {
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+.Admin_product_add_hidden_detail {
+   display: flex;
+   gap: 20px;
+   width: 100%;
+}
+.Admin_product_add_hidden_Row3 {
+   display: flex;
+   justify-content: end;
+   gap: 20px;
+}
+.Admin_save,
+.Admin_cancel {
+   padding: 5px 40px;
+   border-radius: 10px;
+}
+.Admin_save {
+   border: 1px solid #3fd786;
+   color: #3fd786;
+}
+.Admin_cancel {
+   border: 1px solid #d53e2a;
+   color: #d53e2a;
+}
+@media (max-width: 1201px) {
+   .Admin_product_add_hidden {
+      width: 80%;
+      left: 10%;
+   }
+}
+.Admin_Processing_section {
+   display: flex;
+   gap: 10px;
+}
+.Admin_delete,
+.Admin_edit {
+   padding: 10px;
+}
+.Admin_edit {
+   border: 1px solid #3fd786;
+   color: #3fd786;
+}
+.Admin_delete {
+   border: 1px solid #d53e2a;
+   color: #d53e2a;
 }

@@ -42,6 +42,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/HUFLITCOFFEE/Views/Admin/AdminCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5DdXN0b21lci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUFLITCOFFEE/Views/Admin/AdminDelivery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5EZWxpdmVyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUFLITCOFFEE/Views/Admin/AdminOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5PcmRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUFLITCOFFEE/Views/Admin/AdminProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5Qcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HUFLITCOFFEE/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/HUFLITCOFFEE/Views/Home/Aboutus.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dHVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -100,10 +120,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/HUFLITCOFFEE/Views/Product/Shipping.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxTaGlwcGluZy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/HUFLITCOFFEE/Views/Role/Admin.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/HUFLITCOFFEE/Views/Shared/Error.cshtml]

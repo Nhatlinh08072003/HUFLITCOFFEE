@@ -167,14 +167,34 @@ app.MapControllerRoute(
     pattern: "/profile",
     defaults: new { controller = "Account", action = "Profile" }
 );
+// tổng quan admin
 app.MapControllerRoute(
 name: " Admin faffafaf",
 pattern: "/admin",
-defaults: new { controller = "Role", action = "Admin" }
+defaults: new { controller = "Admin", action = "Index" }
 );
+// đơn hàng admin
 app.MapControllerRoute(
-name: " Role User faffafaf",
-pattern: "/user",
-defaults: new { controller = "Role", action = "Customer" }
+name: "AdminOrder",
+pattern: "/adminorder",
+defaults: new { controller = "Admin", action = "AdminOrder" }
+);
+// giao hàng admin
+app.MapControllerRoute(
+name: "AdminDelivery",
+pattern: "/admindelivery",
+defaults: new { controller = "Admin", action = "AdminDelivery" }
+);
+// sản phẩm admin
+app.MapControllerRoute(
+name: "AdminProduct",
+pattern: "/adminproduct",
+defaults: new { controller = "Admin", action = "AdminProduct" }
+);
+// khách hàng admin
+app.MapControllerRoute(
+name: "AdminCustomer",
+pattern: "/admincustomer",
+defaults: new { controller = "Admin", action = "AdminCustomer" }
 );
 app.Run();

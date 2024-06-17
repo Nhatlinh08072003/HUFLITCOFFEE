@@ -1,0 +1,186 @@
+@model List<HUFLITCOFFEE.Models.Main.Product>;
+@{
+    string curPage = ViewBag.CurPage;
+}
+<link rel="stylesheet" href="~/css/admin.css">
+<div class="Admin_vertical_all">
+    <div class="Admin_toolbar">
+        <h1 style="text-align: center;">Coffee</h1>
+        <ul class="Admin_list_toolbar">
+            <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/2550/2550264.png"
+                    loading="lazy" alt="Home " title="Home " width="20" height="20"> <span id="Admin_overview"><a
+                        href="/admin">Tổng
+                        quan</a></span> </li>
+            <li class="Admin_list_toolbar_item"> <img src="https://cdn-icons-png.flaticon.com/128/888/888034.png"
+                    loading="lazy" alt="Document " title="Document " width="20" height="20">
+                <Span id="Admin_order"><a href="/admin/adminorder">Đơn hàng</a></Span> <img
+                    src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
+                    title="Right arrow " width="10" height="10">
+            </li>
+            <li class="Admin_list_toolbar_item"> <img src="https://cdn-icons-png.flaticon.com/128/3128/3128841.png"
+                    loading="lazy" alt="Motorbike " title="Motorbike " width="20" height="20">
+                <span id="Admin_transport"><a href="/admin/admindelivery">Giao hàng</a></span> <img
+                    src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
+                    title="Right arrow " width="10" height="10">
+            </li>
+            <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/679/679720.png"
+                    loading="lazy" alt="Box " title="Box " width="20" height="20"><span id="Admin_product"><a
+                        href="/admin/adminproduct">Sản
+                        phẩm</a></span> <img src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy"
+                    alt="Right arrow " title="Right arrow " width="10" height="10"></li>
+            <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/1077/1077063.png"
+                    loading="lazy" alt="User " title="User " width="20" height="20"><span id="Admin_customer"><a
+                        href="/admin/admincustomer">Khách
+                        hàng</a></span> <img src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy"
+                    alt="Right arrow " title="Right arrow " width="10" height="10"></li>
+            <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/2329/2329087.png"
+                    loading="lazy" alt="Dashboard " title="Dashboard " width="20" height="20">Báo cáo <img
+                    src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
+                    title="Right arrow " width="10" height="10"></li>
+            <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/702/702455.png"
+                    loading="lazy" alt="Warehouse " title="Warehouse " width="20" height="20">Kho <img
+                    src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
+                    title="Right arrow " width="10" height="10"></li>
+            <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/5402/5402931.png"
+                    loading="lazy" alt="Recipe book " title="Recipe book " width="20" height="20">Công thức <img
+                    src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
+                    title="Right arrow " width="10" height="10"></li>
+        </ul>
+    </div>
+    @* Sản Phẩm *@
+    <div Class="Admin_product" style="padding: 30px;">
+        @* Bảng Nhập Sản Phẩm *@
+        <div class="Admin_product_add_hidden">
+            <div class="Admin_product_add_hidden_Row1">
+                <div>
+                    Thêm ảnh sản phẩm
+                </div>
+                <div id="Add_product_close">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png" loading="lazy" alt="Close "
+                        title="Close " width="20" height="20">
+                </div>
+            </div>
+            <div class=Admin_product_add_hidden_Row2>
+                <div class="Admin_product_add_hidden_add_image">
+                    <img src="https://cdn-icons-png.flaticon.com/128/992/992651.png" loading="lazy" alt="Add "
+                        title="Add " width="30" height="30">
+                </div>
+                <div class="Admin_add_detail_product">
+                    <div class="Admin_product_add_hidden_detail">
+                        <div>
+                            Mã sản phẩm
+                        </div>
+                        <div>
+                            <input type="text" name="product_code" placeholder="Nhập mã sản phẩm">
+                        </div>
+                        <div>
+                            Giá sản phẩm
+                        </div>
+                        <div>
+                            <input type="text" name="product_price" placeholder="Nhập giá sản phẩm">
+                        </div>
+                    </div>
+                    <div class="Admin_product_add_hidden_detail">
+                        <div>
+                            Tên sản phẩm
+                        </div>
+                        <div>
+                            <input type="text" name="product_name" placeholder="Nhập tên sản phẩm">
+                        </div>
+                        <div>
+                            Size
+                        </div>
+                        <div>
+                            <input type="text" name="product_size" placeholder="Nhập size sản phẩm">
+                        </div>
+
+                    </div>
+                    <div class="Admin_product_add_hidden_detail">
+                        <div>
+                            Tên danh mục sản phẩm
+                        </div>
+                        <div style="width:40%">
+                            <input type="text" name="product_category" placeholder="Nhập tên danh mục sản phẩm"
+                                style="width:100%">
+                        </div>
+                    </div>
+                    <div class="Admin_product_add_hidden_detail">
+                        <div>
+                            Mô tả sản phẩm
+                        </div>
+                        <div style="width:100%">
+                            <textarea name="product_description" placeholder="Nhập mô tả sản phẩm"
+                                style="width:100%;height: 50px;"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Admin_product_add_hidden_Row3">
+                <div>
+                    <button Class="Admin_save">Lưu</button>
+                </div>
+                <div>
+                    <button Class="Admin_cancel">Hủy</button>
+                </div>
+            </div>
+        </div>
+        @* Bảng Nhập Sản Phẩm *@
+        <div style="border: 1px solid black; border-radius: 5px;">
+            <div style="display: flex; justify-content: space-between; padding:10px">
+                <div Class="Admin_product_title"> Danh Sách Sản Phẩm</div>
+                <div id="Add_product_icon"><img src="https://cdn-icons-png.flaticon.com/128/9641/9641897.png"
+                        data-src="https://cdn-icons-png.flaticon.com/128/9641/9641897.png" alt="Plus" title="Plus"
+                        width="50" height="50" class="lzy lazyload--done"
+                        srcset="https://cdn-icons-png.flaticon.com/128/9641/9641897.png 4x"></div>
+            </div>
+            <table Class="Admin_content_result_order">
+                <thead style="background-color: #ccc;">
+                    <tr>
+                        <th>Mã sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Hình ảnh sản phẩm</th>
+                        <th>Giá sản phẩm</th>
+                        <th>Mô tả sản phẩm</th>
+                        <th>Size</th>
+                        <th>Tên Danh mục sản phẩm</th>
+                        <th>Processing section</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Count > 0)
+                    {
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ProductId</td>
+                                <td>@item.NameProduct</td>
+                                <td><img class=" lazyloaded" src="@item.ImgProduct" width="100px" style="border-radius: 10px">
+                                </td>
+                                <td>@item.PriceProduct đ</td>
+                                <td>@item.DescriptionProduct</td>
+                                <td>@item.Dvt</td>
+                                <td>@item.NameCategory</td>
+                                <td>
+                                    <div class="Admin_Processing_section"><button class="Admin_delete">Delete</button>
+                                        <button class="Admin_edit">Edit</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById('Add_product_icon').addEventListener('click', function () {
+        var hiddenForm = document.querySelector('.Admin_product_add_hidden');
+        hiddenForm.style.display = 'block';
+    });
+
+    document.getElementById('Add_product_close').addEventListener('click', function () {
+        var hiddenForm = document.querySelector('.Admin_product_add_hidden');
+        hiddenForm.style.display = 'none';
+    });
+</script>
