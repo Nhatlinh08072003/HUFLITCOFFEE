@@ -33,7 +33,7 @@
                 loading="lazy" alt="Logo Shop " title="Shopping cart " width="64" height="64">
         </div>
         <div class="Home_register_cart">
-            @if (User.Identity.IsAuthenticated)
+            @if (User.Identity != null && User.Identity.IsAuthenticated)
             {
                 <div>
                     <span style="color:#000;text-decoration: none;">

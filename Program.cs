@@ -6,10 +6,6 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Thêm DbContext
-builder.Services.AddDbContext<HuflitcoffeeContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<HuflitcoffeeContext>(options =>

@@ -33,7 +33,7 @@ namespace HUFLITCOFFEE.Controllers
                 var user = await _context.Users
                     .FirstOrDefaultAsync(u => u.Email == model.Email && u.PasswordHash == model.Password);
 
-                if (user != null)
+                if (user != null && user.Username != null && user.Email != null)
                 {
                     var claims = new List<Claim>
                     {

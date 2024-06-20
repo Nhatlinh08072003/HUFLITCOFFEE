@@ -143,16 +143,16 @@ td {
    justify-content: end;
    gap: 20px;
 }
-.Admin_save,
-.Admin_cancel {
+#Admin_save,
+#Admin_cancel {
    padding: 5px 40px;
    border-radius: 10px;
 }
-.Admin_save {
+#Admin_save {
    border: 1px solid #3fd786;
    color: #3fd786;
 }
-.Admin_cancel {
+#Admin_cancel {
    border: 1px solid #d53e2a;
    color: #d53e2a;
 }
@@ -166,15 +166,15 @@ td {
    display: flex;
    gap: 10px;
 }
-.Admin_delete,
-.Admin_edit {
+#Admin_delete,
+#Admin_edit {
    padding: 10px;
 }
-.Admin_edit {
+#Admin_edit {
    border: 1px solid #3fd786;
    color: #3fd786;
 }
-.Admin_delete {
+#Admin_delete {
    border: 1px solid #d53e2a;
    color: #d53e2a;
 }
