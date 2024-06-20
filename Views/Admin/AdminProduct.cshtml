@@ -50,80 +50,53 @@
     @* Sản Phẩm *@
     <div Class="Admin_product" style="padding: 30px;">
         @* Bảng Nhập Sản Phẩm *@
-        <div class="Admin_product_add_hidden">
-            <div class="Admin_product_add_hidden_Row1">
-                <div>
-                    Thêm ảnh sản phẩm
+        <form id="addProductForm" method="post" enctype="multipart/form-data" action="/admin/addproduct">
+            <div class="Admin_product_add_hidden">
+                <input type="file" id="uploadImageInput" name="product_image" style="display: none;">
+                <div class="Admin_product_add_hidden_Row1">
+                    <div>Thêm ảnh sản phẩm</div>
+                    <div id="Add_product_close">
+                        <img src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png" loading="lazy" alt="Close"
+                            title="Close" width="20" height="20">
+                    </div>
                 </div>
-                <div id="Add_product_close">
-                    <img src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png" loading="lazy" alt="Close "
-                        title="Close " width="20" height="20">
+                <div class="Admin_product_add_hidden_Row2">
+                    <div class="Admin_product_add_hidden_add_image">
+                        <img src="https://cdn-icons-png.flaticon.com/128/992/992651.png" loading="lazy" alt="Add"
+                            title="Add" width="30" height="30" id="addImageIcon">
+                    </div>
+                    <div class="Admin_add_detail_product">
+                        <div class="Admin_product_add_hidden_detail">
+                            <div>ID danh mục sản phẩm
+                            </div>
+                            <div><input type="text" name="IdCagory" placeholder="Nhập id danh mục sản phẩm"></div>
+                            <div>Giá sản phẩm</div>
+                            <div><input type="text" name="product_price" placeholder="Nhập giá sản phẩm"></div>
+                        </div>
+                        <div class="Admin_product_add_hidden_detail">
+                            <div>Tên sản phẩm</div>
+                            <div><input type="text" name="product_name" placeholder="Nhập tên sản phẩm"></div>
+                            <div>Size</div>
+                            <div><input type="text" name="product_size" placeholder="Nhập size sản phẩm"></div>
+                        </div>
+                        <div class="Admin_product_add_hidden_detail">
+                            <div>Tên danh mục sản phẩm</div>
+                            <div style="width:40%"><input type="text" name="product_category"
+                                    placeholder="Nhập tên danh mục sản phẩm" style="width:100%"></div>
+                        </div>
+                        <div class="Admin_product_add_hidden_detail">
+                            <div>Mô tả sản phẩm</div>
+                            <div style="width:100%"><textarea name="product_description"
+                                    placeholder="Nhập mô tả sản phẩm" style="width:100%;height: 50px;"></textarea></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Admin_product_add_hidden_Row3">
+                    <div><button type="submit" id="Admin_save">Lưu</button></div>
+                    <div><button type="button" id="Admin_cancel">Hủy</button></div>
                 </div>
             </div>
-            <div class=Admin_product_add_hidden_Row2>
-                <div class="Admin_product_add_hidden_add_image">
-                    <img src="https://cdn-icons-png.flaticon.com/128/992/992651.png" loading="lazy" alt="Add "
-                        title="Add " width="30" height="30">
-                </div>
-                <div class="Admin_add_detail_product">
-                    <div class="Admin_product_add_hidden_detail">
-                        <div>
-                            Mã sản phẩm
-                        </div>
-                        <div>
-                            <input type="text" name="product_code" placeholder="Nhập mã sản phẩm">
-                        </div>
-                        <div>
-                            Giá sản phẩm
-                        </div>
-                        <div>
-                            <input type="text" name="product_price" placeholder="Nhập giá sản phẩm">
-                        </div>
-                    </div>
-                    <div class="Admin_product_add_hidden_detail">
-                        <div>
-                            Tên sản phẩm
-                        </div>
-                        <div>
-                            <input type="text" name="product_name" placeholder="Nhập tên sản phẩm">
-                        </div>
-                        <div>
-                            Size
-                        </div>
-                        <div>
-                            <input type="text" name="product_size" placeholder="Nhập size sản phẩm">
-                        </div>
-
-                    </div>
-                    <div class="Admin_product_add_hidden_detail">
-                        <div>
-                            Tên danh mục sản phẩm
-                        </div>
-                        <div style="width:40%">
-                            <input type="text" name="product_category" placeholder="Nhập tên danh mục sản phẩm"
-                                style="width:100%">
-                        </div>
-                    </div>
-                    <div class="Admin_product_add_hidden_detail">
-                        <div>
-                            Mô tả sản phẩm
-                        </div>
-                        <div style="width:100%">
-                            <textarea name="product_description" placeholder="Nhập mô tả sản phẩm"
-                                style="width:100%;height: 50px;"></textarea>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="Admin_product_add_hidden_Row3">
-                <div>
-                    <button Class="Admin_save">Lưu</button>
-                </div>
-                <div>
-                    <button Class="Admin_cancel">Hủy</button>
-                </div>
-            </div>
-        </div>
+        </form>
         @* Bảng Nhập Sản Phẩm *@
         <div style="border: 1px solid black; border-radius: 5px;">
             <div style="display: flex; justify-content: space-between; padding:10px">
@@ -161,8 +134,8 @@
                                 <td>@item.Dvt</td>
                                 <td>@item.NameCategory</td>
                                 <td>
-                                    <div class="Admin_Processing_section"><button class="Admin_delete">Delete</button>
-                                        <button class="Admin_edit">Edit</button>
+                                    <div class="Admin_Processing_section"><button id="Admin_delete">Delete</button>
+                                        <button id="Admin_edit">Edit</button>
                                     </div>
                                 </td>
                             </tr>
@@ -182,5 +155,61 @@
     document.getElementById('Add_product_close').addEventListener('click', function () {
         var hiddenForm = document.querySelector('.Admin_product_add_hidden');
         hiddenForm.style.display = 'none';
+    });
+
+    document.getElementById('addImageIcon').addEventListener('click', function () {
+        document.getElementById('uploadImageInput').click();
+    });
+
+    // Xử lý sự kiện khi người dùng chọn hình ảnh từ máy tính
+    document.getElementById('uploadImageInput').addEventListener('change', function (event) {
+        var file = event.target.files[0]; // Lấy file hình ảnh từ sự kiện
+
+        if (file) {
+            var reader = new FileReader(); // Tạo đối tượng FileReader để đọc file
+
+            reader.onload = function (e) {
+                // Khi file đã được đọc thành công
+                var imageSrc = e.target.result; // Lấy đường dẫn base64 của hình ảnh
+
+                // Hiển thị hình ảnh đã chọn lên biểu tượng "Add image"
+                var addImageIcon = document.getElementById('addImageIcon');
+                addImageIcon.src = imageSrc; // Thay đổi thuộc tính src của thẻ img để hiển thị hình ảnh mới
+                addImageIcon.width = 100; // Thay đổi chiều rộng của ảnh
+                addImageIcon.height = 100; // Thay đổi chiều cao của ảnh
+            };
+
+            reader.readAsDataURL(file); // Đọc file dưới dạng data URL (base64)
+        }
+    });
+    document.getElementById('addProductForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        var formData = new FormData();
+        formData.append('IdCagory', document.querySelector('input[name="IdCagory"]').value);
+        formData.append('product_name', document.querySelector('input[name="product_name"]').value);
+        formData.append('product_price', document.querySelector('input[name="product_price"]').value);
+        formData.append('product_size', document.querySelector('input[name="product_size"]').value);
+        formData.append('product_category', document.querySelector('input[name="product_category"]').value);
+        formData.append('product_description', document.querySelector('textarea[name="product_description"]').value);
+        formData.append('product_image', document.getElementById('uploadImageInput').files[0]);
+
+        fetch('/admin/addproduct', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message);
+                    location.reload();
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Lỗi khi gửi yêu cầu:', error);
+                alert('Lỗi khi gửi yêu cầu.');
+            });
     });
 </script>
