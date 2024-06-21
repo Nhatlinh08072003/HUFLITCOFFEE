@@ -119,6 +119,114 @@ namespace HUFLITCOFFEE.Controllers
             return "/images/" + uniqueFileName;
         }
 
+
+        // Xử lý edit sản phẩm
+        public IActionResult EditProduct()
+        {
+            return View();
+        }
+
+        [HttpPost("/admin/editproduct")]
+        public async Task<IActionResult> EditProduct(
+    [FromForm] int product_id,
+    [FromForm] string product_name,
+    [FromForm] string product_price,
+    [FromForm] string product_size,
+    [FromForm] string product_category,
+    [FromForm] string product_description,
+    [FromForm] IFormFile product_image,
+    [FromForm] string product_image_url)
+        {
+            try
+            {
+                string imageUrl = product_image_url; // Mặc định là URL hiện tại
+
+                if (product_image != null && product_image.Length > 0)
+                {
+                    // Nếu có file ảnh mới được chọn, lưu ảnh và lấy URL mới
+                    imageUrl = await SaveImageAsync(product_image);
+                }
+
+                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("CoffeeDBConnectionString")))
+                {
+                    await connection.OpenAsync();
+
+                    string sql = @"
+            UPDATE Product
+            SET NameProduct = @NameProduct,
+                PriceProduct = @PriceProduct,
+                Dvt = @Dvt,
+                DescriptionProduct = @DescriptionProduct,
+                NameCategory = @NameCategory,
+                ImgProduct = @ImgProduct
+            WHERE ProductId = @ProductId";
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@NameProduct", product_name);
+                        command.Parameters.AddWithValue("@PriceProduct", decimal.Parse(product_price));
+                        command.Parameters.AddWithValue("@Dvt", product_size);
+                        command.Parameters.AddWithValue("@DescriptionProduct", product_description);
+                        command.Parameters.AddWithValue("@NameCategory", product_category);
+                        command.Parameters.AddWithValue("@ImgProduct", imageUrl);
+                        command.Parameters.AddWithValue("@ProductId", product_id);
+                        await command.ExecuteNonQueryAsync();
+                    }
+                }
+
+                return Json(new { success = true, message = "Sản phẩm đã được cập nhật thành công." });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return Json(new { success = false, message = $"Lỗi khi cập nhật sản phẩm: {ex.Message}" });
+            }
+        }
+        // Xử lý delete sản phẩm
+        public IActionResult DeleteProduct()
+        {
+            return View();
+        }
+        // Action xử lý khi nhận yêu cầu POST từ form xóa sản phẩm
+        [HttpPost("/admin/deleteproduct")]
+        public async Task<IActionResult> DeleteProduct([FromForm] int delete_product_id)
+        {
+            try
+            {
+                // Thực hiện kết nối đến cơ sở dữ liệu
+                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("CoffeeDBConnectionString")))
+                {
+                    await connection.OpenAsync();
+
+                    // Chuẩn bị câu truy vấn SQL để xóa sản phẩm dựa vào ProductId
+                    string sql = @"
+                        DELETE FROM Product
+                        WHERE ProductId = @ProductId
+                    ";
+
+                    // Sử dụng SqlCommand để thực thi câu truy vấn
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@ProductId", delete_product_id);
+                        int rowsAffected = await command.ExecuteNonQueryAsync();
+
+                        if (rowsAffected > 0)
+                        {
+                            return Json(new { success = true, message = "Xóa sản phẩm thành công." });
+                        }
+                        else
+                        {
+                            return Json(new { success = false, message = "Không tìm thấy sản phẩm để xóa." });
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return Json(new { success = false, message = $"Lỗi khi xóa sản phẩm: {ex.Message}" });
+            }
+        }
         public IActionResult AdminCustomer()
         {
             return View();
