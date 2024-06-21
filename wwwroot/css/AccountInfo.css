@@ -1,9 +1,19 @@
+body {
+   font-family: Arial, sans-serif;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 0;
+   padding: 20px;
+   background-color: #f4f4f4;
+}
+
 .AccountInfo_container {
+   text-align: center;
    border-radius: 15px;
    border: 1px solid #ccc;
    padding: 20px;
    width: 90%;
-   height: 400px;
    max-width: 400px;
    margin: 40px auto;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -15,10 +25,10 @@
 }
 
 .AccountInfo_avatar {
-   width: 90px; /* Điều chỉnh kích thước avatar */
+   width: 90px;
    height: 80px;
    border-radius: 50%;
-   margin-bottom: 10px; /* Khoảng cách giữa avatar và form */
+   margin-bottom: 10px;
 }
 
 .AccountInfo_innercontainer {
@@ -39,69 +49,77 @@
 input[type='text'],
 input[type='password'],
 input[type='email'] {
-   width: calc(100% - 40px); /* Trừ đi chiều rộng của icon và margin */
+   width: calc(100% - 40px);
    padding: 12px 20px;
    border: 1px solid #ccc;
-   border-radius: 10px; /* Bo tròn các góc của ô điền */
+   border-radius: 40px;
    box-sizing: border-box;
-   margin: 10px 0; /* Khoảng cách trên dưới giữa các ô input */
+   margin: 10px 0;
 }
-
 button {
    background-color: red;
    color: white;
    padding: 14px 20px;
    margin: 10px 0;
-   margin-left: 110px;
    border: none;
    cursor: pointer;
    width: 30%;
-   border-radius: 15px; /* Bo tròn các góc của nút */
-   transition: background-color 0.3s; /* Thêm hiệu ứng hover */
+   border-radius: 15px;
+   transition: background-color 0.3s;
+   display: block;
+   margin: 10px auto; /* Căn giữa theo chiều ngang */
 }
 
 button:hover {
-   background-color: #45a049; /* Thay đổi màu khi hover */
+   background-color: #45a049;
    opacity: 0.8;
 }
+hr {
+   border: 0; /* Loại bỏ đường viền mặc định */
+   height: 1px; /* Tăng chiều cao */
+   background-color: #000; /* Màu đen đậm */
+   width: 20%; /* Chiều rộng 100% */
+   margin: 20px 0; /* Khoảng cách trên và dưới */
+}
 
-.AccountInfo_checkbox-container {
+.purchase-history {
+   width: 100%;
+   max-width: 600px;
+}
+
+.purchase-history h3 {
+   margin-bottom: 20px;
+   text-align: center;
+}
+
+.purchase-item {
    display: flex;
    align-items: center;
-   margin-top: 8px;
+   background-color: #fff;
+   border: 1px solid #ddd;
+   border-radius: 20px;
+   padding: 10px;
+   margin-bottom: 10px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.checkbox-label {
-   display: flex;
-   align-items: center;
-   cursor: pointer;
-   margin-right: 20px;
+.item-pic {
+   width: 80px;
+   height: 80px;
+   border-radius: 10px;
+   margin-right: 15px;
 }
 
-.checkbox-label:hover input + .checkbox-custom {
-   background-color: #e7e7e7; /* Thay đổi màu khi hover */
+.item-details h4,
+.item-details p {
+   margin: 5px 0;
 }
 
-.checkbox-custom {
-   position: relative;
-   height: 25px;
-   width: 25px;
-   background-color: #ddd;
+.order-again-btn {
+   background-color: #ff4d4d;
+   color: #fff;
+   border: none;
    border-radius: 5px;
-   margin-right: 10px;
+   padding: 10px 20px;
    cursor: pointer;
-}
-
-.checkbox-custom:after {
-   content: '';
-   position: absolute;
-   display: none;
-}
-
-.checkbox-custom input {
-   display: none;
-}
-
-.checkbox-custom input:checked + .checkbox-checkmark:after {
-   display: block;
 }

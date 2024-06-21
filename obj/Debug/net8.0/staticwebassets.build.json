@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/WkZfd3wSTbNUPDcDal4CRLWlptshh6reds3AgBk7Xc=",
+  "Hash": "vhVjp0rBdANyt0COi+4VMNZE29ZMVrTHwj0prqAOjV0=",
   "Source": "HUFLITCOFFEE",
   "BasePath": "_content/HUFLITCOFFEE",
   "Mode": "Default",
@@ -587,6 +587,25 @@
       "OriginalItemSpec": "wwwroot\\images\\8b36078e-3833-4ad1-ba67-cb3cf0d05911_th.jpg"
     },
     {
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\8e51c851-9e37-46cb-bb58-f15d6319cf11_th.jpg",
+      "SourceId": "HUFLITCOFFEE",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
+      "BasePath": "_content/HUFLITCOFFEE",
+      "RelativePath": "images/8e51c851-9e37-46cb-bb58-f15d6319cf11_th.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\8e51c851-9e37-46cb-bb58-f15d6319cf11_th.jpg"
+    },
+    {
       "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\94b16bbe-bc4f-4f9e-9947-99f66cb33e40_th.jpg",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
@@ -623,6 +642,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\979f805e-2803-481a-80f7-79b4c044c1b1_th.jpg"
+    },
+    {
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\9f3ce4f2-8133-432c-b1f2-3e8961eb17e0_th.jpg",
+      "SourceId": "HUFLITCOFFEE",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
+      "BasePath": "_content/HUFLITCOFFEE",
+      "RelativePath": "images/9f3ce4f2-8133-432c-b1f2-3e8961eb17e0_th.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\9f3ce4f2-8133-432c-b1f2-3e8961eb17e0_th.jpg"
     },
     {
       "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\afc451c7-acfb-4bd8-bcff-f14a8d709b07_th.jpg",
