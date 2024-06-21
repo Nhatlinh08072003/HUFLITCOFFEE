@@ -61,8 +61,53 @@ namespace HUFLITCOFFEE.Controllers
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Login", "Account"); // Chuyển hướng về trang Login
         }
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Register(RegisterViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var userExists = await _context.Users.AnyAsync(u => u.Email == model.Email || u.Username == model.Username);
+                if (userExists)
+                {
+                    ModelState.AddModelError(string.Empty, "User with this email or username already exists.");
+                    return View(model);
+                }
 
+                var user = new User
+                {
+                    Email = model.Email,
+                    Username = model.Username,
+                    PasswordHash = model.Password, // You should hash the password here
+                    CreatedAt = DateTime.Now
+                };
+
+                _context.Users.Add(user);
+                await _context.SaveChangesAsync();
+
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, user.Username),
+                    new Claim(ClaimTypes.Email, user.Email),
+                    new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString())
+                };
+
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+
+                return RedirectToAction("Index", "Home");
+            }
+
+            return View(model);
+        }
 
 
     }
+
+
 }
