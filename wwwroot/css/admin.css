@@ -105,11 +105,8 @@ td {
    border: 2px solid black;
    padding: 20px;
    border-radius: 10px;
-   width: 60%;
-   position: absolute;
    background-color: #fff;
    left: 20%;
-   display: none;
 }
 .Admin_product_add_hidden_Row1 {
    display: flex;
@@ -144,17 +141,14 @@ td {
    gap: 20px;
 }
 #Admin_save,
-#Admin_cancel {
+#Admin_update {
    padding: 5px 40px;
    border-radius: 10px;
 }
-#Admin_save {
+#Admin_save,
+#Admin_update {
    border: 1px solid #3fd786;
    color: #3fd786;
-}
-#Admin_cancel {
-   border: 1px solid #d53e2a;
-   color: #d53e2a;
 }
 @media (max-width: 1201px) {
    .Admin_product_add_hidden {
@@ -166,15 +160,26 @@ td {
    display: flex;
    gap: 10px;
 }
-#Admin_delete,
-#Admin_edit {
+.Admin_delete,
+.Admin_edit {
    padding: 10px;
 }
-#Admin_edit {
+.Admin_edit {
    border: 1px solid #3fd786;
    color: #3fd786;
 }
-#Admin_delete {
+.Admin_delete {
    border: 1px solid #d53e2a;
    color: #d53e2a;
+}
+#addProductForm {
+   display: none;
+   position: fixed;
+}
+#editProductForm {
+   display: none;
+   position: fixed;
+}
+#deleteProductForm {
+   display: none;
 }

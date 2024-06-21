@@ -49,6 +49,7 @@
     </div>
     @* Sản Phẩm *@
     <div Class="Admin_product" style="padding: 30px;">
+
         @* Bảng Nhập Sản Phẩm *@
         <form id="addProductForm" method="post" enctype="multipart/form-data" action="/admin/addproduct">
             <div class="Admin_product_add_hidden">
@@ -93,11 +94,62 @@
                 </div>
                 <div class="Admin_product_add_hidden_Row3">
                     <div><button type="submit" id="Admin_save">Lưu</button></div>
-                    <div><button type="button" id="Admin_cancel">Hủy</button></div>
                 </div>
             </div>
         </form>
-        @* Bảng Nhập Sản Phẩm *@
+        @* Bảng eidt sản phẩm *@
+        <form id="editProductForm" method="post" enctype="multipart/form-data" action="/admin/editproduct">
+            <input type="hidden" name="edit_product_image_url" value="">
+            <div class="Admin_product_add_hidden">
+                <input type="file" id="uploadImageInputEdit" name="edit_product_image" style="display: none;">
+                <div class="Admin_product_add_hidden_Row1">
+                    <div>Sửa ảnh sản phẩm</div>
+                    <div id="Edit_product_close">
+                        <img src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png" loading="lazy" alt="Close"
+                            title="Close" width="20" height="20">
+                    </div>
+                </div>
+                <div class="Admin_product_add_hidden_Row2">
+                    <div class="Admin_product_add_hidden_add_image">
+                        <img src="https://cdn-icons-png.flaticon.com/128/992/992651.png" loading="lazy" alt="Add"
+                            title="Add" width="30" height="30" id="addImageIconEdit">
+                    </div>
+                    <div class="Admin_add_detail_product">
+                        <div class="Admin_product_add_hidden_detail">
+                            <div>Mã sản phẩm</div>
+                            <div><input type="text" name="edit_product_id" placeholder="Nhập mã sản phẩm"></div>
+                            <div>Tên sản phẩm</div>
+                            <div><input type="text" name="edit_product_name" placeholder="Nhập tên sản phẩm"></div>
+                            <div>Giá sản phẩm</div>
+                            <div><input type="text" name="edit_product_price" placeholder="Nhập giá sản phẩm"></div>
+                        </div>
+                        <div class="Admin_product_add_hidden_detail">
+                            <div>Tên danh mục sản phẩm</div>
+                            <div style="width:40%"><input type="text" name="edit_product_category"
+                                    placeholder="Nhập tên danh mục sản phẩm" style="width:100%"></div>
+                            <div>Size</div>
+                            <div><input type="text" name="edit_product_size" placeholder="Nhập size sản phẩm"></div>
+                        </div>
+                        <div class="Admin_product_add_hidden_detail">
+                            <div>Mô tả sản phẩm</div>
+                            <div style="width:100%"><textarea name="edit_product_description"
+                                    placeholder="Nhập mô tả sản phẩm" style="width:100%;height: 50px;"></textarea></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Admin_product_add_hidden_Row3">
+                    <div><button type="submit" id="Admin_update">Cập nhật</button></div>
+                </div>
+            </div>
+        </form>
+        @* Bảng delete sản phẩm *@
+        <form id="deleteProductForm" method="post" enctype="multipart/form-data" action="/admin/deleteproduct">
+            <div>Mã sản phẩm</div>
+            <div><input type="text" name="delete_product_id"></div>
+        </form>
+
+
+
         <div style="border: 1px solid black; border-radius: 5px;">
             <div style="display: flex; justify-content: space-between; padding:10px">
                 <div Class="Admin_product_title"> Danh Sách Sản Phẩm</div>
@@ -134,8 +186,9 @@
                                 <td>@item.Dvt</td>
                                 <td>@item.NameCategory</td>
                                 <td>
-                                    <div class="Admin_Processing_section"><button id="Admin_delete">Delete</button>
-                                        <button id="Admin_edit">Edit</button>
+                                    <div class="Admin_Processing_section"> <button class="Admin_delete"
+                                            data-product-id="@item.ProductId">Delete</button>
+                                        <button class="Admin_edit">Edit</button>
                                     </div>
                                 </td>
                             </tr>
@@ -148,14 +201,27 @@
 </div>
 <script>
     document.getElementById('Add_product_icon').addEventListener('click', function () {
-        var hiddenForm = document.querySelector('.Admin_product_add_hidden');
+        var hiddenForm = document.getElementById('addProductForm');
         hiddenForm.style.display = 'block';
     });
+    document.querySelectorAll('.Admin_edit').forEach(function (button) {
+        button.addEventListener('click', function () {
+            var hiddenForm = document.getElementById('editProductForm');
+            hiddenForm.style.display = 'block';
+        });
+    });
+
+
 
     document.getElementById('Add_product_close').addEventListener('click', function () {
-        var hiddenForm = document.querySelector('.Admin_product_add_hidden');
-        hiddenForm.style.display = 'none';
+        var addProductForm = document.getElementById('addProductForm');
+        addProductForm.style.display = 'none';
     });
+    document.getElementById('Edit_product_close').addEventListener('click', function () {
+        var editProductForm = document.getElementById('editProductForm');
+        editProductForm.style.display = 'none';
+    });
+
 
     document.getElementById('addImageIcon').addEventListener('click', function () {
         document.getElementById('uploadImageInput').click();
@@ -182,6 +248,7 @@
             reader.readAsDataURL(file); // Đọc file dưới dạng data URL (base64)
         }
     });
+    //Xử lý nút thêm sản phẩm
     document.getElementById('addProductForm').addEventListener('submit', function (event) {
         event.preventDefault();
 
@@ -193,6 +260,7 @@
         formData.append('product_category', document.querySelector('input[name="product_category"]').value);
         formData.append('product_description', document.querySelector('textarea[name="product_description"]').value);
         formData.append('product_image', document.getElementById('uploadImageInput').files[0]);
+
 
         fetch('/admin/addproduct', {
             method: 'POST',
@@ -212,4 +280,121 @@
                 alert('Lỗi khi gửi yêu cầu.');
             });
     });
+    // Xử lý sự kiện khi click nút "Edit"
+    document.querySelectorAll('.Admin_edit').forEach(function (editBtn) {
+        editBtn.addEventListener('click', function () {
+            var row = editBtn.closest('tr');
+
+            var productId = row.querySelector('td:nth-child(1)').innerText.trim();
+            var productName = row.querySelector('td:nth-child(2)').innerText.trim();
+            var productImage = row.querySelector('img').getAttribute('src');
+            var productPrice = row.querySelector('td:nth-child(4)').innerText.trim();
+            var productDescription = row.querySelector('td:nth-child(5)').innerText.trim();
+            var productSize = row.querySelector('td:nth-child(6)').innerText.trim();
+            var productCategory = row.querySelector('td:nth-child(7)').innerText.trim();
+
+            var editProductForm = document.getElementById('editProductForm');
+
+            editProductForm.querySelector('input[name="edit_product_id"]').value = productId;
+            editProductForm.querySelector('input[name="edit_product_name"]').value = productName;
+            editProductForm.querySelector('input[name="edit_product_price"]').value = productPrice;
+            editProductForm.querySelector('input[name="edit_product_size"]').value = productSize;
+            editProductForm.querySelector('input[name="edit_product_category"]').value = productCategory;
+            editProductForm.querySelector('textarea[name="edit_product_description"]').value = productDescription;
+
+            // Gán URL ảnh hiện tại vào input ẩn
+            editProductForm.querySelector('input[name="edit_product_image_url"]').value = productImage;
+
+            var addImageIcon = editProductForm.querySelector('#addImageIconEdit');
+            addImageIcon.src = productImage;
+            addImageIcon.width = 100;
+            addImageIcon.height = 100;
+
+            addImageIcon.addEventListener('click', function () {
+                document.getElementById('uploadImageInputEdit').click();
+            });
+
+            document.getElementById('uploadImageInputEdit').addEventListener('change', function (event) {
+                var file = event.target.files[0];
+
+                if (file) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        var imageSrc = e.target.result;
+                        addImageIcon.src = imageSrc;
+                        addImageIcon.width = 100;
+                        addImageIcon.height = 100;
+                    };
+
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            editProductForm.style.display = 'block';
+        });
+    });
+
+    document.getElementById('editProductForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        var formData = new FormData();
+        formData.append('product_id', document.querySelector('input[name="edit_product_id"]').value);
+        formData.append('product_name', document.querySelector('input[name="edit_product_name"]').value);
+        formData.append('product_price', document.querySelector('input[name="edit_product_price"]').value);
+        formData.append('product_size', document.querySelector('input[name="edit_product_size"]').value);
+        formData.append('product_category', document.querySelector('input[name="edit_product_category"]').value);
+        formData.append('product_description', document.querySelector('textarea[name="edit_product_description"]').value);
+
+        // Lấy URL ảnh hiện tại từ thẻ img
+        var currentImageUrl = document.getElementById('addImageIconEdit').getAttribute('src');
+        formData.append('product_image_url', currentImageUrl);
+
+        // Lấy file ảnh từ input nếu có
+        var fileInput = document.getElementById('uploadImageInputEdit');
+        if (fileInput.files.length > 0) {
+            formData.append('product_image', fileInput.files[0]);
+        } else {
+            // Thêm giá trị rỗng để tránh lỗi yêu cầu trường
+            formData.append('product_image', new Blob());
+        }
+
+        fetch('/admin/editproduct', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message);
+                    location.reload();
+                } else {
+                    console.error('Lỗi dữ liệu:', data.errors);
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Lỗi khi gửi yêu cầu:', error);
+                alert('Lỗi khi gửi yêu cầu.');
+            });
+    });
+
+    // Xử lý nút delete
+    document.querySelectorAll('.Admin_delete').forEach(function (deleteBtn) {
+        deleteBtn.addEventListener('click', function () {
+            var productId = deleteBtn.getAttribute('data-product-id');
+
+            // Hiển thị hộp thoại xác nhận
+            if (confirm("Bạn có chắc chắn muốn xóa sản phẩm này?")) {
+                // Đặt giá trị productId vào input ẩn
+                document.querySelector('input[name="delete_product_id"]').value = productId;
+                // Submit form để gửi yêu cầu xóa sản phẩm
+                document.getElementById('deleteProductForm').submit();
+            } else {
+                // Nếu người dùng không chắc chắn, không làm gì cả
+                return false;
+            }
+        });
+    });
+
 </script>
