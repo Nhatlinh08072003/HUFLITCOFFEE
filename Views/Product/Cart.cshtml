@@ -1,3 +1,7 @@
+@model List<HUFLITCOFFEE.Models.Main.CartItem>;
+@{
+    string curPage = ViewBag.CurPage;
+}
 <link rel="stylesheet" href="~/css/cart.css">
 <div class="cart-main">
     <div class="cart-container">
@@ -5,80 +9,48 @@
             <h2>Giỏ Hàng(1)</h2>
         </div>
         <div class="cart-product-layout">
-            <div class="cart-pro-box">
-                <div class="cart-pro-box-img">
-                    <img class="img-img-cart"
-                        src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg">
-                </div>
-                <div class="cart-pro-box-detail">
-                    <div class="ctcttt">
-                        <h4 class="ct-title">Cà phê sữa đá</h4>
-                        <p class="txt-tt">Phin sữa tươi bánh Plan</p>
-                        <div class="cart-pro-box-price"> 49.000đ</div>
+            @foreach (var CartItem in Model)
+            {
+                <div class="cart-pro-box">
+                    <div class="cart-pro-box-img">
+                        <img class="img-img-cart" src="@CartItem.ImgProduct">
+                    </div>
+                    <div class="cart-pro-box-detail">
+                        <div class="ctcttt">
+                            <h4 class="ct-title"></h4>
+                            <p class="txt-tt">@CartItem.NameProduct @CartItem.Dvt</p>
+                            <div class="cart-pro-box-price"> @CartItem.PriceProduct</div>
+                            <div>Số lượng: @CartItem.Quantity</div>
+                            <div>Toppings: @CartItem.ToppingNames</div>
+                        </div>
+                    </div>
+                    <div class="text-delete">
+                        <button data-cart-id="@CartItem.CartItemId" class="Admin_delete">Xóa</button>
                     </div>
                 </div>
-                <div class="cart-pro-quantity">
-                    <div class="cart-pro-number">
-                        <div class="cart-ud">
-                            <button class="cart-pro-prevous">
-                                <p style="font-size: 18px;">-</p>
-                            </button>
-                            <span id="cart-ct">1</span>
-                            <button class="cart-pro-next">
-                                <p style="font-size: 18px;">+</p>
-                            </button>
+}
+                <form id="deleteCartForm" method="post" enctype="multipart/form-data" action="/product/deletecart"
+                    style="display: none;">
+                    <div><input type="text" name="delete_cart_id"></div>
+                </form>
+               <form id="deleteAllForm" method="post" enctype="multipart/form-data" action="/product/deleteall"
+                    style="display: none;">
+                </form>
+                <div class="total-detail">
+                    <div class="delete-all-detail"> 
+                  <button id="deleteAllBtn" class="txt-delete">
+                         Xoá tất cả
+                </button>
+
+                        <div class="pay-detail">
+                            <p class="txt-pay">Tổng thanh toán <span>(1 sản phẩm)</span>: <span>1234 đ</span> </p>
+                        </div>
+                        <div class="order-detail">
+                            <button class="order-btn"><a href="/shipping" style="text-decoration:none; color:#000">Đặt
+                                    hàng</a></button>
                         </div>
                     </div>
                 </div>
-                <div class="text-delete">
-                    <button class="btn btn-dele">Xóa</button>
-                </div>
-            </div>
-
-            <div class="cart-pro-box">
-                <div class="cart-pro-box-img">
-                    <img class="img-img-cart"
-                        src="https://product.hstatic.net/1000075078/product/1696220170_phin-sua-tuoi-banh-flan_0172beb85d08408b8912bf5f1dae7fd9.jpg">
-                </div>
-                <div class="cart-pro-box-detail">
-                    <div class="ctcttt">
-                        <h4 class="ct-title">Cà phê sữa đá</h4>
-                        <p class="txt-tt">Phin sữa tươi bánh Plan</p>
-                        <div class="cart-pro-box-price"> 49.000đ</div>
-                    </div>
-                </div>
-                <div class="cart-pro-quantity">
-                    <div class="cart-pro-number">
-                        <div class="cart-ud">
-                            <button class="cart-pro-prevous">
-                                <p style="font-size: 18px;">-</p>
-                            </button>
-                            <span id="cart-ct">1</span>
-                            <button class="cart-pro-next">
-                                <p style="font-size: 18px;">+</p>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-delete">
-                    <button class="btn btn-dele">Xóa</button>
-                </div>
-            </div>
-
-            <div class="total-detail">
-                <div class="delete-all-detail">
-                    <button class="txt-delete">
-                        Xoá tất cả
-                    </button>
-                    <div class="pay-detail">
-                        <p class="txt-pay">Tổng thanh toán <span>(1 sản phẩm)</span>: <span>1234 đ</span> </p>
-                    </div>
-                    <div class="order-detail">
-                        <button class="order-btn"><a href="/shipping" style="text-decoration:none; color:#000">Đặt
-                                hàng</a></button>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="sgshdasa">
@@ -144,39 +116,34 @@
     </div>
 </div>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Xử lý cho tăng giảm giá trị trong thẻ span và xóa sản phẩm
-        const deleteButtons = document.querySelectorAll('.btn-dele');
+    // Xử lý nút delete
+    document.querySelectorAll('.Admin_delete').forEach(function (deleteBtn) {
+        deleteBtn.addEventListener('click', function () {
+            var cartId = deleteBtn.getAttribute('data-cart-id');
 
-        deleteButtons.forEach(button => {
-            const parentElement = button.closest('.cart-pro-box');
-            const counter = parentElement.querySelector('#cart-ct');
-            const prevButton = parentElement.querySelector('.cart-pro-prevous');
-            const nextButton = parentElement.querySelector('.cart-pro-next');
-
-            prevButton.addEventListener('click', function () {
-                let currentValue = parseInt(counter.textContent, 10);
-                if (currentValue > 0) {
-                    counter.textContent = currentValue - 1;
-                }
-            });
-
-            nextButton.addEventListener('click', function () {
-                let currentValue = parseInt(counter.textContent, 10);
-                counter.textContent = currentValue + 1;
-            });
-
-            button.addEventListener('click', function () {
-                parentElement.remove();
-            });
-        });
-
-        // Thêm sự kiện cho nút "Xoá tất cả"
-        const deleteAllButton = document.querySelector('.txt-delete');
-        deleteAllButton.addEventListener('click', function () {
-            const cartBoxes = document.querySelectorAll('.cart-pro-box');
-            cartBoxes.forEach(box => box.remove());
+            // Hiển thị hộp thoại xác nhận
+            if (confirm("Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng?")) {
+                // Đặt giá trị productId vào input ẩn
+                document.querySelector('input[name="delete_cart_id"]').value = cartId;
+                // Submit form để gửi yêu cầu xóa sản phẩm
+                document.getElementById('deleteCartForm').submit();
+            } else {
+                // Nếu người dùng không chắc chắn, không làm gì cả
+                return false;
+            }
         });
     });
-
+  // Xử lý nút delete
+    document.querySelectorAll('.txt-delete').forEach(function (deleteBtn) {
+        deleteBtn.addEventListener('click', function () {
+            // Hiển thị hộp thoại xác nhận
+            if (confirm("Bạn có chắc chắn muốn xóa tất cả sản phẩm này khỏi giỏ hàng?")) {
+                // Submit form để gửi yêu cầu xóa sản phẩm
+                document.getElementById('deleteAllForm').submit();
+            } else {
+                // Nếu người dùng không chắc chắn, không làm gì cả
+                return false;
+            }
+        });
+    });
 </script>

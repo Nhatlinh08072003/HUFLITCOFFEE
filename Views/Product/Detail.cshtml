@@ -39,10 +39,13 @@
             <div class=" pro-prodcut-title">
                 <div class="pro-title">
                     <div class="titleee">
-                        <p>@Model.MainProduct?.NameProduct @Model.MainProduct?.Dvt</p>
+                        <p class="product_name" data-product-name="@Model.MainProduct?.NameProduct">
+                            @Model.MainProduct?.NameProduct</p>
+                        <p class="product_size" data-product-size="@Model.MainProduct?.Dvt">@Model.MainProduct?.Dvt</p>
                     </div>
                     <div class="pro-price">
-                        <span id="mainProductPrice" data-base-price="@Model.MainProduct?.PriceProduct">
+                        <span id="mainProductPrice" class="product_price"
+                            data-base-price="@Model.MainProduct?.PriceProduct">
                             @Model.MainProduct?.PriceProduct đ
                         </span>
                     </div>
@@ -129,11 +132,12 @@
 
                 <div class="pro-cart">
                     <div class="method-pro">
-                        <a class="method-btn" href="/cart">
-                            <button class="btn-des"><img style="width: 25px;"
-                                    src="https://cdn-icons-png.flaticon.com/128/3523/3523885.png">Giỏ
-                                hàng</button>
-                        </a>
+
+                        <button class="Admin_addtocard" data-product-id="@Model.MainProduct?.ProductId"><img
+                                style="width: 25px;" src="https://cdn-icons-png.flaticon.com/128/3523/3523885.png">Thêm
+                            Giỏ
+                            hàng</button>
+
                         <a class="method-btn" href="/shipping">
                             <button class="btn-des"><img style="width: 30px;"
                                     src="https://cdn-icons-png.flaticon.com/128/5637/5637217.png"> Đặt giao tận
@@ -144,12 +148,21 @@
                 </div>
             </div>
         </div>
-
+        @* Bảng thêm sản phẩm vào giỏ hàng *@
+        <form id="addtoCartForm" method="post" enctype="multipart/form-data" action="/product/addtocart"
+            style="display:none">
+            <input type="text" name="product_id">
+            <input type="text" name="product_price" placeholder="">
+            <input type="text" name="product_name" placeholder="">
+            <input type="text" name="product_size" placeholder="">
+            <input type="text" name="product_image" placeholder="">
+            <input type="text" name="product_quantity" placeholder="">
+            <input type="text" name="topping_names" placeholder="">
+        </form>
         <div class="pro-describe">
             <div class="describe">
                 <h4 class="des-title">Mô tả sản phẩm</h4>
                 <p class="des-text">@Model.MainProduct?.DescriptionProduct</p>
-
             </div>
         </div>
 
@@ -399,7 +412,39 @@
         document.getElementById('mainProductPrice').innerText = totalPrice.toLocaleString('vi-VN') + ' .000 đ'; // Hiển thị giá sản phẩm
     }
 
-
+    // Xử lý nút thêm giỏ hàng
+    const addproductname = document.querySelector('.product_name');
+    const addproductimage = document.querySelector('.img_pro');
+    const addproductprice = document.querySelector('.product_price');
+    const addproductsize = document.querySelector('.product_size');
+    const addproductid = document.querySelector('.Admin_addtocard');
+    document.querySelectorAll('.Admin_addtocard').forEach(function (addtocartBtn) {
+        addtocartBtn.addEventListener('click', function () {
+            updateToppingDetails()
+            var product_id = addproductid.getAttribute('data-product-id');
+            var product_name = addproductname.getAttribute('data-product-name');
+            var product_size = addproductsize.getAttribute('data-product-size');
+            var product_image = addproductimage.getAttribute('src');
+            var product_price = document.getElementById('mainProductPrice').textContent.replace(' .000 đ', '').replace(',', ''); // Chuyển đổi giá thành số nguyên
+            var topping_names = document.getElementById('Name_Topping').innerText || 'Không có'; // Nếu không có topping, đặt giá trị là chuỗi rỗng
+            // Hiển thị hộp thoại xác nhận
+            if (confirm("Bạn muốn thêm sản phẩm vào giỏ hàng?")) {
+                // Đặt giá trị productId vào input ẩn
+                document.querySelector('input[name="product_id"]').value = product_id;
+                document.querySelector('input[name="product_name"]').value = product_name;
+                document.querySelector('input[name="product_image"]').value = product_image;
+                document.querySelector('input[name="product_price"]').value = product_price;
+                document.querySelector('input[name="product_size"]').value = product_size;
+                document.querySelector('input[name="product_quantity"]').value = counter.textContent;
+                document.querySelector('input[name="topping_names"]').value = topping_names;
+                // Submit form để gửi yêu cầu thêm sản phẩm vào giỏ hàng
+                document.getElementById('addtoCartForm').submit();
+            } else {
+                // Nếu người dùng không chắc chắn, không làm gì cả
+                return false;
+            }
+        });
+    });
 
 
 </script>

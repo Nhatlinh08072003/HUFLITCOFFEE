@@ -180,7 +180,21 @@
    white-space: nowrap;
    text-decoration: none;
 }
-
+.Admin_addtocard {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 50%;
+   height: 50px;
+   font-size: 18px;
+   font-weight: bold;
+   margin-left: 10px;
+   background-color: #dd9a1d;
+   border: 0px;
+   border-radius: 10px;
+   white-space: nowrap;
+   text-decoration: none;
+}
 .pro-describe {
    border-top: 1px solid #6b6666;
    height: auto;

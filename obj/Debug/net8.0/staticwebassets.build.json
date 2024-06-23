@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fOqo/H4i6tsux12WyuWRRtY2qJFLFgLEr5gXt0Kmihw=",
+  "Hash": "9YKZKI6mpZ1p4WmIlM5Ughff2aAEtHm/Zo5BOHfvicA=",
   "Source": "HUFLITCOFFEE",
   "BasePath": "_content/HUFLITCOFFEE",
   "Mode": "Default",
@@ -568,6 +568,25 @@
       "OriginalItemSpec": "wwwroot\\images\\5009d910-7ca9-48b0-9f18-da61c7b071fb_th (3).jpg"
     },
     {
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\50d03112-f4d6-4782-ab47-aaba9982a074_th (2).jpg",
+      "SourceId": "HUFLITCOFFEE",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
+      "BasePath": "_content/HUFLITCOFFEE",
+      "RelativePath": "images/50d03112-f4d6-4782-ab47-aaba9982a074_th (2).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\50d03112-f4d6-4782-ab47-aaba9982a074_th (2).jpg"
+    },
+    {
       "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\565b2983-3b53-40ad-942e-f8f57b4e1fc8_th.jpg",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
@@ -604,6 +623,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\5b29d2b7-f122-4f7c-9af6-21999fbec8b4_th.jpg"
+    },
+    {
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\6c7894e6-84d9-49f9-a8a8-4793f7bf00a2_th (3).jpg",
+      "SourceId": "HUFLITCOFFEE",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
+      "BasePath": "_content/HUFLITCOFFEE",
+      "RelativePath": "images/6c7894e6-84d9-49f9-a8a8-4793f7bf00a2_th (3).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\6c7894e6-84d9-49f9-a8a8-4793f7bf00a2_th (3).jpg"
     },
     {
       "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\7474a9ec-73e3-4fd2-8261-fc830c45045b_th (2).jpg",
@@ -1060,6 +1098,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\d59ee48a-1e37-4bcf-931a-cbef3453dd5b_th.jpg"
+    },
+    {
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\dacc2685-3862-4fbc-891e-3d059673b308_th (2).jpg",
+      "SourceId": "HUFLITCOFFEE",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
+      "BasePath": "_content/HUFLITCOFFEE",
+      "RelativePath": "images/dacc2685-3862-4fbc-891e-3d059673b308_th (2).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\dacc2685-3862-4fbc-891e-3d059673b308_th (2).jpg"
     },
     {
       "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\Desk.webp",
