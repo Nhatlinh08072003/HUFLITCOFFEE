@@ -10,6 +10,14 @@ public partial class CartItem
     public int UserId { get; set; }
 
     public int ProductId { get; set; }
+    public string? ImgProduct { get; set; }
+    public string NameProduct { get; set; } = null!;
+
+    public decimal PriceProduct { get; set; }
+    public int Quantity { get; set; }
+
+    public string? ToppingNames { get; set; }
+    public string? Dvt { get; set; }
 
     public virtual ICollection<CartItemDetail> CartItemDetails { get; set; } = new List<CartItemDetail>();
 
