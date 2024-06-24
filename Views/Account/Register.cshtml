@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="~/css/Register.css">
 <div class="Register_container">
-    <form action="action_page.php" method="post">
+    <form id="addUserForm" method="post" enctype="multipart/form-data" action="/account/adduser">
         <div class="Register_imgcontainer">
             <img src="~/images/LogoCoffeeHouse.jpg" alt="Avatar" class="Register_avatar">
             <h4>ĐĂNG KÝ</h4>
@@ -50,6 +50,13 @@
                     <input class="Register_input-container_input" type="password" placeholder="Nhập lại Mật khẩu"
                         name="psw-repeat" required>
                 </div>
+
+                <div class="Register_input-container">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3179/3179068.png" alt="Address Icon"
+                        class="Register_icon">
+                    <input class="Register_input-container_input" type="text" placeholder="Nhập địa chỉ" name="address"
+                        required>
+                </div>
             </div>
             <hr>
             <p class="agree-text">Bằng cách nhấp vào Đăng ký, bạn đồng ý với Điều khoản sử dụng và Chính sách bảo mật
@@ -61,3 +68,41 @@
         </div>
     </form>
 </div>
+<script>
+    document.getElementById('addUserForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        var formData = new FormData();
+        var password = document.querySelector('input[name="psw"]').value;
+        var passwordRepeat = document.querySelector('input[name="psw-repeat"]').value;
+        if (password !== passwordRepeat) {
+            alert("Mật khẩu nhập lại không khớp. Vui lòng thử lại.");
+            return;
+        }
+        formData.append('fullname', document.querySelector('input[name="fullname"]').value);
+        formData.append('email', document.querySelector('input[name="email"]').value);
+        formData.append('psw', document.querySelector('input[name="psw"]').value);
+        formData.append('username', document.querySelector('input[name="username"]').value);
+        formData.append('phone', document.querySelector('input[name="phone"]').value);
+        formData.append('address', document.querySelector('input[name="address"]').value);
+
+
+        fetch('/account/adduser', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message);
+                    window.location.href = '/account/login';
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Lỗi khi gửi yêu cầu:', error);
+                alert('Lỗi khi gửi yêu cầu.');
+            });
+    });
+</script>

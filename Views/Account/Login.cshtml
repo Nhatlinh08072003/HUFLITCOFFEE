@@ -9,17 +9,26 @@
         </div>
 
         <div class="Login_innercontainer">
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger">
+                    @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                    {
+                        <p>@error.ErrorMessage</p>
+                    }
+                </div>
+            }
             <div class="Login_input-container">
-                <img src="https://w7.pngwing.com/pngs/768/505/png-transparent-mobile-phones-telephone-handset-computer-icons-icon-telefon-text-telephone-call-hand-thumbnail.png"
-                    alt="Phone Icon" class="Login_icon">
-                <input asp-for="Email" style="padding:10px 20px ;width:100%" class="Login_input-container_input"
-                    placeholder="Email" required>
-                <span asp-validation-for="Email" class="text-danger"></span>
+                <img src="https://cdn-icons-png.flaticon.com/128/1077/1077114.png" alt="Username Icon"
+                    class="Login_icon">
+                <input asp-for="Username" style="padding:10px 20px ;width:100%" class="Login_input-container_input"
+                    placeholder="Username" required>
+                <span asp-validation-for="Username" class="text-danger"></span>
             </div>
 
             <div class="Login_input-container">
-                <img src="https://w7.pngwing.com/pngs/975/821/png-transparent-password-manager-computer-icons-password-strength-password-safe-chang-miscellaneous-password-strength-password-safe-thumbnail.png"
-                    alt="Password Icon" class="Login_icon">
+                <img src="https://cdn-icons-png.flaticon.com/128/3064/3064155.png" alt="Password Icon"
+                    class="Login_icon">
                 <input asp-for="Password" type="password" class="Login_input-container_input" placeholder="Mật khẩu"
                     required>
                 <span asp-validation-for="Password" class="text-danger"></span>
