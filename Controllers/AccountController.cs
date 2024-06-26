@@ -69,7 +69,7 @@ namespace HUFLITCOFFEE.Controllers
             return View();
         }
         [HttpPost("/account/adduser")]
-        public async Task<IActionResult> AddProduct(
+        public async Task<IActionResult> AddUser(
      [FromForm] string fullname,
      [FromForm] string email,
      [FromForm] string psw,
