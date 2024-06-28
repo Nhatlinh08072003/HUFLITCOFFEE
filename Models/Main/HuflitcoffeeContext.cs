@@ -19,8 +19,6 @@ public partial class HuflitcoffeeContext : DbContext
 
     public virtual DbSet<CartItem> CartItems { get; set; }
 
-    public virtual DbSet<CartItemDetail> CartItemDetails { get; set; }
-
     public virtual DbSet<Category> Categories { get; set; }
 
     public virtual DbSet<Employee> Employees { get; set; }
@@ -86,29 +84,6 @@ public partial class HuflitcoffeeContext : DbContext
                 .HasConstraintName("FK__CartItem__UserID__440B1D61");
         });
 
-        modelBuilder.Entity<CartItemDetail>(entity =>
-        {
-            entity.HasKey(e => e.CartItemDetailId).HasName("PK__CartItem__BDC6D8829610AE11");
-
-            entity.ToTable("CartItemDetail");
-
-            entity.Property(e => e.CartItemDetailId)
-                .ValueGeneratedNever()
-                .HasColumnName("CartItemDetailID");
-            entity.Property(e => e.CartItemId).HasColumnName("CartItemID");
-            entity.Property(e => e.Price).HasColumnType("decimal(10, 2)");
-            entity.Property(e => e.ProductId).HasColumnName("ProductID");
-
-            entity.HasOne(d => d.CartItem).WithMany(p => p.CartItemDetails)
-                .HasForeignKey(d => d.CartItemId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__CartItemD__CartI__5165187F");
-
-            entity.HasOne(d => d.Product).WithMany(p => p.CartItemDetails)
-                .HasForeignKey(d => d.ProductId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__CartItemD__Produ__52593CB8");
-        });
 
         modelBuilder.Entity<Category>(entity =>
         {

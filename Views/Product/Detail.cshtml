@@ -48,6 +48,11 @@
                             data-base-price="@Model.MainProduct?.PriceProduct">
                             @Model.MainProduct?.PriceProduct đ
                         </span>
+
+                        <span id="unitProductPrice" style="display: none;" class="product_price"
+                            data-unit-price="@Model.MainProduct?.PriceProduct">
+                            @Model.MainProduct?.PriceProduct đ
+                        </span>
                     </div>
                     <div id="Name_Topping"></div>
                     <div id="Price_Topping"></div>
@@ -158,6 +163,7 @@
             <input type="text" name="product_image" placeholder="">
             <input type="text" name="product_quantity" placeholder="">
             <input type="text" name="topping_names" placeholder="">
+            <input type="text" name="unit_price" placeholder="">
         </form>
         <div class="pro-describe">
             <div class="describe">
@@ -426,6 +432,7 @@
             var product_size = addproductsize.getAttribute('data-product-size');
             var product_image = addproductimage.getAttribute('src');
             var product_price = document.getElementById('mainProductPrice').textContent.replace(' .000 đ', '').replace(',', ''); // Chuyển đổi giá thành số nguyên
+            var unit_price = document.getElementById('unitProductPrice').textContent.replace(/\s|,|đ/g, '');// Chuyển đổi giá thành số nguyên
             var topping_names = document.getElementById('Name_Topping').innerText || 'Không có'; // Nếu không có topping, đặt giá trị là chuỗi rỗng
             // Hiển thị hộp thoại xác nhận
             if (confirm("Bạn muốn thêm sản phẩm vào giỏ hàng?")) {
@@ -434,11 +441,31 @@
                 document.querySelector('input[name="product_name"]').value = product_name;
                 document.querySelector('input[name="product_image"]').value = product_image;
                 document.querySelector('input[name="product_price"]').value = product_price;
+                document.querySelector('input[name="unit_price"]').value = unit_price;
                 document.querySelector('input[name="product_size"]').value = product_size;
                 document.querySelector('input[name="product_quantity"]').value = counter.textContent;
                 document.querySelector('input[name="topping_names"]').value = topping_names;
                 // Submit form để gửi yêu cầu thêm sản phẩm vào giỏ hàng
-                document.getElementById('addtoCartForm').submit();
+                var formData = new FormData(document.getElementById('addtoCartForm'));
+                // Gửi yêu cầu thêm sản phẩm vào giỏ hàng
+                fetch('/product/addtocart', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert(data.message);
+                            location.reload();
+                        } else {
+                            console.error('Lỗi dữ liệu:', data.errors);
+                            alert(data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Lỗi khi gửi yêu cầu:', error);
+                        alert('Lỗi khi gửi yêu cầu.');
+                    });
             } else {
                 // Nếu người dùng không chắc chắn, không làm gì cả
                 return false;

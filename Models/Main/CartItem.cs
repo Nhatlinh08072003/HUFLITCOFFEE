@@ -14,12 +14,12 @@ public partial class CartItem
     public string NameProduct { get; set; } = null!;
 
     public decimal PriceProduct { get; set; }
+    public decimal UnitPrice { get; set; }
+
     public int Quantity { get; set; }
 
     public string? ToppingNames { get; set; }
     public string? Dvt { get; set; }
-
-    public virtual ICollection<CartItemDetail> CartItemDetails { get; set; } = new List<CartItemDetail>();
 
     public virtual Product Product { get; set; } = null!;
 
