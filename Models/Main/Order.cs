@@ -14,6 +14,8 @@ public partial class Order
     public string? Address { get; set; }
 
     public string? PhoneNumber { get; set; }
+    public string? Ghichu { get; set; }
+
 
     public decimal? TotalDiscount { get; set; }
 

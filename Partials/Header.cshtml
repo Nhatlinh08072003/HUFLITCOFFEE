@@ -40,8 +40,11 @@
                         Welcome, @User.Identity.Name
                     </span>
                 </div>
-
-
+                <a href="@Url.Action("Logout", "Account")" onclick="confirmLogout()">
+                    <div class="Orther-login">Đăng xuất</div>
+                </a>
+                <a href="/profile"><img src="https://cdn-icons-png.flaticon.com/128/1077/1077114.png" loading="lazy"
+                        alt="User " title="User " width="30" height="30"></a>
             }
             else
             {
@@ -105,3 +108,10 @@
         </ul>
     </div>
 </header>
+<script>
+    function confirmLogout() {
+        if (confirm("Bạn có chắc muốn đăng xuất không?")) {
+            window.location.href = '@Url.Action("Logout", "Account")';
+        }
+    }
+</script>

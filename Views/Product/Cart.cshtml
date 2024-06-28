@@ -126,7 +126,27 @@
                 // Đặt giá trị productId vào input ẩn
                 document.querySelector('input[name="delete_cart_id"]').value = cartId;
                 // Submit form để gửi yêu cầu xóa sản phẩm
-                document.getElementById('deleteCartForm').submit();
+                   var formData = new FormData(document.getElementById('deleteCartForm'));
+
+                // Gửi yêu cầu thêm sản phẩm vào giỏ hàng
+                fetch('/product/deletecart', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert(data.message);
+                            location.reload();
+                        } else {
+                            console.error('Lỗi dữ liệu:', data.errors);
+                            alert(data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Lỗi khi gửi yêu cầu:', error);
+                        alert('Lỗi khi gửi yêu cầu.');
+                    });
             } else {
                 // Nếu người dùng không chắc chắn, không làm gì cả
                 return false;
@@ -139,7 +159,27 @@
             // Hiển thị hộp thoại xác nhận
             if (confirm("Bạn có chắc chắn muốn xóa tất cả sản phẩm này khỏi giỏ hàng?")) {
                 // Submit form để gửi yêu cầu xóa sản phẩm
-                document.getElementById('deleteAllForm').submit();
+                 var formData = new FormData(document.getElementById('deleteAllForm'));
+
+                // Gửi yêu cầu thêm sản phẩm vào giỏ hàng
+                fetch('/product/deleteall', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert(data.message);
+                            location.reload();
+                        } else {
+                            console.error('Lỗi dữ liệu:', data.errors);
+                            alert(data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Lỗi khi gửi yêu cầu:', error);
+                        alert('Lỗi khi gửi yêu cầu.');
+                    });
             } else {
                 // Nếu người dùng không chắc chắn, không làm gì cả
                 return false;

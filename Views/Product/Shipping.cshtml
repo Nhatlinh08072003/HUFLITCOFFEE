@@ -1,3 +1,4 @@
+@model List<HUFLITCOFFEE.Models.Main.CartItem>;
 <link rel="stylesheet" href="~/css/shipping.css">
 <div class="shipping-main">
     <div class="shipping-container">
@@ -11,38 +12,36 @@
         </div>
         <div class="shipping-pro">
             <div class="address-sh">
-                <form action="add-ship">
+                <form id="addOrderForm" method="post" enctype="multipart/form-data" action="/product/addorder">
                     <div class="mapping-sh">
                         <h2> Thông tin giao hàng</h2>
                     </div>
                     <div class="form-total">
                         <div class="form-group">
                             @* <label for="name">Tên người đặt hàng:</label> *@
-                            <input type="text" id="name" name="name" placeholder="Nhập tên của bạn" required>
+                            <input type="text" id="name" name="fullname" placeholder="Nhập tên của bạn" required>
                         </div>
                         <div class="phone-sh">
                             @* <label for="address">Nhập số điện thoại: </label> *@
-                            <input type="text" id="number-phone" name="number-phone"
-                                placeholder="Nhập số điện thoại của bạn" required>
+                            <input type="text" id="number-phone" name="phone" placeholder="Nhập số điện thoại của bạn"
+                                required>
                         </div>
                         <div class="address-txt">
                             @* <label for="address">Nhập địa chỉ giao hàng:</label> *@
                             <input type="text" id="address" name="address" placeholder="Nhập địa chỉ  của bạn" required>
                         </div>
                     </div>
-                    <div class="uyretrad">
-                        <div class="ghsdsja">
-                            <h3 class="trrowew">Phương thức thanh toán</h3>
-                        </div>
-                        <div class="form-group">
-                            <input type="radio" id="cash" name="payment" class="custom-radio"
-                                onchange="togglePayment(this)" checked>
-                            <label for="cash" style="margin-left: 5px;">Thanh toán tiền mặt</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="radio" id="transfer" name="payment" class="custom-radio"
-                                onchange="togglePayment(this)">
-                            <label for="transfer" style="margin-left: 5px;">Chuyển khoản</label>
+                    <div style="display: none;">
+                        <input type="text" name="price" value="@ViewBag.TotalPayment">
+                        <input type="text" name="status" value="Đang chuẩn bị đơn hàng">
+
+                    </div>
+                    <div class="text-note-pro">
+                        <textarea placeholder="Viết ghi chú ở đây..." name="ghichu"></textarea>
+                    </div>
+                    <div class="total-pro-all">
+                        <div class="tt-all">
+                            <button type="submit" class="btn-order-dei" style="float: center;">Đặt hàng</button>
                         </div>
                     </div>
                 </form>
@@ -62,41 +61,44 @@
                     <p class="pro-price-sp" style="font-weight: bold;">
                         Đơn giá
                     </p>
+
                     <p class="pro-quantity-sp" style="font-weight: bold;">
                         Số lượng
+                    </p>
+                    <p class="name-asasasas" style="font-weight: bold;">
+                        Kèm topping
                     </p>
                     <p class="pro-total-sp" style="font-weight: bold;">
                         Thành tiền
                     </p>
                 </div>
-                <div class="ship-detail-pro">
-                    <p class="name-cbcbcbc">
-                        Cà phê sữa tươi bánh Plan
-                    </p>
-                    <p class="pro-price-sp-dei">
-                        49.000
-                    </p>
-                    <p class="pro-quantity-sp-quan">
-                        1
-                    </p>
-                    <p class="pro-total-sp-tt">
-                        49.000
-                    </p>
-                </div>
+                @foreach (var item in Model)
+                {
+                    <div class="ship-detail-pro">
+                        <p class="name-cbcbcbc">
+                            @item.NameProduct
+                        </p>
+                        <p class="pro-price-sp-dei">
+                            @item.UnitPrice
+                        </p>
+                        <p class="pro-quantity-sp-quan">
+                            @item.Quantity
+                        </p>
+                        <p class="name-cbcbcbc">
+                            @item.ToppingNames
+                        </p>
 
-                <div class="text-note-pro">
-                    <textarea placeholder="Viết ghi chú ở đây..."></textarea>
-                </div>
+
+                        <p class="pro-total-sp-tt">
+                            @item.PriceProduct
+                        </p>
+                    </div>
+                }
+
+
                 <div class="tt-total">
                     <div class="tt-pri-all">
-                        <h3>Tổng thanh toán : <span>12345 đ</span></h3>
-                    </div>
-                </div>
-
-                <div class="total-pro-all">
-                    <div class="tt-all">
-                        <button class="btn-delete-all">Xoá tất cả</button>
-                        <button class="btn-order-dei" style="float: right;">Đặt hàng</button>
+                        <h3>Tổng thanh toán : <span>@ViewBag.TotalPayment đ</span></h3>
                     </div>
                 </div>
             </div>
@@ -107,12 +109,42 @@
     </div>
 </div>
 <script>
-    function checkOnlyOne(clickedCheckbox) {
+    @* function checkOnlyOne(clickedCheckbox) {
         var checkboxes = document.querySelectorAll('input[type="checkbox"][name="payment"]');
         checkboxes.forEach(function (checkbox) {
-            if (checkbox !== clickedCheckbox) {
-                checkbox.checked = false;
-            }
+        if (checkbox !== clickedCheckbox) {
+        checkbox.checked = false;
+        }
         });
-    }
+        } *@
+        document.getElementById('addOrderForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var formData = new FormData();
+            formData.append('fullname', document.querySelector('input[name="fullname"]').value);
+            formData.append('price', document.querySelector('input[name="price"]').value);
+            formData.append('address', document.querySelector('input[name="address"]').value);
+            formData.append('status', document.querySelector('input[name="status"]').value);
+            formData.append('ghichu', document.querySelector('textarea[name="ghichu"]').value);
+            formData.append('phone', document.querySelector('input[name="phone"]').value);
+
+
+            fetch('/product/addorder', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert(data.message);
+                        location.reload();
+                    } else {
+                        alert(data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Lỗi khi gửi yêu cầu:', error);
+                    alert('Lỗi khi gửi yêu cầu.');
+                });
+        });
 </script>

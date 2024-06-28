@@ -4,6 +4,7 @@ using HUFLITCOFFEE.Models;
 using HUFLITCOFFEE.Models.Main;
 using System.Data.SqlClient;
 using System.Security.Claims;
+using Microsoft.EntityFrameworkCore;
 
 namespace HUFLITCOFFEE.Controllers;
 
@@ -49,14 +50,30 @@ public class ProductController : Controller
 
         return View(model); // Trả về view với danh sách sản phẩm
     }
-    public IActionResult Cart()
+    public async Task<IActionResult> Cart()
     {
-        var carts = _huflitcoffeeContext.CartItems.ToList();
-        return View(carts);
-    }
-    public IActionResult AddToCart()
-    {
-        return View();
+        try
+        {
+            // Lấy UserId từ claims
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+            if (userIdClaim == null)
+            {
+                return Json(new { success = false, message = "Không tìm thấy thông tin người dùng." });
+            }
+            var userId = int.Parse(userIdClaim.Value);
+
+            // Lấy các mục giỏ hàng của người dùng tương ứng
+            var carts = await _huflitcoffeeContext.CartItems
+                            .Where(c => c.UserId == userId)
+                            .ToListAsync();
+
+            return View(carts);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+            return Json(new { success = false, message = $"Lỗi khi lấy giỏ hàng: {ex.Message}" });
+        }
     }
 
     // Action xử lý khi người dùng nhấn nút thêm sản phẩm vào giỏ hàng trên form
@@ -68,7 +85,8 @@ public class ProductController : Controller
   [FromForm] string product_image,
   [FromForm] string product_size,
   [FromForm] string product_quantity,
-  [FromForm] string topping_names)
+  [FromForm] string topping_names,
+  [FromForm] string unit_price)
     {
         if (ModelState.IsValid)
         {
@@ -87,8 +105,8 @@ public class ProductController : Controller
                     await connection.OpenAsync();
 
                     string sql = @"
-                    INSERT INTO CartItem  ( UserID, ProductID, ImgProduct,NameProduct,PriceProduct,Quantity,ToppingNames,DVT )
-                    VALUES ( @UserID, @ProductID, @ImgProduct,@NameProduct,@PriceProduct,@Quantity,@ToppingNames,@DVT )";
+                    INSERT INTO CartItem  ( UserID, ProductID, ImgProduct,NameProduct,PriceProduct,Quantity,ToppingNames,DVT,UnitPrice )
+                    VALUES ( @UserID, @ProductID, @ImgProduct,@NameProduct,@PriceProduct,@Quantity,@ToppingNames,@DVT,@UnitPrice )";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
@@ -100,6 +118,7 @@ public class ProductController : Controller
                         command.Parameters.AddWithValue("@Quantity", product_quantity);
                         command.Parameters.AddWithValue("@ToppingNames", topping_names);
                         command.Parameters.AddWithValue("@DVT", product_size);
+                        command.Parameters.AddWithValue("@UnitPrice", decimal.Parse(unit_price));
                         await command.ExecuteNonQueryAsync();
                     }
                 }
@@ -116,10 +135,6 @@ public class ProductController : Controller
         return Json(new { success = false, message = "Dữ liệu không hợp lệ." });
     }
     // Xử lý delete sản phẩm khỏi giỏ hàng
-    public IActionResult DeleteCart()
-    {
-        return View();
-    }
     // Action xử lý khi nhận yêu cầu POST từ form xóa sản phẩm
     [HttpPost("/product/deletecart")]
     public async Task<IActionResult> DeleteCart([FromForm] int delete_cart_id)
@@ -219,10 +234,82 @@ public class ProductController : Controller
     {
         return View();
     }
-    public IActionResult Shipping()
+    public async Task<IActionResult> Shipping()
     {
-        return View();
+        try
+        {
+            var carts = await _huflitcoffeeContext.CartItems.ToListAsync();
+
+            // Tính tổng thanh toán
+            var totalPayment = carts.Sum(c => c.PriceProduct);
+
+            // Truyền tổng thanh toán đến view
+            ViewBag.TotalPayment = totalPayment;
+
+            return View(carts);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+            return Json(new { success = false, message = $"Lỗi khi lấy giỏ hàng: {ex.Message}" });
+        }
     }
+    // thêm đơn hàng
+    [HttpPost("/product/addorder")]
+    public async Task<IActionResult> AddOrder(
+     [FromForm] string fullname,
+     [FromForm] string price,
+     [FromForm] string address,
+     [FromForm] string status,
+     [FromForm] string ghichu,
+     [FromForm] string phone)
+    {
+        if (ModelState.IsValid)
+        {
+            try
+            {
+                // Lấy UserId từ claims
+                var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+                if (userIdClaim == null)
+                {
+                    return Json(new { success = false, message = "Không tìm thấy thông tin người dùng." });
+                }
+                var userId = int.Parse(userIdClaim.Value);
+
+                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("CoffeeDBConnectionString")))
+                {
+                    await connection.OpenAsync();
+
+                    string sql = @"
+                    INSERT INTO [Order] ( UserID,FullName, Address, PhoneNumber, Total, Status, DateOrder, Ghichu)
+                    VALUES (@UserID, @FullName, @Address, @PhoneNumber, @Total, @Status, @DateOrder, @Ghichu)";
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserID", userId);
+                        command.Parameters.AddWithValue("@FullName", fullname);
+                        command.Parameters.AddWithValue("@Address", address);
+                        command.Parameters.AddWithValue("@PhoneNumber", phone);
+                        command.Parameters.AddWithValue("@Total", decimal.Parse(price));
+                        command.Parameters.AddWithValue("@Status", status);
+                        command.Parameters.AddWithValue("@DateOrder", DateTime.Now);
+                        command.Parameters.AddWithValue("@Ghichu", ghichu);
+                        await command.ExecuteNonQueryAsync();
+                    }
+                }
+
+                return Json(new { success = true, message = "Đặt hàng thành công." });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return Json(new { success = false, message = $"Lỗi khi lưu sản phẩm: {ex.Message}" });
+            }
+        }
+
+        return Json(new { success = false, message = "Dữ liệu không hợp lệ." });
+    }
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

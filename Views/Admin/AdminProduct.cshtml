@@ -388,13 +388,35 @@
             if (confirm("Bạn có chắc chắn muốn xóa sản phẩm này?")) {
                 // Đặt giá trị productId vào input ẩn
                 document.querySelector('input[name="delete_product_id"]').value = productId;
-                // Submit form để gửi yêu cầu xóa sản phẩm
-                document.getElementById('deleteProductForm').submit();
+
+                // Tạo đối tượng FormData từ form
+                var formData = new FormData(document.getElementById('deleteProductForm'));
+
+                // Gửi yêu cầu xóa sản phẩm
+                fetch('/admin/deleteproduct', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert(data.message);
+                            location.reload();
+                        } else {
+                            console.error('Lỗi dữ liệu:', data.errors);
+                            alert(data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Lỗi khi gửi yêu cầu:', error);
+                        alert('Lỗi khi gửi yêu cầu.');
+                    });
             } else {
                 // Nếu người dùng không chắc chắn, không làm gì cả
                 return false;
             }
         });
     });
+
 
 </script>
