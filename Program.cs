@@ -192,6 +192,11 @@ pattern: "/admin",
 defaults: new { controller = "Role", action = "Admin" }
 );
 app.MapControllerRoute(
+name: " Forgotpassword faffafaf",
+pattern: "/forgot",
+defaults: new { controller = "Account", action = "Forgotpassword" }
+);
+app.MapControllerRoute(
 name: " Role User faffafaf",
 pattern: "/user",
 defaults: new { controller = "Role", action = "Customer" }

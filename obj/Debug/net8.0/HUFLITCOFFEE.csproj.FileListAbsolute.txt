@@ -248,4 +248,4 @@ D:\HUFLITCOFFEE\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
 D:\HUFLITCOFFEE\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
 D:\HUFLITCOFFEE\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\HUFLITCOFFEE\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-D:\HUFLITCOFFEE\obj\Debug\net8.0\HUFLITCOFFEE.csproj.CopyComplete
+D:\HUFLITCOFFEE\obj\Debug\net8.0\HUFLITCO.CE9ECA57.Up2Date

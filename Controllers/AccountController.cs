@@ -137,5 +137,10 @@ VALUES (@Username, @PasswordHash, @Email, @FullName, @Address, @PhoneNumber ,@Cr
 
             return Json(new { success = false, message = "Dữ liệu không hợp lệ." });
         }
+        [HttpGet]
+        public IActionResult Forgotpassword()
+        {
+            return View();
+        }
     }
 }
