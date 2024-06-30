@@ -21,30 +21,9 @@ namespace HUFLITCOFFEE.Controllers
             _context = context;
             _configuration = configuration;
         }
-        public async Task<IActionResult> Profile()
+        public IActionResult Profile()
         {
-            try
-            {
-                // Lấy UserId từ claims
-                var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
-                if (userIdClaim == null)
-                {
-                    return Json(new { success = false, message = "Không tìm thấy thông tin người dùng." });
-                }
-                var userId = int.Parse(userIdClaim.Value);
-
-                // Lấy các mục giỏ hàng của người dùng tương ứng
-                var orders = await _context.Orders
-                                .Where(c => c.UserId == userId)
-                                .ToListAsync();
-
-                return View(orders);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-                return Json(new { success = false, message = $"Lỗi khi lấy giỏ hàng: {ex.Message}" });
-            }
+            return View();
         }
         [HttpGet]
         public IActionResult Login()
@@ -139,6 +118,14 @@ VALUES (@Username, @PasswordHash, @Email, @FullName, @Address, @PhoneNumber ,@Cr
         }
         [HttpGet]
         public IActionResult Forgotpassword()
+        {
+            return View();
+        }
+        public IActionResult OrderHistory()
+        {
+            return View();
+        }
+        public IActionResult OrderDetailHistory()
         {
             return View();
         }

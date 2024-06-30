@@ -187,6 +187,16 @@ app.MapControllerRoute(
     defaults: new { controller = "Account", action = "Profile" }
 );
 app.MapControllerRoute(
+    name: "OrderHistory",
+    pattern: "/orderhistory",
+    defaults: new { controller = "Account", action = "OrderHistory" }
+);
+app.MapControllerRoute(
+    name: "OrderDetailHistory",
+    pattern: "/orderdetailhistory",
+    defaults: new { controller = "Account", action = "OrderDetailHistory" }
+);
+app.MapControllerRoute(
 name: " Admin faffafaf",
 pattern: "/admin",
 defaults: new { controller = "Role", action = "Admin" }
