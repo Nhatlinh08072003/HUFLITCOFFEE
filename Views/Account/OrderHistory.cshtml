@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch sử mua hàng của khách hàng</title>
+    <!-- Link to Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="container mx-auto mt-10 p-6 bg-white shadow-md rounded">
+        <h1 class="text-2xl font-bold mb-6">Lịch sử mua hàng của khách hàng</h1>
+
+        <!-- Order history list -->
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border-collapse border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+                        <th class="py-3 px-6 text-left">Mã đơn hàng</th>
+                        <th class="py-3 px-6 text-left">Ngày đặt hàng</th>
+                        <th class="py-3 px-6 text-left">Tổng số tiền</th>
+                        <th class="py-3 px-6 text-left">Trạng thái</th>
+                        <th class="py-3 px-6 text-left">Chi tiết</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-600 text-sm font-light">
+                    <!-- Example row, replace with actual data -->
+                    <tr class="border-b border-gray-300 hover:bg-gray-100">
+                        <td class="py-3 px-6 text-left whitespace-nowrap">DH20240001</td>
+                        <td class="py-3 px-6 text-left">2024-06-30</td>
+                        <td class="py-3 px-6 text-left">$120.00</td>
+                        <td class="py-3 px-6 text-left">
+                            <span class="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">Đang xử lý</span>
+                        </td>
+                        <td class="py-3 px-6 text-left">
+                            <a href="/orderdetailhistory" class="text-indigo-600 hover:text-indigo-900">Xem chi tiết</a>
+                        </td>
+                    </tr>
+                    <!-- More rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
