@@ -12,13 +12,13 @@ namespace HUFLITCOFFEE.Controllers
     public class AccountController : Controller
     {
         private readonly ILogger<AccountController> _logger;
-        private readonly HuflitcoffeeContext _huflitcoffeeContext;
+        private readonly HuflitcoffeeContext _context;
         private readonly IConfiguration _configuration;
 
         public AccountController(ILogger<AccountController> logger, HuflitcoffeeContext context, IConfiguration configuration)
         {
             _logger = logger;
-            _huflitcoffeeContext = context;
+            _context = context;
             _configuration = configuration;
         }
         public IActionResult Profile()
@@ -36,7 +36,7 @@ namespace HUFLITCOFFEE.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = await _huflitcoffeeContext.Users
+                var user = await _context.Users
                     .FirstOrDefaultAsync(u => u.Username == model.Username && u.PasswordHash == model.Password);
 
                 if (user != null && user.Username != null && user.Email != null)
@@ -134,7 +134,7 @@ VALUES (@Username, @PasswordHash, @Email, @FullName, @Address, @PhoneNumber ,@Cr
                 var userId = int.Parse(userIdClaim.Value);
 
                 // Lấy các mục giỏ hàng của người dùng tương ứng
-                var orders = await _huflitcoffeeContext.Orders
+                var orders = await _context.Orders
                                 .Where(c => c.UserId == userId)
                                 .ToListAsync();
 
