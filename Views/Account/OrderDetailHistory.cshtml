@@ -1,3 +1,4 @@
+@model HUFLITCOFFEE.Models.Main.OrderDetailViewModel;
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,18 +16,14 @@
         <div class="mb-8 border rounded-lg shadow-md p-4">
             <h2 class="text-xl font-medium mb-2">Customer Information</h2>
             <ul class="list-disc pl-4">
-                <li id="customer-name">NHATLINH</li>
-                <li id="customer-email">Letiennhatlinh08072003@gmail.com</li>
-                <li id="customer-phone">0886007589</li>
-                <li id="customer-address">412/12 Luy Ban Bich</li>
+                <li id="customer-name">@Model.FullName</li>
+                <li id="customer-phone">@Model.PhoneNumber</li>
             </ul>
             <h2 class="text-xl font-medium mt-4 mb-2">Order Details</h2>
             <ul class="list-disc pl-4">
-                <li>Order Date: <span id="order-date">30/06/2024</span></li>
-                <li>Order Status: <span id="order-status">ship nhanh</span></li>
-                <li>Payment Method: <span id="payment-method">COD</span></li>
-                <li>Shipping Address: <span id="shipping-address">412/12 Luy Ban Bich</span></li>
-                <li>Billing Address (if different): <span id="billing-address"></span></li>
+                <li>Order Date: <span id="order-date">@Model.DateOrder</span></li>
+                <li>Order Status: <span id="order-status">@Model.Status</span></li>
+                <li>Shipping Address: <span id="shipping-address">@Model.Address</span></li>
             </ul>
         </div>
 
@@ -36,6 +33,7 @@
                 <thead>
                     <tr class="bg-gray-200 text-sm uppercase leading-normal text-gray-600">
                         <th class="px-6 py-3 text-left">Product Name</th>
+                        <th class="px-6 py-3 text-left">Topping Name</th>
                         <th class="px-6 py-3 text-left">Quantity</th>
                         <th class="px-6 py-3 text-left">Size</th>
                         <th class="px-6 py-3 text-right">Unit Price</th>
@@ -43,20 +41,20 @@
                     </tr>
                 </thead>
                 <tbody id="order-items">
-                    <tr>
-                        <td class="px-6 py-3 text-left">Bạc xĩu</td>
-                        <td class="px-6 py-3 text-left">2</td>
-                        <td class="px-6 py-3 text-left">M</td>
-                        <td class="px-6 py-3 text-right">$25.00</td>
-                        <td class="px-6 py-3 text-right">$50.00</td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-3 text-left">Caphuchino</td>
-                        <td class="px-6 py-3 text-left">1</td>
-                        <td class="px-6 py-3 text-left">L</td>
-                        <td class="px-6 py-3 text-right">$50.00</td>
-                        <td class="px-6 py-3 text-right">$50.00</td>
-                    </tr>
+                    @if (Model.CartItems != null && Model.CartItems.Any())
+                    {
+                        @foreach (var item in Model.CartItems)
+                        {
+                            <tr>
+                                <td class="px-6 py-3 text-left">@item.NameProduct</td>
+                                <td class="px-6 py-3 text-left">@item.ToppingNames</td>
+                                <td class="px-6 py-3 text-left">@item.Quantity</td>
+                                <td class="px-6 py-3 text-left">@item.Dvt</td>
+                                <td class="px-6 py-3 text-right">@item.UnitPrice</td>
+                                <td class="px-6 py-3 text-right">@item.PriceProduct</td>
+                            </tr>
+                        }
+                    }
                 </tbody>
             </table>
         </div>
@@ -64,10 +62,7 @@
         <div>
             <h2 class="text-xl font-medium mb-2">Order Summary</h2>
             <ul class="list-disc pl-4">
-                <li>Subtotal: <span id="subtotal">$100.00</span></li>
-                <li>Tax (if applicable): <span id="tax">$0.00</span></li>
-                <li>Shipping Cost: <span id="shipping-cost">$5.00</span></li>
-                <li class="font-bold text-lg mt-2">Total: <span id="order-total">$105.00</span></li>
+                <li class="font-bold text-lg mt-2">Total: <span id="order-total">@Model.Total</span></li>
             </ul>
         </div>
     </div>
