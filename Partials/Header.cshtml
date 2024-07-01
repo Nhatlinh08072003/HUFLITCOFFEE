@@ -47,11 +47,9 @@
                         <a href="/resetpassword" class="block px-4 py-2 text-black hover:bg-gray-100">Đổi mật khẩu</a>
                     </div>
                 </div>
-                <a href="@Url.Action("Logout", "Account")" onclick="confirmLogout()">
+                <a href="@Url.Action("Logout", "Account")" onclick="confirmLogout(event)">
                     <div class="Orther-login">Đăng xuất</div>
                 </a>
-
-
 
             }
             else
@@ -117,11 +115,12 @@
     </div>
 </header>
 <script>
-    function confirmLogout() {
-        if (confirm("Bạn có chắc muốn đăng xuất không?")) {
-            window.location.href = '@Url.Action("Logout", "Account")';
+    function confirmLogout(event) {
+        if (!confirm("Bạn có chắc muốn đăng xuất không?")) {
+            event.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
         }
     }
+
 
     document.getElementById('dropdownButton').addEventListener('click', function () {
         var menu = document.getElementById('dropdownMenu');

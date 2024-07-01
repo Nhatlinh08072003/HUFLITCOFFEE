@@ -322,7 +322,7 @@
         // Hàm cập nhật tổng giá sản phẩm dựa trên số lượng và topping
         function updateTotalPrice(quantity) {
             let totalToppingPrice = calculateTotalToppingPrice(); // Tính tổng giá của các topping đã chọn
-            let totalPrice = basePrice * quantity + totalToppingPrice; // Tính tổng giá sản phẩm
+            let totalPrice = (basePrice + totalToppingPrice) * quantity; // Tính tổng giá sản phẩm
             document.getElementById('mainProductPrice').textContent = totalPrice.toLocaleString('vi-VN') + ' .000 đ'; // Hiển thị giá sản phẩm
         }
 
@@ -414,7 +414,7 @@
         document.getElementById('Name_Topping').innerText = selectedToppingNames.join(', ');
 
         var basePrice = parseFloat(document.getElementById('mainProductPrice').getAttribute('data-base-price'));
-        var totalPrice = basePrice * quantity + totalToppingPrice; // Tính tổng giá sản phẩm
+        var totalPrice = (basePrice + totalToppingPrice) * quantity; // Tính tổng giá sản phẩm
         document.getElementById('mainProductPrice').innerText = totalPrice.toLocaleString('vi-VN') + ' .000 đ'; // Hiển thị giá sản phẩm
     }
 
@@ -472,6 +472,4 @@
             }
         });
     });
-
-
 </script>
