@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HUFLITCOFFEE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3bf1d1c98b060630a9286bc09c27c1d2b3d16bc2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d426f6cddd1cc9301c075bcff309f64859a0a393")]
 [assembly: System.Reflection.AssemblyProductAttribute("HUFLITCOFFEE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HUFLITCOFFEE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

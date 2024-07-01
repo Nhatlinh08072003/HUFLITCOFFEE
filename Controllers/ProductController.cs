@@ -238,10 +238,21 @@ public class ProductController : Controller
     {
         try
         {
-            var carts = await _huflitcoffeeContext.CartItems.ToListAsync();
+            // Lấy UserId từ claims
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+            if (userIdClaim == null)
+            {
+                return Json(new { success = false, message = "Không tìm thấy thông tin người dùng." });
+            }
+            var userId = int.Parse(userIdClaim.Value);
+
+            // Lấy thông tin giỏ hàng của người dùng tương ứng
+            var carts = await _huflitcoffeeContext.CartItems
+                                .Where(c => c.UserId == userId)
+                                .ToListAsync();
 
             // Tính tổng thanh toán
-            var totalPayment = carts.Sum(c => c.PriceProduct);
+            var totalPayment = carts.Sum(c => c.PriceProduct * c.Quantity);
 
             // Truyền tổng thanh toán đến view
             ViewBag.TotalPayment = totalPayment;

@@ -193,7 +193,7 @@ app.MapControllerRoute(
 );
 app.MapControllerRoute(
     name: "OrderDetailHistory",
-    pattern: "/orderdetailhistory",
+    pattern: "/orderdetailhistory{id}",
     defaults: new { controller = "Account", action = "OrderDetailHistory" }
 );
 app.MapControllerRoute(

@@ -1,3 +1,4 @@
+@model List<HUFLITCOFFEE.Models.Main.Order>;
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,17 +29,22 @@
                 </thead>
                 <tbody class="text-gray-600 text-sm font-light">
                     <!-- Example row, replace with actual data -->
-                    <tr class="border-b border-gray-300 hover:bg-gray-100">
-                        <td class="py-3 px-6 text-left whitespace-nowrap">DH20240001</td>
-                        <td class="py-3 px-6 text-left">2024-06-30</td>
-                        <td class="py-3 px-6 text-left">$120.00</td>
-                        <td class="py-3 px-6 text-left">
-                            <span class="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">Đang xử lý</span>
-                        </td>
-                        <td class="py-3 px-6 text-left">
-                            <a href="/orderdetailhistory" class="text-indigo-600 hover:text-indigo-900">Xem chi tiết</a>
-                        </td>
-                    </tr>
+                    @foreach (var item in @Model)
+                    {
+                        <tr class="border-b border-gray-300 hover:bg-gray-100">
+                            <td class="py-3 px-6 text-left whitespace-nowrap">@item.OrderId</td>
+                            <td class="py-3 px-6 text-left">@item.DateOrder</td>
+                            <td class="py-3 px-6 text-left">@item.Total đ</td>
+                            <td class="py-3 px-6 text-left">
+                                <span
+                                    class="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">@item.Status</span>
+                            </td>
+                            <td class="py-3 px-6 text-left">
+                                <a href="/orderdetailhistory/@item.OrderId"
+                                    class="text-indigo-600 hover:text-indigo-900">Xem chi tiết</a>
+                            </td>
+                        </tr>
+                    }
                     <!-- More rows as needed -->
                 </tbody>
             </table>
