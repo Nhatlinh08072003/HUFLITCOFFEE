@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OT07YJr60xf2eDTWRI65L+9zfYPk0ufESTDahkUleWw=",
+  "Hash": "qHgg2Egm/kn0k7a2RWiE22x7aeOrBlYIl4rYDe7qKN4=",
   "Source": "HUFLITCOFFEE",
   "BasePath": "_content/HUFLITCOFFEE",
   "Mode": "Default",
@@ -1364,6 +1364,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\MoChi.webp"
+    },
+    {
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\NewLogo.png",
+      "SourceId": "HUFLITCOFFEE",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
+      "BasePath": "_content/HUFLITCOFFEE",
+      "RelativePath": "images/NewLogo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\NewLogo.png"
     },
     {
       "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\js\\homepage.js",

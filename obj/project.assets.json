@@ -4705,5 +4705,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\HUFLITCOFFEE\\obj\\project.nuget.cache : After parsing a value an unexpected character was encountered: \". Path 'expectedPackageFiles[87]', line 96, position 4."
+    }
+  ]
 }
