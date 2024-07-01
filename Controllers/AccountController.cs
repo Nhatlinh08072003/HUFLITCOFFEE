@@ -274,8 +274,50 @@ VALUES (@Username, @PasswordHash, @Email, @FullName, @Address, @PhoneNumber ,@Cr
 
             return View(profileViewModel);
         }
+        [HttpGet]
+        public IActionResult Resetpassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                // Lấy UserId từ claims
+                var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+                if (userIdClaim == null)
+                {
+                    return NotFound();
+                }
+                var userId = int.Parse(userIdClaim.Value);
 
+                // Lấy thông tin người dùng từ database
+                var user = await _huflitcoffeeContext.Users
+                    .FirstOrDefaultAsync(u => u.UserId == userId);
 
+                if (user == null)
+                {
+                    return NotFound(); // Return a 404 if user is not found
+                }
+
+                // Kiểm tra mật khẩu hiện tại
+                if (user.PasswordHash != model.CurrentPassword)
+                {
+                    ModelState.AddModelError(nameof(model.CurrentPassword), "Mật khẩu hiện tại không đúng.");
+                    return View(model);
+                }
+
+                // Cập nhật mật khẩu mới
+                user.PasswordHash = model.NewPassword;
+                _huflitcoffeeContext.Users.Update(user);
+                await _huflitcoffeeContext.SaveChangesAsync();
+
+                return RedirectToAction("Index", "Home"); // Chuyển hướng về trang chủ sau khi đổi mật khẩu thành công
+            }
+
+            return View(model);
+        }
 
     }
 }
