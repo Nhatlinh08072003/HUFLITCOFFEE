@@ -1,33 +1,63 @@
-<link rel="stylesheet" href="~/css/AccountInfo.css">
-<div class="AccountInfo_imgcontainer">
-    <img src="https://cdn-icons-png.flaticon.com/128/4874/4874892.png" alt="Avatar" class="AccountInfo_avatar">
-</div>
-<div class="AccountInfo_container">
-    <h2 class="AccountInfo_heading">THÔNG TIN TÀI KHOẢN</h2>
-    <form action="update_account.php" method="post">
-        <div class="AccountInfo_innercontainer">
-            <div class="AccountInfo_input-container">
-                <img src="https://cdn-icons-png.flaticon.com/128/15494/15494722.png" alt="Avatar"
-                    class="AccountInfo_icon">
-                <input type="text" placeholder="Họ và Tên" name="fullname" value="Nhật Linh" readonly>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Hồ Sơ</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="container mx-auto mt-10">
+        <div class="max-w-xl mx-auto bg-white p-5 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold mb-5 text-center">Hồ Sơ Cá Nhân</h2>
+
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="fullName">Họ Tên</label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="fullName" type="text" value="Nguyễn Văn A">
             </div>
 
-            <div class="AccountInfo_input-container">
-                <img src="https://cdn-icons-png.flaticon.com/128/11870/11870524.png" alt="Avatar"
-                    class="AccountInfo_icon">
-                <input type="text" placeholder="Số Điện Thoại" name="phone" value="0886007589" readonly>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="phoneNumber">Số Điện Thoại</label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="phoneNumber" type="text" value="0123456789">
             </div>
 
-            <div class="AccountInfo_input-container">
-                <img src="https://cdn-icons-png.flaticon.com/128/482/482138.png" alt="Avatar" class="AccountInfo_icon">
-                <input type="email" placeholder="Email" name="email" value="letiennhatlinh08072003" readonly>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username</label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="username" type="text" value="nguyenvana">
             </div>
 
-            <div class="AccountInfo_input-container">
-                <img src="https://cdn-icons-png.flaticon.com/128/819/819865.png" alt="Avatar" class="AccountInfo_icon">
-                <input type="text" placeholder="Địa chỉ" name="address" value="Thành phố HCM" readonly>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="address">Địa Chỉ</label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="address" type="text" value="123 Đường ABC, Phường XYZ, Quận 1, TP.HCM">
             </div>
-            <button type="submit">Thay Đổi</button>
+
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="email" type="email" value="nguyenvana@example.com">
+            </div>
+
+            <div class="flex items-center justify-between">
+                <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="button">
+                    Lưu
+                </button>
+            </div>
         </div>
-    </form>
-</div>
+    </div>
+</body>
+
+</html>
