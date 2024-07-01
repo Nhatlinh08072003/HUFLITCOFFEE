@@ -129,5 +129,9 @@ VALUES (@Username, @PasswordHash, @Email, @FullName, @Address, @PhoneNumber ,@Cr
         {
             return View();
         }
+        public IActionResult Resetpassword()
+        {
+            return View();
+        }
     }
 }

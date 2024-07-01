@@ -207,6 +207,11 @@ pattern: "/forgot",
 defaults: new { controller = "Account", action = "Forgotpassword" }
 );
 app.MapControllerRoute(
+name: "Resetpassword faffafaf",
+pattern: "/resetpassword",
+defaults: new { controller = "Account", action = "Resetpassword" }
+);
+app.MapControllerRoute(
 name: " Role User faffafaf",
 pattern: "/user",
 defaults: new { controller = "Role", action = "Customer" }
