@@ -242,6 +242,40 @@ VALUES (@Username, @PasswordHash, @Email, @FullName, @Address, @PhoneNumber ,@Cr
                 return View(orderDetailViewModel);
             }
         }
+        public async Task<IActionResult> UserProfile()
+        {
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+            if (userIdClaim == null)
+            {
+                return NotFound();
+            }
+
+            var userId = int.Parse(userIdClaim.Value);
+
+            var user = await _huflitcoffeeContext.Users
+                .FirstOrDefaultAsync(u => u.UserId == userId);
+
+            if (user == null)
+            {
+                return NotFound(); // Return a 404 if user is not found
+            }
+
+            var profileViewModel = new ProfileViewModel
+            {
+                UserId = user.UserId,
+                Username = user.Username,
+                Email = user.Email,
+                FullName = user.FullName,
+                Address = user.Address,
+                PhoneNumber = user.PhoneNumber,
+                CreatedAt = user.CreatedAt
+                // Add other properties as needed
+            };
+
+            return View(profileViewModel);
+        }
+
+
 
     }
 }

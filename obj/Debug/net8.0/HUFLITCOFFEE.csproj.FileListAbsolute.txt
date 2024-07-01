@@ -144,9 +144,9 @@ D:\HUFLITCOFFEE\obj\Debug\net8.0\staticwebassets.pack.json
 D:\HUFLITCOFFEE\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\HUFLITCOFFEE\obj\Debug\net8.0\scopedcss\bundle\HUFLITCOFFEE.styles.css
 D:\HUFLITCOFFEE\obj\Debug\net8.0\scopedcss\projectbundle\HUFLITCOFFEE.bundle.scp.css
-D:\HUFLITCOFFEE\obj\Debug\net8.0\HUFLITCOFFEE.csproj.CopyComplete
 D:\HUFLITCOFFEE\obj\Debug\net8.0\HUFLITCOFFEE.dll
 D:\HUFLITCOFFEE\obj\Debug\net8.0\refint\HUFLITCOFFEE.dll
 D:\HUFLITCOFFEE\obj\Debug\net8.0\HUFLITCOFFEE.pdb
 D:\HUFLITCOFFEE\obj\Debug\net8.0\HUFLITCOFFEE.genruntimeconfig.cache
 D:\HUFLITCOFFEE\obj\Debug\net8.0\ref\HUFLITCOFFEE.dll
+D:\HUFLITCOFFEE\obj\Debug\net8.0\HUFLITCO.CE9ECA57.Up2Date
