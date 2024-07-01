@@ -252,7 +252,7 @@ public class ProductController : Controller
                                 .ToListAsync();
 
             // Tính tổng thanh toán
-            var totalPayment = carts.Sum(c => c.PriceProduct * c.Quantity);
+            var totalPayment = carts.Sum(c => c.PriceProduct);
 
             // Truyền tổng thanh toán đến view
             ViewBag.TotalPayment = totalPayment;
