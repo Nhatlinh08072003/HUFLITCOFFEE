@@ -237,6 +237,10 @@
       "PackagePath": "staticwebassets\\images\\MoChi.webp"
     },
     {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\NewLogo.png",
+      "PackagePath": "staticwebassets\\images\\NewLogo.png"
+    },
+    {
       "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\afc451c7-acfb-4bd8-bcff-f14a8d709b07_th.jpg",
       "PackagePath": "staticwebassets\\images\\afc451c7-acfb-4bd8-bcff-f14a8d709b07_th.jpg"
     },
