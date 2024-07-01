@@ -21,10 +21,42 @@ namespace HUFLITCOFFEE.Controllers
             _huflitcoffeeContext = context;
             _configuration = configuration;
         }
-        public IActionResult Profile()
+        [HttpGet]
+        public async Task<IActionResult> Profile()
         {
-            return View();
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+            if (userIdClaim == null)
+            {
+                return NotFound();
+            }
+
+            var userId = int.Parse(userIdClaim.Value);
+
+            var user = await _huflitcoffeeContext.Users
+                .FirstOrDefaultAsync(u => u.UserId == userId);
+
+            if (user == null)
+            {
+                return NotFound(); // Trả về 404 nếu không tìm thấy người dùng
+            }
+
+            var profileViewModel = new ProfileViewModel
+            {
+                UserId = user.UserId,
+                Username = user.Username,
+                Email = user.Email,
+                FullName = user.FullName,
+                Address = user.Address,
+                PhoneNumber = user.PhoneNumber
+                // Thêm các thuộc tính khác nếu cần
+            };
+
+            return View(profileViewModel); // Đảm bảo rằng bạn đang trả về view model
         }
+
+
+
+
         [HttpGet]
         public IActionResult Login()
         {
@@ -242,38 +274,7 @@ VALUES (@Username, @PasswordHash, @Email, @FullName, @Address, @PhoneNumber ,@Cr
                 return View(orderDetailViewModel);
             }
         }
-        public async Task<IActionResult> UserProfile()
-        {
-            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
-            if (userIdClaim == null)
-            {
-                return NotFound();
-            }
 
-            var userId = int.Parse(userIdClaim.Value);
-
-            var user = await _huflitcoffeeContext.Users
-                .FirstOrDefaultAsync(u => u.UserId == userId);
-
-            if (user == null)
-            {
-                return NotFound(); // Return a 404 if user is not found
-            }
-
-            var profileViewModel = new ProfileViewModel
-            {
-                UserId = user.UserId,
-                Username = user.Username,
-                Email = user.Email,
-                FullName = user.FullName,
-                Address = user.Address,
-                PhoneNumber = user.PhoneNumber,
-                CreatedAt = user.CreatedAt
-                // Add other properties as needed
-            };
-
-            return View(profileViewModel);
-        }
         [HttpGet]
         public IActionResult Resetpassword()
         {
