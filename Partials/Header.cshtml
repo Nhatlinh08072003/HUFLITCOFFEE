@@ -1,3 +1,4 @@
+<script src="https://cdn.tailwindcss.com"></script>
 <header>
     <div class="Home_menu_show_behind">
         <div class="Home_menu_show">
@@ -35,16 +36,22 @@
         <div class="Home_register_cart">
             @if (User.Identity != null && User.Identity.IsAuthenticated)
             {
-                <div>
-                    <span style="color:#000;text-decoration: none;">
+                <div class="relative">
+                    <button id="dropdownButton" class="text-black bg-white px-4 py-2 rounded focus:outline-none">
                         Welcome, @User.Identity.Name
-                    </span>
+                    </button>
+                    <div id="dropdownMenu" class="hidden w-full absolute right-0  bg-white border rounded shadow-md">
+                        <a href="/profile" class="block px-4 py-2 text-black hover:bg-gray-100">Profile</a>
+                        <a href="/order-history" class="block px-4 py-2 text-black hover:bg-gray-100">Lịch sử mua hàng</a>
+                        <a href="/change-password" class="block px-4 py-2 text-black hover:bg-gray-100">Đổi mật khẩu</a>
+                    </div>
                 </div>
                 <a href="@Url.Action("Logout", "Account")" onclick="confirmLogout()">
                     <div class="Orther-login">Đăng xuất</div>
                 </a>
-                <a href="/profile"><img src="https://cdn-icons-png.flaticon.com/128/1077/1077114.png" loading="lazy"
-                        alt="User " title="User " width="30" height="30"></a>
+
+
+
             }
             else
             {
@@ -114,4 +121,16 @@
             window.location.href = '@Url.Action("Logout", "Account")';
         }
     }
+
+    document.getElementById('dropdownButton').addEventListener('click', function () {
+        var menu = document.getElementById('dropdownMenu');
+        menu.classList.toggle('hidden');
+    });
+
+    // Hide the dropdown menu if clicked outside
+    window.addEventListener('click', function (e) {
+        if (!document.getElementById('dropdownButton').contains(e.target)) {
+            document.getElementById('dropdownMenu').classList.add('hidden');
+        }
+    });
 </script>
