@@ -176,6 +176,11 @@ td {
    display: none;
    position: fixed;
 }
+@media (min-width: 1201px) {
+   #addProductForm {
+      margin-left: 13%;
+   }
+}
 #editProductForm {
    display: none;
    position: fixed;
