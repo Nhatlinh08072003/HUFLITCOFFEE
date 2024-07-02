@@ -1,50 +1,56 @@
+@model HUFLITCOFFEE.Models.Main.ProfileViewModel
+
 <link rel="stylesheet" href="~/css/AccountInfo.css">
+
 <div class="AccountInfo_imgcontainer">
     <img src="https://cdn-icons-png.flaticon.com/128/4874/4874892.png" alt="Avatar" class="AccountInfo_avatar">
 </div>
+
 <div class="AccountInfo_container">
     <h2 class="AccountInfo_heading">THÔNG TIN TÀI KHOẢN</h2>
     <form action="update_account.php" method="post">
         <div class="AccountInfo_innercontainer">
             <div class="AccountInfo_input-container">
-                <img src="https://cdn-icons-png.flaticon.com/128/15494/15494722.png" alt="Avatar"
-                    class="AccountInfo_icon">
-                <input type="text" placeholder="Họ và Tên" name="fullname" value="Nhật Linh" readonly>
+                <img src="https://cdn-icons-png.flaticon.com/128/15494/15494722.png" alt="Avatar" class="AccountInfo_icon">
+                <input type="text" placeholder="Họ và Tên" name="fullname" value="@Model.User.FullName" readonly>
             </div>
 
             <div class="AccountInfo_input-container">
-                <img src="https://cdn-icons-png.flaticon.com/128/11870/11870524.png" alt="Avatar"
-                    class="AccountInfo_icon">
-                <input type="text" placeholder="Số Điện Thoại" name="phone" value="0886007589" readonly>
+                <img src="https://cdn-icons-png.flaticon.com/128/11870/11870524.png" alt="Avatar" class="AccountInfo_icon">
+                <input type="text" placeholder="Số Điện Thoại" name="phone" value="@Model.User.PhoneNumber" readonly>
             </div>
 
             <div class="AccountInfo_input-container">
                 <img src="https://cdn-icons-png.flaticon.com/128/482/482138.png" alt="Avatar" class="AccountInfo_icon">
-                <input type="email" placeholder="Email" name="email" value="letiennhatlinh08072003" readonly>
+                <input type="email" placeholder="Email" name="email" value="@Model.User.Email" readonly>
             </div>
 
             <div class="AccountInfo_input-container">
                 <img src="https://cdn-icons-png.flaticon.com/128/819/819865.png" alt="Avatar" class="AccountInfo_icon">
-                <input type="text" placeholder="Địa chỉ" name="address" value="Thành phố HCM" readonly>
+                <input type="text" placeholder="Địa chỉ" name="address" value="@Model.User.Address" readonly>
             </div>
+
             <button type="submit">Thay Đổi</button>
         </div>
     </form>
 </div>
 
+
 <hr> <!-- Dòng kẻ để phân chia -->
 
 <div class="purchase-history">
     <h3>Lịch sử mua hàng của bạn</h3>
+    @foreach (var order in Model.Orders){
     <div class="purchase-item">
-        <img src="coffee.jpg" alt="Coffee" class="item-pic">
+        <img src="@order.OrderDetails.FirstOrDefault().Product.ImgProduct" alt="Coffee" class="item-pic">
         <div class="item-details">
-            <h4>Cà Phê Highlight</h4>
-            <p>Phin Sữa Tươi Bánh Flan</p>
+            <h4>@order.OrderDetails.FirstOrDefault().Product.NameProduct</h4>
+            <p>@order.OrderDetails.FirstOrDefault().Product.NameCategory</p>
             <p>49.000đ</p>
             <p>Thời gian đặt hàng: 01/01/2024</p>
         </div>
         <button class="order-again-btn">Đặt lại</button>
     </div>
+    }
     <!-- Thêm các mục mua hàng khác nếu cần -->
 </div>

@@ -44,6 +44,10 @@
         </ul>
     </div>
     @* khách hàng *@
+@model List<HUFLITCOFFEE.Models.Main.User>;
+@{
+    string curPage = ViewBag.CurPage;
+}
     <div Class="Admin_customer" style="padding: 30px;width:90%">
         <div style="border: 1px solid black; border-radius: 5px; ">
             <div Class="Admin_product_title"> Danh sách khách hàng</div>
@@ -58,48 +62,17 @@
                     </tr>
                 </thead>
                 <tbody>
+                @foreach (var item in Model)
+                {
                     <tr>
-                        <td>KH01</td>
-                        <td>1/05/2024</td>
-                        <td>Hồng Hữu</td>
-                        <td>luuhonghuu530@gmail.com</td>
-                        <td>092345678</td>
+                        <td>@item.UserId</td>
+                        <td>@item.CreatedAt</td>
+                        <td>@item.FullName</td>
+                        <td>@item.Email</td>
+                        <td>@item.PhoneNumber</td>
                     </tr>
-                    <tr>
-                        <td>KH01</td>
-                        <td>1/05/2024</td>
-                        <td>Hồng Hữu</td>
-                        <td>luuhonghuu530@gmail.com</td>
-                        <td>092345678</td>
-                    </tr>
-                    <tr>
-                        <td>KH01</td>
-                        <td>1/05/2024</td>
-                        <td>Hồng Hữu</td>
-                        <td>luuhonghuu530@gmail.com</td>
-                        <td>092345678</td>
-                    </tr>
-                    <tr>
-                        <td>KH01</td>
-                        <td>1/05/2024</td>
-                        <td>Hồng Hữu</td>
-                        <td>luuhonghuu530@gmail.com</td>
-                        <td>092345678</td>
-                    </tr>
-                    <tr>
-                        <td>KH01</td>
-                        <td>1/05/2024</td>
-                        <td>Hồng Hữu</td>
-                        <td>luuhonghuu530@gmail.com</td>
-                        <td>092345678</td>
-                    </tr>
-                    <tr>
-                        <td>KH01</td>
-                        <td>1/05/2024</td>
-                        <td>Hồng Hữu</td>
-                        <td>luuhonghuu530@gmail.com</td>
-                        <td>092345678</td>
-                    </tr>
+                    }
+                
                 </tbody>
             </table>
         </div>

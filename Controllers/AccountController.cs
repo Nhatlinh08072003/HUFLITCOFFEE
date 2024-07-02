@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using HUFLITCOFFEE.Models.Main;
 using HUFLITCOFFEE.ViewModels;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.AspNetCore.Authorization;
 namespace HUFLITCOFFEE.Controllers
 {
     public class AccountController : Controller
@@ -61,8 +61,39 @@ namespace HUFLITCOFFEE.Controllers
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Login", "Account"); // Chuyển hướng về trang Login
         }
+          [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> Profile()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
+            if (userId == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
 
+         
+            var user = await _context.Users.FindAsync(int.Parse(userId));
 
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+         
+            var orders = await _context.Orders
+                .Include(o => o.OrderDetails)
+                .ThenInclude(od => od.Product)
+                .Where(o => o.UserId == user.UserId)
+                .ToListAsync();
+
+            var viewModel = new ProfileViewModel
+            {
+                User = user,
+                Orders = orders
+            };
+
+            return View(viewModel);
+        }
     }
 }

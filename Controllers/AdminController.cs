@@ -227,9 +227,9 @@ namespace HUFLITCOFFEE.Controllers
                 return Json(new { success = false, message = $"Lỗi khi xóa sản phẩm: {ex.Message}" });
             }
         }
-        public IActionResult AdminCustomer()
-        {
-            return View();
+       public IActionResult AdminCustomer()
+        { var user =_huflitcoffeeContext.Users.ToList();
+            return View(user);  
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
