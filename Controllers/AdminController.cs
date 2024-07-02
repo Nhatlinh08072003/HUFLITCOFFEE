@@ -29,7 +29,41 @@ namespace HUFLITCOFFEE.Controllers
 
         public IActionResult AdminOrder()
         {
-            return View();
+            var orders = _huflitcoffeeContext.Orders.ToList();
+            return View(orders);
+        }
+        [HttpPost("/admin/updateorder")]
+        public async Task<IActionResult> UpdateOrder(
+  [FromForm] int orderid,
+  [FromForm] string status)
+        {
+            try
+            {
+
+                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("CoffeeDBConnectionString")))
+                {
+                    await connection.OpenAsync();
+
+                    string sql = @"
+            UPDATE [Order]
+            SET Status = @Status
+            WHERE OrderID = @OrderID";
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@Status", status);
+                        command.Parameters.AddWithValue("@OrderID", orderid);
+                        await command.ExecuteNonQueryAsync();
+                    }
+                }
+
+                return Json(new { success = true, message = "đơn hàng đã được cập nhật thành công." });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return Json(new { success = false, message = $"Lỗi khi cập nhật đơn hàng: {ex.Message}" });
+            }
         }
 
         public IActionResult AdminDelivery()
@@ -229,7 +263,8 @@ namespace HUFLITCOFFEE.Controllers
         }
         public IActionResult AdminCustomer()
         {
-            return View();
+            var users = _huflitcoffeeContext.Users.ToList();
+            return View(users);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

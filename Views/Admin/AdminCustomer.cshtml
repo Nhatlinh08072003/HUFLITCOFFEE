@@ -1,3 +1,4 @@
+@model List<HUFLITCOFFEE.Models.Main.User>;
 <link rel="stylesheet" href="~/css/admin.css">
 <div class="Admin_vertical_all">
     <div class="Admin_toolbar">
@@ -58,48 +59,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>KH01</td>
-                        <td>1/05/2024</td>
-                        <td>Hồng Hữu</td>
-                        <td>luuhonghuu530@gmail.com</td>
-                        <td>092345678</td>
-                    </tr>
-                    <tr>
-                        <td>KH01</td>
-                        <td>1/05/2024</td>
-                        <td>Hồng Hữu</td>
-                        <td>luuhonghuu530@gmail.com</td>
-                        <td>092345678</td>
-                    </tr>
-                    <tr>
-                        <td>KH01</td>
-                        <td>1/05/2024</td>
-                        <td>Hồng Hữu</td>
-                        <td>luuhonghuu530@gmail.com</td>
-                        <td>092345678</td>
-                    </tr>
-                    <tr>
-                        <td>KH01</td>
-                        <td>1/05/2024</td>
-                        <td>Hồng Hữu</td>
-                        <td>luuhonghuu530@gmail.com</td>
-                        <td>092345678</td>
-                    </tr>
-                    <tr>
-                        <td>KH01</td>
-                        <td>1/05/2024</td>
-                        <td>Hồng Hữu</td>
-                        <td>luuhonghuu530@gmail.com</td>
-                        <td>092345678</td>
-                    </tr>
-                    <tr>
-                        <td>KH01</td>
-                        <td>1/05/2024</td>
-                        <td>Hồng Hữu</td>
-                        <td>luuhonghuu530@gmail.com</td>
-                        <td>092345678</td>
-                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.UserId</td>
+                            <td>@item.CreatedAt</td>
+                            <td>@item.FullName</td>
+                            <td>@item.Email</td>
+                            <td>@item.PhoneNumber</td>
+                        </tr>
+                    }
                 </tbody>
             </table>
         </div>
