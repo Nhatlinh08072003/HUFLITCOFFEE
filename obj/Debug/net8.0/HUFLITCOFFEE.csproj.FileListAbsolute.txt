@@ -149,4 +149,4 @@ D:\HUFLITCOFFEE\obj\Debug\net8.0\refint\HUFLITCOFFEE.dll
 D:\HUFLITCOFFEE\obj\Debug\net8.0\HUFLITCOFFEE.pdb
 D:\HUFLITCOFFEE\obj\Debug\net8.0\HUFLITCOFFEE.genruntimeconfig.cache
 D:\HUFLITCOFFEE\obj\Debug\net8.0\ref\HUFLITCOFFEE.dll
-D:\HUFLITCOFFEE\obj\Debug\net8.0\HUFLITCOFFEE.csproj.CopyComplete
+D:\HUFLITCOFFEE\obj\Debug\net8.0\HUFLITCO.CE9ECA57.Up2Date
