@@ -78,10 +78,6 @@ namespace HUFLITCOFFEE.Controllers
         }
 
         // Action để hiển thị form thêm sản phẩm
-        public IActionResult AddProduct()
-        {
-            return View();
-        }
 
         // Action xử lý khi người dùng nhấn nút Lưu trên form
         [HttpPost("/admin/addproduct")]
@@ -155,10 +151,6 @@ namespace HUFLITCOFFEE.Controllers
 
 
         // Xử lý edit sản phẩm
-        public IActionResult EditProduct()
-        {
-            return View();
-        }
 
         [HttpPost("/admin/editproduct")]
         public async Task<IActionResult> EditProduct(
@@ -217,10 +209,6 @@ namespace HUFLITCOFFEE.Controllers
             }
         }
         // Xử lý delete sản phẩm
-        public IActionResult DeleteProduct()
-        {
-            return View();
-        }
         // Action xử lý khi nhận yêu cầu POST từ form xóa sản phẩm
         [HttpPost("/admin/deleteproduct")]
         public async Task<IActionResult> DeleteProduct([FromForm] int delete_product_id)
