@@ -1,4 +1,47 @@
+@model List<HUFLITCOFFEE.Models.Main.Order>;
 <link rel="stylesheet" href="~/css/admin.css">
+<style>
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        width: 50%;
+        margin: auto;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content div {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+    }
+
+    .dropdown-content div:hover {
+        background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown div.main {
+        background-color: #8b8484;
+        border-radius: 5px;
+        color: rgb(114, 215, 114);
+        padding: 10px;
+        cursor: pointer;
+        text-align: center;
+    }
+</style>
 <div class="Admin_vertical_all">
     <div class="Admin_toolbar">
         <h1 style="text-align: center;">Coffee</h1>
@@ -86,143 +129,83 @@
                     <thead style="background-color: #ccc;">
                         <tr>
                             <th>Mã đơn hàng</th>
+                            <th>Mã khách hàng</th>
                             <th>Ngày tạo đơn</th>
                             <th>Tên khách hàng</th>
                             <th>Trạng thái đơn hàng</th>
                             <th>Khách phải trả</th>
-                            <th>Trạng thái thanh toán</th>
+                            <th>Cập nhật trạng thái đơn hàng</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Huflit01</td>
-                            <td>1/05/2024 8:34</td>
-                            <td>Hồng Hữu</td>
-                            <td>
-                                <div
-                                    style="background-color: #8b8484;border-radius: 5px;width:50%;margin: auto;color:rgb(114, 215, 114)">
-                                    Hoàn
-                                    thành</div>
-                            </td>
-                            <td>150.000đ</td>
-                            <td><img src="https://cdn-icons-png.flaticon.com/128/5291/5291043.png" loading="lazy"
-                                    alt="Check mark " title="Check mark " width="20" height="20"></td>
-                        </tr>
-                        <tr>
-                            <td>Huflit02</td>
-                            <td>1/05/2024 9:25</td>
-                            <td>Gia Bảo</td>
-                            <td>
-                                <div
-                                    style="background-color: #8b8484;border-radius: 5px;width:50%;margin: auto;color:rgb(114, 215, 114)">
-                                    Hoàn
-                                    thành</div>
-                            </td>
-                            <td>300.000đ</td>
-                            <td><img src="https://cdn-icons-png.flaticon.com/128/5291/5291043.png" loading="lazy"
-                                    alt="Check mark " title="Check mark " width="20" height="20"></td>
-                        </tr>
-                        <tr>
-                            <td>Huflit03</td>
-                            <td>1/05/2024 9:25</td>
-                            <td>Nhất Linh</td>
-                            <td>
-                                <div
-                                    style="background-color: #8b8484;border-radius: 5px;width:50%;margin: auto;color:rgb(114, 215, 114)">
-                                    Hoàn
-                                    thành</div>
-                            </td>
-                            <td>250.000đ</td>
-                            <td><img src="https://cdn-icons-png.flaticon.com/128/5291/5291043.png" loading="lazy"
-                                    alt="Check mark " title="Check mark " width="20" height="20"></td>
-                        </tr>
-                        <tr>
-                            <td>Huflit04</td>
-                            <td>1/05/2024 9:25</td>
-                            <td>Minh Tiến</td>
-                            <td>
-                                <div
-                                    style="background-color: #8b8484;border-radius: 5px;width:50%;margin: auto;color:rgb(114, 215, 114)">
-                                    Hoàn
-                                    thành</div>
-                            </td>
-                            <td>140.000đ</td>
-                            <td><img src="https://cdn-icons-png.flaticon.com/128/5291/5291043.png" loading="lazy"
-                                    alt="Check mark " title="Check mark " width="20" height="20"></td>
-                        </tr>
-                        <tr>
-                            <td>Huflit05</td>
-                            <td>1/05/2024 9:25</td>
-                            <td>Anh Quân</td>
-                            <td>
-                                <div
-                                    style="background-color: #8b8484;border-radius: 5px;width:50%;margin: auto;color:rgb(114, 215, 114)">
-                                    Hoàn
-                                    thành</div>
-                            </td>
-                            <td>600.000đ</td>
-                            <td><img src="https://cdn-icons-png.flaticon.com/128/5291/5291043.png" loading="lazy"
-                                    alt="Check mark " title="Check mark " width="20" height="20"></td>
-                        </tr>
-                        <tr>
-                            <td>Huflit06</td>
-                            <td>1/05/2024 9:25</td>
-                            <td>Anh Khoa</td>
-                            <td>
-                                <div
-                                    style="background-color: #8b8484;border-radius: 5px;width:50%;margin: auto;color:rgb(114, 215, 114)">
-                                    Hoàn
-                                    thành</div>
-                            </td>
-                            <td>780.000đ</td>
-                            <td><img src="https://cdn-icons-png.flaticon.com/128/5291/5291043.png" loading="lazy"
-                                    alt="Check mark " title="Check mark " width="20" height="20"></td>
-                        </tr>
-                        <tr>
-                            <td>Huflit07</td>
-                            <td>1/05/2024 9:25</td>
-                            <td>Trần Kha</td>
-                            <td>
-                                <div
-                                    style="background-color: #8b8484;border-radius: 5px;width:50%;margin: auto;color:rgb(114, 215, 114)">
-                                    Hoàn
-                                    thành</div>
-                            </td>
-                            <td>100.000đ</td>
-                            <td><img src="https://cdn-icons-png.flaticon.com/128/5291/5291043.png" loading="lazy"
-                                    alt="Check mark " title="Check mark " width="20" height="20"></td>
-                        </tr>
-                        <tr>
-                            <td>Huflit08</td>
-                            <td>1/05/2024 9:25</td>
-                            <td>Kim Lân</td>
-                            <td>
-                                <div
-                                    style="background-color: #8b8484;border-radius: 5px;width:50%;margin: auto;color:rgb(114, 215, 114)">
-                                    Chưa
-                                    hoàn
-                                    thành</div>
-                            </td>
-                            <td>100.000.000đ</td>
-                            <td><img src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png" loading="lazy"
-                                    alt="Close " title="Close " width="20" height="20"></td>
-                        </tr>
-                        <tr>
-                            <td>Huflit09</td>
-                            <td>1/05/2024 9:25</td>
-                            <td>Việt Mỹ</td>
-                            <td>
-                                <div
-                                    style="background-color: #d2a7b6;border-radius: 5px;width:50%;margin: auto;color:rgb(211, 47, 121)">
-                                    Đặt hàng</div>
-                            </td>
-                            <td>170.000đ</td>
-                            <td><img src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png" loading="lazy"
-                                    alt="Close " title="Close " width="20" height="20"></td>
-                        </tr>
+                        <form id="updateOrderForm" method="post" enctype="multipart/form-data"
+                            action="/admin/updateorder">
+                            <input type="text" name="orderid" class="p-2 my-2 border border-black rounded" hidden>
+                            <input type="text" name="status" class="p-2 my-2 border border-black rounded" hidden>
+                        </form>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.OrderId</td>
+                                <td>@item.UserId</td>
+                                <td>@item.DateOrder</td>
+                                <td>@item.FullName</td>
+                                <td>
+                                    <div class="dropdown" id="dropdown-@item.OrderId">
+                                        <div class="main">@item.Status</div>
+                                        <div class="dropdown-content">
+                                            <div onclick="selectOption('đang giao', @item.OrderId)">đang giao</div>
+                                            <div onclick="selectOption('đã giao thành công', @item.OrderId)">đã giao thành
+                                                công</div>
+                                            <div onclick="selectOption('giao không thành công', @item.OrderId)">giao không
+                                                thành công</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>@item.Total</td>
+                                <td><button type="button" onclick="submitForm(@item.OrderId)">Cập nhật</button></td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 </div>
+<script>
+    function selectOption(status, orderId) {
+        var dropdown = document.getElementById('dropdown-' + orderId);
+        dropdown.querySelector('.main').innerText = status;
+        document.querySelector('input[name="orderid"]').value = orderId;
+        document.querySelector('input[name="status"]').value = status;
+    }
+
+    @* function submitForm(orderId) {
+        var dropdown = document.getElementById('dropdown-' + orderId);
+        var status = dropdown.querySelector('.main').innerText;
+        document.querySelector('input[name="orderid"]').value = orderId;
+        document.querySelector('input[name="status"]').value = status;
+        document.getElementById('updateOrderForm').submit();
+        } *@
+        function submitForm(orderId) {
+            var formData = new FormData(document.getElementById('updateOrderForm'));
+            $.ajax({
+                url: '/admin/updateorder',
+                type: 'POST',
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    if (response.success) {
+                        alert(response.message);
+                        location.reload();
+                    } else {
+                        alert(response.message);
+                    }
+                },
+                error: function () {
+                    alert('Lỗi khi gửi yêu cầu.');
+                }
+            });
+        }
+</script>
