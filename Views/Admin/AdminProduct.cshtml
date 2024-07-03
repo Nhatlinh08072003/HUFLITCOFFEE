@@ -288,11 +288,11 @@
             var productId = row.querySelector('td:nth-child(1)').innerText.trim();
             var productName = row.querySelector('td:nth-child(2)').innerText.trim();
             var productImage = row.querySelector('img').getAttribute('src');
-            var productPrice = row.querySelector('td:nth-child(4)').innerText.trim();
+            var productPriceText = row.querySelector('td:nth-child(4)').innerText.trim();
+            var productPrice = productPriceText.replace(/[^\d]/g, '');
             var productDescription = row.querySelector('td:nth-child(5)').innerText.trim();
             var productSize = row.querySelector('td:nth-child(6)').innerText.trim();
             var productCategory = row.querySelector('td:nth-child(7)').innerText.trim();
-
             var editProductForm = document.getElementById('editProductForm');
 
             editProductForm.querySelector('input[name="edit_product_id"]').value = productId;

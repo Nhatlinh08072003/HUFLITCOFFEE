@@ -1,4 +1,4 @@
-@model List<HUFLITCOFFEE.Models.Main.Order>;
+@model List<HUFLITCOFFEE.Models.Main.OrderDetailViewModel>;
 <link rel="stylesheet" href="~/css/admin.css">
 <style>
     .dropdown {
@@ -11,8 +11,8 @@
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
+        using HUFLITCOFFEE.Models.Main;
+        #line default min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
     }
@@ -133,6 +133,7 @@
                             <th>Ngày tạo đơn</th>
                             <th>Tên khách hàng</th>
                             <th>Trạng thái đơn hàng</th>
+                            <th>Chi tiết đơn hàng</th>
                             <th>Khách phải trả</th>
                             <th>Cập nhật trạng thái đơn hàng</th>
                         </tr>
@@ -146,24 +147,52 @@
                         @foreach (var item in Model)
                         {
                             <tr>
-                                <td>@item.OrderId</td>
+                                <td>@item.OrderID</td>
                                 <td>@item.UserId</td>
                                 <td>@item.DateOrder</td>
                                 <td>@item.FullName</td>
                                 <td>
-                                    <div class="dropdown" id="dropdown-@item.OrderId">
+                                    <div class="dropdown" id="dropdown-@item.OrderID">
                                         <div class="main">@item.Status</div>
                                         <div class="dropdown-content">
-                                            <div onclick="selectOption('đang giao', @item.OrderId)">đang giao</div>
-                                            <div onclick="selectOption('đã giao thành công', @item.OrderId)">đã giao thành
+                                            <div onclick="selectOption('đang giao', @item.OrderID)">đang giao</div>
+                                            <div onclick="selectOption('đã giao thành công', @item.OrderID)">đã giao thành
                                                 công</div>
-                                            <div onclick="selectOption('giao không thành công', @item.OrderId)">giao không
+                                            <div onclick="selectOption('giao không thành công', @item.OrderID)">giao không
                                                 thành công</div>
                                         </div>
                                     </div>
                                 </td>
+                                <td>
+                                    <table id="order-items">
+                                        @if (item.CartItems != null && item.CartItems.Any())
+                                        {
+                                             <thead>
+                    <tr class="bg-gray-200 text-sm uppercase leading-normal text-gray-600">
+                        <th class="px-2 py-2 text-left">Product Name</th>
+                        <th class="px-2 py-2 text-left">Topping Name</th>
+                        <th class="px-2 py-2 text-left">Quantity</th>
+                        <th class="px-2 py-2 text-left">Size</th>
+                        <th class="px-2 py-2 text-right">Unit Price</th>
+                        <th class="px-2 py-2 text-right">Subtotal</th>
+                    </tr>
+                </thead>
+                                            @foreach (var cartItem in item.CartItems)
+                                            {
+                                                <tr>
+                                                    <td class="px-2 py-2 text-left">@cartItem.NameProduct</td>
+                                                    <td class="px-2 py-2 text-left">@cartItem.ToppingNames</td>
+                                                    <td class="px-2 py-2 text-left">@cartItem.Quantity</td>
+                                                    <td class="px-2 py-2 text-left">@cartItem.Dvt</td>
+                                                    <td class="px-2 py-2 text-right">@cartItem.UnitPrice</td>
+                                                    <td class="px-2 py-2 text-right">@cartItem.PriceProduct</td>
+                                                </tr>
+                                            }
+                                        }
+                                    </table>
+                                </td>
                                 <td>@item.Total</td>
-                                <td><button type="button" onclick="submitForm(@item.OrderId)">Cập nhật</button></td>
+                                <td><button type="button" onclick="submitForm(@item.OrderID)">Cập nhật</button></td>
                             </tr>
                         }
                     </tbody>
