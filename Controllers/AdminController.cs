@@ -27,11 +27,77 @@ namespace HUFLITCOFFEE.Controllers
             return View();
         }
 
-        public IActionResult AdminOrder()
+        public async Task<IActionResult> AdminOrder()
         {
-            var orders = _huflitcoffeeContext.Orders.ToList();
-            return View(orders);
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("CoffeeDBConnectionString")))
+            {
+                // Open the database connection
+                await connection.OpenAsync();
+
+                // SQL query to get all orders and their cart items
+                string orderWithCartItemsSql = @"
+        SELECT 
+            o.OrderID, o.UserID, o.FullName, o.Address, o.PhoneNumber, o.Total, o.Status, o.DateOrder, o.Ghichu,
+            ci.CartItemID, ci.ProductID, ci.ImgProduct, ci.NameProduct, ci.PriceProduct, ci.Quantity, ci.ToppingNames, ci.DVT, ci.UnitPrice
+        FROM [Order] o
+        LEFT JOIN CartItem ci ON o.UserID = ci.UserID";
+
+                Dictionary<int, OrderDetailViewModel> orders = new Dictionary<int, OrderDetailViewModel>();
+
+                // Execute the query
+                using (SqlCommand command = new SqlCommand(orderWithCartItemsSql, connection))
+                {
+                    using (SqlDataReader reader = await command.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            int orderId = reader.GetInt32(0);
+
+                            // If the order is not already in the dictionary, add it
+                            if (!orders.ContainsKey(orderId))
+                            {
+                                orders[orderId] = new OrderDetailViewModel
+                                {
+                                    OrderID = orderId,
+                                    UserId = reader.GetInt32(1),
+                                    FullName = reader.GetString(2),
+                                    Address = reader.GetString(3),
+                                    PhoneNumber = reader.GetString(4),
+                                    Total = reader.GetDecimal(5),
+                                    Status = reader.GetString(6),
+                                    DateOrder = reader.GetDateTime(7),
+                                    Ghichu = reader.GetString(8),
+                                    CartItems = new List<CartItem>()
+                                };
+                            }
+
+                            // If there's a cart item, add it to the order's cart items list
+                            if (!reader.IsDBNull(9)) // Check if CartItemID is not null
+                            {
+                                CartItem cartItem = new CartItem
+                                {
+                                    CartItemId = reader.GetInt32(9),
+                                    UserId = reader.GetInt32(1),
+                                    ProductId = reader.GetInt32(10),
+                                    ImgProduct = reader.GetString(11),
+                                    NameProduct = reader.GetString(12),
+                                    PriceProduct = reader.GetDecimal(13),
+                                    Quantity = reader.GetInt32(14),
+                                    ToppingNames = reader.GetString(15),
+                                    Dvt = reader.GetString(16),
+                                    UnitPrice = reader.GetDecimal(17)
+                                };
+                                orders[orderId]?.CartItems?.Add(cartItem);
+                            }
+                        }
+                    }
+                }
+
+                // Return the view with the list of orders
+                return View(orders.Values.ToList());
+            }
         }
+
         [HttpPost("/admin/updateorder")]
         public async Task<IActionResult> UpdateOrder(
   [FromForm] int orderid,
