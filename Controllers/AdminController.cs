@@ -78,6 +78,10 @@ namespace HUFLITCOFFEE.Controllers
         }
 
         // Action để hiển thị form thêm sản phẩm
+        // public IActionResult AddProduct()
+        // {
+        //     return View();
+        // }
 
         // Action xử lý khi người dùng nhấn nút Lưu trên form
         [HttpPost("/admin/addproduct")]
