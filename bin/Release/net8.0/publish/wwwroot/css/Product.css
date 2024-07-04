@@ -1,0 +1,610 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tab-button {
+    border: none; 
+    font-weight: 900;
+    background-color: beige;
+    font-family: ui-rounded;
+    white-space: nowrap;
+    margin-right: 5px;
+}
+.btn-img-close {
+   display: none;
+}
+.tab-btn {
+    border: 0px;
+}
+
+.cffff1 {
+    border-bottom: 2px solid #000;
+}
+
+.list-ct2 {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+.list-ct2:hover{
+   display: block;
+}
+.list-ct2.active {
+   display: block;
+}
+
+.list-ct2 .tab-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    white-space: nowrap;      
+    overflow: hidden;        
+    text-overflow: ellipsis; 
+}
+#t1{
+   margin-left: -40px;
+}
+#t2{
+   margin-left: -40px;
+}
+#t3{
+   margin-left: -20px;
+}
+#t4{
+   margin-left: -20px;
+}
+#t5{
+   margin-left: -20px;
+}
+
+.tt2 {
+    display: flex;
+    align-items: center;
+}
+
+.menu-product-list li:hover .list-ct2 {
+    background-color: #fff;
+}
+.icon-xxx {
+    transform: rotate(90deg); 
+}
+.menu-product-main {
+    margin-bottom: 50px;
+}
+.menu-product-list {
+    margin-top: 40px;
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    width: 100%; 
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.menu-product-list li {
+    flex: 1; 
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+}
+.menu-product-list{
+   background: beige;
+}
+
+.tab-button, .tab-btn {
+    margin: 5px 0;
+}
+.menu-product-box-list {
+    height: 10vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 50px auto; 
+}
+img {
+    border-radius: 10px;
+}
+.container {
+    padding-left: 50px;
+}
+/* coffee */
+.menu-cf-product {
+    width: 80%;
+}
+
+.menu-cf-vn {
+    margin-top: 50px;
+}
+
+.cf-item {
+    flex: 0 0 auto;
+    margin-right: 30px;
+}
+
+.cf-vn-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+    gap: 40px;
+}
+
+.cf-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 210px;
+    height: 210px;
+    margin-top: 40px;
+}
+
+.cf-title {
+    font-size: 30px;
+    color: chocolate;
+}
+
+.cf-info {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.cf-img img {
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.cf-img:hover img {
+    transform: scale(1.1);
+}
+
+/* tea */
+.menu-tea-product {
+    width: 80%;
+}
+
+.menu-tea-vn {
+    margin-top: 50px;
+}
+
+.tea-item {
+    flex: 0 0 auto;
+    margin-right: 30px;
+}
+
+.tea-vn-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+}
+
+.tea-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 210px;
+    height: 210px;
+    margin-top: 40px;
+}
+
+.tea-title {
+    font-size: 30px;
+    color: chocolate;
+}
+
+.tea-info {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.tea-img img {
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.tea-img:hover img {
+    transform: scale(1.1);
+}
+
+/* Cloud */
+.menu-cloud-product {
+    width: 80%;
+}
+
+.menu-cloud-vn {
+    margin-top: 50px;
+}
+
+.cloud-item {
+    flex: 0 0 auto;
+    margin-right: 30px;
+}
+
+.cloud-vn-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+}
+
+.cloud-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 210px;
+    height: 210px;
+    margin-top: 40px;
+}
+
+.cloud-title {
+    font-size: 30px;
+    color: chocolate;
+}
+
+.cloud-info {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.cloud-img img {
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.cloud-img:hover img {
+    transform: scale(1.1);
+}
+
+/* hi-tea */
+.menu-hitea-product {
+    width: 80%;
+}
+
+.menu-hitea-vn {
+    margin-top: 50px;
+}
+
+.hitea-item {
+    flex: 0 0 auto;
+    margin-right: 30px;
+}
+
+.hitea-vn-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+}
+
+.hitea-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 210px;
+    height: 210px;
+    margin-top: 40px;
+}
+
+.hitea-title {
+    font-size: 30px;
+    color: chocolate;
+}
+
+.hitea-info {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.hitea-img img {
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.hitea-img:hover img {
+    transform: scale(1.1);
+}
+
+/* greentea */
+.menu-greentea-product {
+    width: 80%;
+}
+
+.menu-greentea-vn {
+    margin-top: 50px;
+}
+
+.greentea-item {
+    flex: 0 0 auto;
+    margin-right: 30px;
+}
+
+.greentea-vn-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+}
+
+.greentea-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 210px;
+    height: 210px;
+    margin-top: 40px;
+}
+
+.greentea-title {
+    font-size: 30px;
+    color: chocolate;
+}
+
+.greentea-info {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.greentea-img img {
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.greentea-img:hover img {
+    transform: scale(1.1);
+}
+
+/* drink */
+.menu-drink-product {
+    width: 80%;
+}
+
+.menu-drink-vn {
+    margin-top: 50px;
+}
+
+.drink-item {
+    flex: 0 0 auto;
+    margin-right: 30px;
+}
+
+.drink-vn-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+}
+
+.drink-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 210px;
+    height: 210px;
+    margin-top: 40px;
+}
+
+.drink-title {
+    font-size: 30px;
+    color: chocolate;
+}
+
+.drink-info {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.drink-img img {
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.drink-img:hover img {
+    transform: scale(1.1);
+}
+
+/* snacks */
+.menu-snack-product {
+    width: 80%;
+}
+
+.menu-snack-vn {
+    margin-top: 50px;
+}
+
+.snack-item {
+    flex: 0 0 auto;
+    margin-right: 30px;
+}
+
+.snack-vn-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+}
+
+.snack-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 210px;
+    height: 210px;
+    margin-top: 40px;
+}
+
+.snack-title {
+    font-size: 30px;
+    color: chocolate;
+}
+
+.snack-info {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.snack-img img {
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.snack-img:hover img {
+    transform: scale(1.1);
+}
+
+/* InHome */
+.menu-home-product {
+    width: 80%;
+}
+
+.menu-home-vn {
+    margin-top: 50px;
+}
+
+.home-item {
+    flex: 0 0 auto;
+    margin-right: 30px;
+}
+
+.home-vn-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+}
+
+.home-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 210px;
+    height: 210px;
+    margin-top: 40px;
+}
+
+.home-title {
+    font-size: 30px;
+    color: chocolate;
+}
+
+.home-info {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.home-img img {
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.home-img:hover img {
+    transform: scale(1.1);
+}
+
+.active-tab {
+    color: red; 
+}
+
+/* hieu ung khi chua chuot vao cua phan ten san pham */
+.list-ct2 li{
+   flex: 1;
+}
+.list-ct2 {
+   display: none;
+   position: absolute;
+   top: 100%;
+   background-color: white;
+   z-index: 1;
+   border: 1px solid #000;
+   border-radius: 10px;
+}
+.list-ct2 .tab-btn {
+   display: block;
+   width: 100%;
+   flex: 1;
+   text-align: left;
+   border: none;
+   background-color: transparent;
+   cursor: pointer;
+   white-space: nowrap;      
+   overflow: hidden;        
+   text-overflow: ellipsis; 
+}
+#t1{
+   margin-right: 10px;
+ }
+ #t1 .tab-button:active {
+   font-size: 20px;
+ }
+ #t2{
+   margin-left: -40px;
+   position: relative;
+ }
+ #t2 .tab-button {
+   font-size: 18px; 
+   transition: font-size 0.3s ease; 
+ }
+#t2:hover .list-ct2 {
+   display: block;
+}
+
+#t4{
+   margin-left: -30px;
+   position: relative;
+ }
+ #t4 .tab-button {
+   font-size: 18px; 
+   transition: font-size 0.3s ease; 
+ }
+
+ #t4:hover .list-ct2 {
+   display: block;
+}
+
+#t5{
+
+   position: relative;
+ }
+ #t5 .tab-button {
+   font-size: 18px; 
+   transition: font-size 0.3s ease; 
+ }
+ #t5:hover .list-ct2 {
+   display: block;
+}
+
+#t6{
+
+   position: relative;
+ }
+ #t6 .tab-button {
+   font-size: 18px; 
+   transition: font-size 0.3s ease; 
+ }
+ #t6:hover .list-ct2 {
+   display: block;
+}
+
+#t7{
+
+   position: relative;
+ }
+ #t7 .tab-button {
+   font-size: 18px; 
+   transition: font-size 0.3s ease; 
+ }
+ #t7:hover .list-ct2 {
+   display: block;
+}
+.icon-xxx{
+   transform: rotate(90deg); 
+}
+ .active-tab {
+    color: rgb(216, 34, 34);
+ }
+ .tab-button:hover {
+    color: red;
+ }
