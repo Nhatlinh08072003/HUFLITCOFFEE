@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Container {
+  width: 100%;
+  height: auto;
+}
+
+.Heading-aboutus {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  border-top: 1px solid black;
+}
+
+.Heading-aboutus h1 {
+  margin-top: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.Content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.Content-source {
+  width: 30%;
+  height: auto;
+  margin-left: 40px;
+}
+
+.Content-source h3 {
+  font-size: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.Content-source p {
+  margin-bottom: 20px;
+}
+
+.click {
+  width: 60%;
+  padding-bottom: 5px;
+  border: 1px solid black;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.click a {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  margin-top: 5px;
+}
+
+.click:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.Content-img {
+  width: 40%;
+  height: auto;
+}
+.Content-img img {
+  width: 80%;
+  height: 90%;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  margin-left: 10%;
+}
+
+.Content-img2 {
+  width: 38%;
+  margin-top: 20px;
+}
+
+.Content-img2 img {
+  width: 85%;
+  height: 80%;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  margin-left: -20px;
+}
+
+.Content-2 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.Content-source-DV {
+  width: 30%;
+  margin-top: 70px;
+}
+
+.Content-source-DV h3 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.Content-source-DV p {
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 1067px) {
+  .Content-img,
+  .Content-img2 {
+    height: 226px;
+    width: 400px;
+    margin-top: 20px;
+  }
+  .Content-source-DV {
+    margin-top: 30px;
+  }
+  .Heading-aboutus {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .Content-source,
+  .Content-source-DV {
+    font-size: 12px;
+  }
+  .Content,
+  .Content-2 {
+    margin: 0;
+  }
+
+  .Content-source h3,
+  .Content-source-DV h3 {
+    font-size: 20px;
+  }
+  .Heading-aboutus {
+    font-size: 14px;
+  }
+  .Content-img {
+    width: 40%;
+  }
+}

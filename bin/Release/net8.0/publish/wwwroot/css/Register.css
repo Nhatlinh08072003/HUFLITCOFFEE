@@ -1,0 +1,119 @@
+.Register_container {
+   border-radius: 15px;
+   border: 1px solid #ccc;
+   padding: 20px;
+   width: 90%; /* Thay đổi chiều rộng của form */
+   max-width: 400px;
+   margin: 40px auto;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   box-sizing: border-box;
+}
+
+.Register_imgcontainer {
+   text-align: center;
+   margin: 24px 0 12px 0;
+}
+
+.Register_avatar {
+   width: 40%;
+   border-radius: 50%;
+}
+
+.Register_greeting {
+   margin-top: 10px;
+   font-size: 14px;
+   color: #555;
+}
+
+.Register_innercontainer {
+   padding: 16px;
+}
+
+.Register_input-container {
+   display: flex;
+   align-items: center;
+   margin: 8px 0;
+   width: 90%;
+   margin-top: 20px;
+}
+
+.Register_input-container_input {
+   border-radius: 20px;
+}
+
+.Register_icon {
+   width: 20px;
+   height: 20px;
+   margin-right: 10px;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+   width: 100%;
+   padding: 12px 20px;
+   display: inline-block;
+   border: 1px solid #ccc;
+   box-sizing: border-box;
+}
+
+button {
+   background-color: #fafad2; /* Đổi màu nút Đăng Ký thành màu đen */
+   color: black;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: 1px solid #000;
+   cursor: pointer;
+   width: 100%;
+   border-radius: 15px; /* Bo tròn các góc của nút */
+}
+
+button:hover {
+   opacity: 0.8;
+}
+
+.Register_cancelbtn {
+   width: auto;
+   padding: 10px 18px;
+   background-color: #f5deb3; /* Đổi màu nút Đăng Nhập thành màu kem */
+   color: black; /* Đổi màu chữ thành màu đen */
+   border-radius: 15px; /* Bo tròn các góc của nút */
+}
+
+hr {
+   width: 90%;
+   height: 1px;
+   background-color: #000; /* Màu đen */
+   margin: 20px auto; /* Đặt margin top và bottom là 20px, margin left và right là auto để canh giữa */
+   border: none; /* Loại bỏ border */
+}
+
+.agree-text {
+   text-align: center;
+   color: #555;
+   font-size: 12px;
+   margin: 10px auto; /* Canh giữa dọc và ngang */
+   max-width: 70%; /* Độ rộng tối đa của văn bản */
+
+   /* Responsive Design */
+   @media screen and (max-width: 600px) {
+      .Register_container {
+         width: 100%;
+         padding: 15px;
+      }
+
+      .Register_imgcontainer {
+         margin: 20px 0 10px 0;
+      }
+
+      button,
+      .Register_cancelbtn {
+         padding: 12px 15px;
+         font-size: 16px;
+      }
+
+      .agree-text {
+         font-size: 10px; /* Đặt kích thước chữ nhỏ hơn */
+      }
+   }
+}

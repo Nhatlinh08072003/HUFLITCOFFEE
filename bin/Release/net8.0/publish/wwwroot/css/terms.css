@@ -1,0 +1,21 @@
+.Address {
+    display: flex;
+    justify-content: center;
+}
+
+.Content {
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.Heading {
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+p {
+    margin-bottom: 15px;
+}
