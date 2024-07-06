@@ -34,7 +34,8 @@
                         hàng</a></span> <img src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy"
                     alt="Right arrow " title="Right arrow " width="10" height="10"></li>
             <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/2329/2329087.png"
-                    loading="lazy" alt="Dashboard " title="Dashboard " width="20" height="20">Báo cáo <img
+                    loading="lazy" alt="Dashboard " title="Dashboard " width="20" height="20"><a
+                    href="/admin/thongkebaocao">Báo cáo</a> <img
                     src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
                     title="Right arrow " width="10" height="10"></li>
             <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/702/702455.png"
@@ -294,7 +295,8 @@
             var productSize = row.querySelector('td:nth-child(6)').innerText.trim();
             var productCategory = row.querySelector('td:nth-child(7)').innerText.trim();
             var editProductForm = document.getElementById('editProductForm');
-
+            // Thêm 3 số 0 vào giá sản phẩm
+            productPrice = parseInt(productPrice) / 1000;
             editProductForm.querySelector('input[name="edit_product_id"]').value = productId;
             editProductForm.querySelector('input[name="edit_product_name"]').value = productName;
             editProductForm.querySelector('input[name="edit_product_price"]').value = productPrice;

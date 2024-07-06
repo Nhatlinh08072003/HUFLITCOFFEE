@@ -100,7 +100,7 @@ public class ProductController : Controller
                 }
                 var userId = int.Parse(userIdClaim.Value);
 
-                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("CoffeeDBConnectionString")))
                 {
                     await connection.OpenAsync();
 
@@ -142,7 +142,7 @@ public class ProductController : Controller
         try
         {
             // Thực hiện kết nối đến cơ sở dữ liệu
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("CoffeeDBConnectionString")))
             {
                 await connection.OpenAsync();
 
@@ -190,7 +190,7 @@ public class ProductController : Controller
             }
             var userId = int.Parse(userIdClaim.Value);
             // Thực hiện kết nối đến cơ sở dữ liệu
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("CoffeeDBConnectionString")))
             {
                 await connection.OpenAsync();
 
@@ -265,6 +265,7 @@ public class ProductController : Controller
             return Json(new { success = false, message = $"Lỗi khi lấy giỏ hàng: {ex.Message}" });
         }
     }
+
     // thêm đơn hàng
     [HttpPost("/product/addorder")]
     public async Task<IActionResult> AddOrder(
@@ -287,13 +288,23 @@ public class ProductController : Controller
                 }
                 var userId = int.Parse(userIdClaim.Value);
 
-                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+                // Kiểm tra giỏ hàng của người dùng
+                var carts = await _huflitcoffeeContext.CartItems
+                                    .Where(c => c.UserId == userId)
+                                    .ToListAsync();
+
+                if (carts.Count == 0)
+                {
+                    return Json(new { success = false, message = "Giỏ hàng của bạn đang trống. Vui lòng thêm sản phẩm vào giỏ hàng trước khi đặt hàng." });
+                }
+
+                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("CoffeeDBConnectionString")))
                 {
                     await connection.OpenAsync();
 
                     string sql = @"
-                    INSERT INTO [Order] ( UserID,FullName, Address, PhoneNumber, Total, Status, DateOrder, Ghichu)
-                    VALUES (@UserID, @FullName, @Address, @PhoneNumber, @Total, @Status, @DateOrder, @Ghichu)";
+                INSERT INTO [Order] ( UserID, FullName, Address, PhoneNumber, Total, Status, DateOrder, Ghichu)
+                VALUES (@UserID, @FullName, @Address, @PhoneNumber, @Total, @Status, @DateOrder, @Ghichu)";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
@@ -320,7 +331,6 @@ public class ProductController : Controller
 
         return Json(new { success = false, message = "Dữ liệu không hợp lệ." });
     }
-
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

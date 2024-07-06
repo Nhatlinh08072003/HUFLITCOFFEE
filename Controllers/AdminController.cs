@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using HUFLITCOFFEE.Models;
 using HUFLITCOFFEE.Models.Main;
 using System.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace HUFLITCOFFEE.Controllers
 {
@@ -29,7 +30,7 @@ namespace HUFLITCOFFEE.Controllers
 
         public async Task<IActionResult> AdminOrder()
         {
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("CoffeeDBConnectionString")))
             {
                 // Open the database connection
                 await connection.OpenAsync();
@@ -106,7 +107,7 @@ namespace HUFLITCOFFEE.Controllers
             try
             {
 
-                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("CoffeeDBConnectionString")))
                 {
                     await connection.OpenAsync();
 
@@ -166,7 +167,7 @@ namespace HUFLITCOFFEE.Controllers
                 {
                     string imageUrl = await SaveImageAsync(product_image);
 
-                    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+                    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("CoffeeDBConnectionString")))
                     {
                         await connection.OpenAsync();
 
@@ -243,7 +244,7 @@ namespace HUFLITCOFFEE.Controllers
                     imageUrl = await SaveImageAsync(product_image);
                 }
 
-                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("CoffeeDBConnectionString")))
                 {
                     await connection.OpenAsync();
 
@@ -286,7 +287,7 @@ namespace HUFLITCOFFEE.Controllers
             try
             {
                 // Thực hiện kết nối đến cơ sở dữ liệu
-                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("CoffeeDBConnectionString")))
                 {
                     await connection.OpenAsync();
 
@@ -323,6 +324,36 @@ namespace HUFLITCOFFEE.Controllers
         {
             var users = _huflitcoffeeContext.Users.ToList();
             return View(users);
+        }
+
+        public async Task<IActionResult> ThongKeBaoCao()
+        {
+            // Lấy danh sách đơn hàng từ database và chuyển sang danh sách
+            var orders = await _huflitcoffeeContext.Orders.ToListAsync();
+
+            // Tính tổng thanh toán của tất cả đơn hàng
+            var totalPayment = orders.Sum(c => c.Total);
+            var totalOrders = orders.Count();
+
+            if (orders.Count > 0)
+            {
+                // Lấy đơn hàng mới nhất và đơn hàng cũ nhất
+                var latestOrderDate = orders.Max(o => o.DateOrder);
+                var earliestOrderDate = orders.Min(o => o.DateOrder);
+
+                // Tính tổng số ngày bán hàng
+                var totalDaysSelling = (latestOrderDate - earliestOrderDate)?.Days;
+                ViewBag.TotalDaysSelling = totalDaysSelling;
+            }
+            else
+            {
+                ViewBag.TotalDaysSelling = "Không có đơn hàng nào.";
+            }
+            // Truyền tổng thanh toán đến view thông qua ViewBag
+            ViewBag.TotalPayment = (decimal)totalPayment;
+            ViewBag.TotalOrders = totalOrders;
+            // Trả về danh sách các đơn hàng để hiển thị trên view
+            return View(orders);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
