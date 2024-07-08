@@ -34,7 +34,7 @@ public partial class HuflitcoffeeContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 
         // => optionsBuilder.UseSqlServer("Server=UINLAN\\SQLEXPRESS;Database=HUFLITCOFFEE;MultipleActiveResultSets=true;User ID=admin;Password=asdasd;Trusted_Connection=True;TrustServerCertificate=Yes;Connect Timeout=60");
-        => optionsBuilder.UseSqlServer("Server=UINLAN\\SQLEXPRESS;Database=HUFLITCOFFEE;MultipleActiveResultSets=true;User ID=admin;Password=asdasd;Trusted_Connection=True;TrustServerCertificate=Yes");
+        => optionsBuilder.UseSqlServer("Server=DESKTOP-C8F8CM6;Database=HUFLITCOFFEE;MultipleActiveResultSets=true;User ID=admin;Password=asdasd;Trusted_Connection=True;TrustServerCertificate=Yes");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
