@@ -253,16 +253,16 @@
       "PackagePath": "staticwebassets\\images\\HaiCaPhe.jpg"
     },
     {
+      "Id": "C:\\HUFLITCOFFEE\\wwwroot\\images\\Logo.png",
+      "PackagePath": "staticwebassets\\images\\Logo.png"
+    },
+    {
       "Id": "C:\\HUFLITCOFFEE\\wwwroot\\images\\LogoCoffeeHouse.jpg",
       "PackagePath": "staticwebassets\\images\\LogoCoffeeHouse.jpg"
     },
     {
       "Id": "C:\\HUFLITCOFFEE\\wwwroot\\images\\MoChi.webp",
       "PackagePath": "staticwebassets\\images\\MoChi.webp"
-    },
-    {
-      "Id": "C:\\HUFLITCOFFEE\\wwwroot\\images\\NewLogo.png",
-      "PackagePath": "staticwebassets\\images\\NewLogo.png"
     },
     {
       "Id": "C:\\HUFLITCOFFEE\\wwwroot\\images\\a1ea16d3-d649-4f65-849a-6a6db5e16eda_1-ca-phe-pixels-17109138043411096477098-0-0-640-1024-crop-1710913827842619971152.jpg",

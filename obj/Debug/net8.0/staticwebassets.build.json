@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "q3TaanRSTx+csYt93zIku3f9ntqIPgI+Olu1+EmJIAA=",
+  "Hash": "Vv89nAp2ocRLNlNQU7dAMsJBoBlqtl7fdscsKnuFACo=",
   "Source": "HUFLITCOFFEE",
   "BasePath": "_content/HUFLITCOFFEE",
   "Mode": "Default",
@@ -1575,6 +1575,25 @@
       "OriginalItemSpec": "wwwroot\\images\\hinh-tach-ca-phe-va-hat.jpg"
     },
     {
+      "Identity": "C:\\HUFLITCOFFEE\\wwwroot\\images\\Logo.png",
+      "SourceId": "HUFLITCOFFEE",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\HUFLITCOFFEE\\wwwroot\\",
+      "BasePath": "_content/HUFLITCOFFEE",
+      "RelativePath": "images/Logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Logo.png"
+    },
+    {
       "Identity": "C:\\HUFLITCOFFEE\\wwwroot\\images\\LogoCoffeeHouse.jpg",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
@@ -1611,25 +1630,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\MoChi.webp"
-    },
-    {
-      "Identity": "C:\\HUFLITCOFFEE\\wwwroot\\images\\NewLogo.png",
-      "SourceId": "HUFLITCOFFEE",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\HUFLITCOFFEE\\wwwroot\\",
-      "BasePath": "_content/HUFLITCOFFEE",
-      "RelativePath": "images/NewLogo.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\NewLogo.png"
     },
     {
       "Identity": "C:\\HUFLITCOFFEE\\wwwroot\\js\\chart.js",
