@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ipO8VNIR9CuhtGxfH+5bDlhdKEG5OsLAOipeWwrzr2U=",
+  "Hash": "daYXoj1FzEdSha5dHMZ7PQZB1t/oCDj9Sm5dVtRTX8o=",
   "Source": "HUFLITCOFFEE",
   "BasePath": "_content/HUFLITCOFFEE",
   "Mode": "Default",
@@ -1575,6 +1575,25 @@
       "OriginalItemSpec": "wwwroot\\images\\hinh-tach-ca-phe-va-hat.jpg"
     },
     {
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\Logo.png",
+      "SourceId": "HUFLITCOFFEE",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
+      "BasePath": "_content/HUFLITCOFFEE",
+      "RelativePath": "images/Logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Logo.png"
+    },
+    {
       "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\LogoCoffeeHouse.jpg",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
@@ -1613,12 +1632,12 @@
       "OriginalItemSpec": "wwwroot\\images\\MoChi.webp"
     },
     {
-      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\images\\NewLogo.png",
+      "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\js\\chart.js",
       "SourceId": "HUFLITCOFFEE",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\HUFLITCOFFEE\\wwwroot\\",
       "BasePath": "_content/HUFLITCOFFEE",
-      "RelativePath": "images/NewLogo.png",
+      "RelativePath": "js/chart.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1629,7 +1648,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\NewLogo.png"
+      "OriginalItemSpec": "wwwroot\\js\\chart.js"
     },
     {
       "Identity": "D:\\HUFLITCOFFEE\\wwwroot\\js\\homepage.js",
