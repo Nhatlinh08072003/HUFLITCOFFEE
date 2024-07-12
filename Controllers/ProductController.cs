@@ -7,6 +7,8 @@ using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 using HUFLITCOFFEE.Services;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using HUFLITCOFFEE.ViewModels;
 using Newtonsoft.Json;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -421,7 +423,7 @@ public class ProductController : Controller
                     command.Parameters.AddWithValue("@Address", vnPayModel.Address);
                     command.Parameters.AddWithValue("@PhoneNumber", vnPayModel.PhoneNumber);
                     command.Parameters.AddWithValue("@Total", (decimal)vnPayModel.Amount / 1000);
-                    command.Parameters.AddWithValue("@Status", "Đang chuẩn bị");
+                    command.Parameters.AddWithValue("@Status", "Đang chuẩn bị đơn hàng");
                     command.Parameters.AddWithValue("@DateOrder", DateTime.Now);
                     command.Parameters.AddWithValue("@Ghichu", vnPayModel.Description);
                     command.Parameters.AddWithValue("@PaymentMethod", "VnPay");
