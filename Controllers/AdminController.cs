@@ -30,7 +30,7 @@ namespace HUFLITCOFFEE.Controllers
 
         public async Task<IActionResult> AdminOrder()
         {
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
             {
                 // Open the database connection
                 await connection.OpenAsync();
@@ -107,7 +107,7 @@ namespace HUFLITCOFFEE.Controllers
             try
             {
 
-                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
+                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
                 {
                     await connection.OpenAsync();
 
@@ -167,7 +167,7 @@ namespace HUFLITCOFFEE.Controllers
                 {
                     string imageUrl = await SaveImageAsync(product_image);
 
-                    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
+                    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
                     {
                         await connection.OpenAsync();
 
@@ -244,7 +244,7 @@ namespace HUFLITCOFFEE.Controllers
                     imageUrl = await SaveImageAsync(product_image);
                 }
 
-                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
+                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
                 {
                     await connection.OpenAsync();
 
@@ -287,7 +287,7 @@ namespace HUFLITCOFFEE.Controllers
             try
             {
                 // Thực hiện kết nối đến cơ sở dữ liệu
-                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
+                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
                 {
                     await connection.OpenAsync();
 

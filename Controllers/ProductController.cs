@@ -110,7 +110,7 @@ public class ProductController : Controller
                 }
                 var userId = int.Parse(userIdClaim.Value);
 
-                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
+                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
                 {
                     await connection.OpenAsync();
 
@@ -152,7 +152,7 @@ public class ProductController : Controller
         try
         {
             // Thực hiện kết nối đến cơ sở dữ liệu
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
             {
                 await connection.OpenAsync();
 
@@ -200,7 +200,7 @@ public class ProductController : Controller
             }
             var userId = int.Parse(userIdClaim.Value);
             // Thực hiện kết nối đến cơ sở dữ liệu
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
             {
                 await connection.OpenAsync();
 
@@ -330,7 +330,7 @@ public class ProductController : Controller
                         return Json(new { success = false, message = "Giỏ hàng của bạn đang trống. Vui lòng thêm sản phẩm vào giỏ hàng trước khi đặt hàng." });
                     }
 
-                    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
+                    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
                     {
                         await connection.OpenAsync();
 
@@ -408,7 +408,7 @@ public class ProductController : Controller
         }
         try
         {
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
             {
                 await connection.OpenAsync();
 
