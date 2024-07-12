@@ -53,6 +53,10 @@
       "PackagePath": "staticwebassets\\css\\output.css"
     },
     {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\paymentsuccess.css",
+      "PackagePath": "staticwebassets\\css\\paymentsuccess.css"
+    },
+    {
       "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\policy.css",
       "PackagePath": "staticwebassets\\css\\policy.css"
     },

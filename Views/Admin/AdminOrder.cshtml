@@ -19,6 +19,7 @@
 
     .dropdown-content div {
         color: black;
+        background-color: #fff;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
@@ -135,6 +136,7 @@
                             <th>Tên khách hàng</th>
                             <th>Trạng thái đơn hàng</th>
                             <th>Chi tiết đơn hàng</th>
+                            <th>Ghi chú</th>
                             <th>Khách phải trả</th>
                             <th>Cập nhật trạng thái đơn hàng</th>
                         </tr>
@@ -165,17 +167,18 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <table id="order-items">
+                                    <button style="border: 1px solid black;padding:10px" class="button_detail_order">xem chi tiết</button>
+                                    <table id="order-items" style="display: none;">
                                         @if (item.CartItems != null && item.CartItems.Any())
                                         {
                                              <thead>
                     <tr class="bg-gray-200 text-sm uppercase leading-normal text-gray-600">
-                        <th class="px-2 py-2 text-left">Product Name</th>
-                        <th class="px-2 py-2 text-left">Topping Name</th>
-                        <th class="px-2 py-2 text-left">Quantity</th>
-                        <th class="px-2 py-2 text-left">Size</th>
-                        <th class="px-2 py-2 text-right">Unit Price</th>
-                        <th class="px-2 py-2 text-right">Subtotal</th>
+                        <th class="px-2 py-2 text-left">Tên sản phẩm</th>
+                        <th class="px-2 py-2 text-left">Tên topping</th>
+                        <th class="px-2 py-2 text-left">Số lượng</th>
+                        <th class="px-2 py-2 text-left">Đơn vị tính</th>
+                        <th class="px-2 py-2 text-right">Đơn giá</th>
+                        <th class="px-2 py-2 text-right">Thành tiền</th>
                     </tr>
                 </thead>
                                             @foreach (var cartItem in item.CartItems)
@@ -192,6 +195,7 @@
                                         }
                                     </table>
                                 </td>
+                                <td>@item.Ghichu</td>
                                 <td>@item.Total</td>
                                 <td><button type="button" onclick="submitForm(@item.OrderID)">Cập nhật</button></td>
                             </tr>
@@ -203,6 +207,16 @@
     </div>
 </div>
 <script>
+      @* document.getElementById('button_detail_order').addEventListener('click', function () {
+        var table = document.getElementById('order-items');
+        if (table.style.display === 'none') {
+            table.style.display = 'table'; // Hiển thị bảng nếu nó đang ẩn
+            this.textContent = 'Ẩn chi tiết'; // Thay đổi nội dung của nút
+        } else {
+            table.style.display = 'none'; // Ẩn bảng nếu nó đang hiển thị
+            this.textContent = 'Xem chi tiết'; // Thay đổi nội dung của nút
+        }
+    }); *@
     function selectOption(status, orderId) {
         var dropdown = document.getElementById('dropdown-' + orderId);
         dropdown.querySelector('.main').innerText = status;
@@ -238,4 +252,17 @@
                 }
             });
         }
+       var buttons = document.querySelectorAll('.button_detail_order');
+buttons.forEach(function(button) {
+    button.addEventListener('click', function () {
+        var table = this.nextElementSibling; // Lấy phần tử kế tiếp của nút là bảng order-items
+        if (table.style.display === 'none' || table.style.display === '') {
+            table.style.display = 'table'; // Hiển thị bảng nếu nó đang ẩn hoặc chưa có kiểu hiển thị
+            this.textContent = 'Ẩn chi tiết'; // Thay đổi nội dung của nút
+        } else {
+            table.style.display = 'none'; // Ẩn bảng nếu nó đang hiển thị
+            this.textContent = 'Xem chi tiết'; // Thay đổi nội dung của nút
+        }
+    });
+});
 </script>
