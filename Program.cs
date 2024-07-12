@@ -11,7 +11,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<HuflitcoffeeContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("localDB"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("azureDB"));
     options.EnableSensitiveDataLogging(false);
 });
 
