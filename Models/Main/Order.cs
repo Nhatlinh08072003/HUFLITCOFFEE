@@ -24,6 +24,8 @@ public partial class Order
     public decimal Total { get; set; }
 
     public string? Status { get; set; }
+    public string? PaymentMethod { get; set; }
+
 
     public DateTime? DateOrder { get; set; }
 

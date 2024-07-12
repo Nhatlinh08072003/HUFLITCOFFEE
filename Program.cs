@@ -3,6 +3,7 @@ using HUFLITCOFFEE.Models.Main;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using HUFLITCOFFEE.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +11,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<HuflitcoffeeContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("azureDB"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("localDB"));
     options.EnableSensitiveDataLogging(false);
 });
 
@@ -33,7 +34,7 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(120);
+    options.IdleTimeout = TimeSpan.FromMinutes(20);
 });
 
 JsonConvert.DefaultSettings = () => new JsonSerializerSettings
@@ -41,6 +42,7 @@ JsonConvert.DefaultSettings = () => new JsonSerializerSettings
     Formatting = Formatting.Indented,
     ReferenceLoopHandling = ReferenceLoopHandling.Ignore
 };
+builder.Services.AddSingleton<IVnPayService, VnPayService>();
 
 var app = builder.Build();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -166,6 +168,16 @@ app.MapControllerRoute(
     pattern: "/shipping",
     defaults: new { controller = "Product", action = "Shipping" }
 );
+// app.MapControllerRoute(
+//     name: "PaymentSuccess",
+//     pattern: "/paymentsuccess",
+//     defaults: new { controller = "Product", action = "PaymentSuccess" }
+// );
+// app.MapControllerRoute(
+//     name: "PaymentFail",
+//     pattern: "/paymentfail",
+//     defaults: new { controller = "Product", action = "PaymentFail" }
+// );
 app.MapControllerRoute(
     name: "Historybuy",
     pattern: "/historybuy",

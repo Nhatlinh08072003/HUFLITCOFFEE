@@ -5,6 +5,11 @@ using HUFLITCOFFEE.Models.Main;
 using System.Data.SqlClient;
 using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using HUFLITCOFFEE.Services;
+using HUFLITCOFFEE.ViewModels;
+using Newtonsoft.Json;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace HUFLITCOFFEE.Controllers;
 
@@ -13,13 +18,16 @@ public class ProductController : Controller
     private readonly HuflitcoffeeContext _huflitcoffeeContext;
     private readonly IHttpContextAccessor _httpContext;
     private readonly IConfiguration _configuration;
+    private readonly IVnPayService _vnPayService;
+
 
     // Constructor
-    public ProductController(HuflitcoffeeContext huflitcoffeeContext, IHttpContextAccessor httpContextAccessor, IConfiguration configuration)
+    public ProductController(HuflitcoffeeContext huflitcoffeeContext, IHttpContextAccessor httpContextAccessor, IConfiguration configuration, IVnPayService vnPayService)
     {
         _huflitcoffeeContext = huflitcoffeeContext;
         _httpContext = httpContextAccessor;
         _configuration = configuration;
+        _vnPayService = vnPayService;
     }
     public IActionResult Index()
     {
@@ -100,7 +108,7 @@ public class ProductController : Controller
                 }
                 var userId = int.Parse(userIdClaim.Value);
 
-                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
                 {
                     await connection.OpenAsync();
 
@@ -142,7 +150,7 @@ public class ProductController : Controller
         try
         {
             // Thực hiện kết nối đến cơ sở dữ liệu
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
             {
                 await connection.OpenAsync();
 
@@ -190,7 +198,7 @@ public class ProductController : Controller
             }
             var userId = int.Parse(userIdClaim.Value);
             // Thực hiện kết nối đến cơ sở dữ liệu
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
             {
                 await connection.OpenAsync();
 
@@ -238,6 +246,7 @@ public class ProductController : Controller
     {
         try
         {
+
             // Lấy UserId từ claims
             var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
             if (userIdClaim == null)
@@ -274,62 +283,160 @@ public class ProductController : Controller
      [FromForm] string address,
      [FromForm] string status,
      [FromForm] string ghichu,
-     [FromForm] string phone)
+     [FromForm] string phone,
+     [FromForm] string payment)
     {
         if (ModelState.IsValid)
         {
-            try
+
+            // Lấy UserId từ claims
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+            if (userIdClaim == null)
             {
-                // Lấy UserId từ claims
-                var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
-                if (userIdClaim == null)
-                {
-                    return Json(new { success = false, message = "Không tìm thấy thông tin người dùng." });
-                }
-                var userId = int.Parse(userIdClaim.Value);
-
-                // Kiểm tra giỏ hàng của người dùng
-                var carts = await _huflitcoffeeContext.CartItems
-                                    .Where(c => c.UserId == userId)
-                                    .ToListAsync();
-
-                if (carts.Count == 0)
-                {
-                    return Json(new { success = false, message = "Giỏ hàng của bạn đang trống. Vui lòng thêm sản phẩm vào giỏ hàng trước khi đặt hàng." });
-                }
-
-                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
-                {
-                    await connection.OpenAsync();
-
-                    string sql = @"
-                INSERT INTO [Order] ( UserID, FullName, Address, PhoneNumber, Total, Status, DateOrder, Ghichu)
-                VALUES (@UserID, @FullName, @Address, @PhoneNumber, @Total, @Status, @DateOrder, @Ghichu)";
-
-                    using (SqlCommand command = new SqlCommand(sql, connection))
-                    {
-                        command.Parameters.AddWithValue("@UserID", userId);
-                        command.Parameters.AddWithValue("@FullName", fullname);
-                        command.Parameters.AddWithValue("@Address", address);
-                        command.Parameters.AddWithValue("@PhoneNumber", phone);
-                        command.Parameters.AddWithValue("@Total", decimal.Parse(price));
-                        command.Parameters.AddWithValue("@Status", status);
-                        command.Parameters.AddWithValue("@DateOrder", DateTime.Now);
-                        command.Parameters.AddWithValue("@Ghichu", ghichu);
-                        await command.ExecuteNonQueryAsync();
-                    }
-                }
-
-                return Json(new { success = true, message = "Đặt hàng thành công." });
+                return Json(new { success = false, message = "Không tìm thấy thông tin người dùng." });
             }
-            catch (Exception ex)
+            var userId = int.Parse(userIdClaim.Value);
+
+            var carts = await _huflitcoffeeContext.CartItems
+                                .Where(c => c.UserId == userId)
+                                .ToListAsync();
+            if (payment == "Thanh Toán VnPay")
             {
-                Console.WriteLine(ex.ToString());
-                return Json(new { success = false, message = $"Lỗi khi lưu sản phẩm: {ex.Message}" });
+                var vnPayModel = new ViewModels.VnPaymentRequestModel
+                {
+                    Amount = (double)carts.Sum(p => p.PriceProduct) * 1000,
+                    CreatedDate = DateTime.Now,
+                    Description = ghichu,
+                    FullName = fullname,
+                    OrderId = new Random().Next(1000, 10000),
+                    PhoneNumber = phone,
+                    Address = address,
+                    UserId = userId
+                };
+                // Lưu thông tin vào session
+                HttpContext.Session.SetString("PaymentStatus", "Pending");
+                HttpContext.Session.SetString("VnPayModel", JsonConvert.SerializeObject(vnPayModel));
+
+                return Redirect(_vnPayService.CreatePaymentUrl(HttpContext, vnPayModel));
+            }
+            else
+            {
+                try
+                {
+                    if (carts.Count == 0)
+                    {
+                        return Json(new { success = false, message = "Giỏ hàng của bạn đang trống. Vui lòng thêm sản phẩm vào giỏ hàng trước khi đặt hàng." });
+                    }
+
+                    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
+                    {
+                        await connection.OpenAsync();
+
+                        string sql = @"
+                INSERT INTO [Order] ( UserID, FullName, Address, PhoneNumber, Total, Status, DateOrder, Ghichu, PaymentMethod)
+                VALUES (@UserID, @FullName, @Address, @PhoneNumber, @Total, @Status, @DateOrder, @Ghichu, @PaymentMethod)";
+
+                        using (SqlCommand command = new SqlCommand(sql, connection))
+                        {
+                            command.Parameters.AddWithValue("@UserID", userId);
+                            command.Parameters.AddWithValue("@FullName", fullname);
+                            command.Parameters.AddWithValue("@Address", address);
+                            command.Parameters.AddWithValue("@PhoneNumber", phone);
+                            command.Parameters.AddWithValue("@Total", decimal.Parse(price));
+                            command.Parameters.AddWithValue("@Status", status);
+                            command.Parameters.AddWithValue("@DateOrder", DateTime.Now);
+                            command.Parameters.AddWithValue("@Ghichu", ghichu);
+                            command.Parameters.AddWithValue("@PaymentMethod", payment);
+                            await command.ExecuteNonQueryAsync();
+                        }
+                    }
+
+                    return Json(new { success = true, message = "Đặt hàng thành công." });
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                    return Json(new { success = false, message = $"Lỗi khi lưu sản phẩm: {ex.Message}" });
+                }
             }
         }
 
         return Json(new { success = false, message = "Dữ liệu không hợp lệ." });
+    }
+
+    [AllowAnonymous]
+    public IActionResult PaymentFail()
+    {
+        return View();
+    }
+    [AllowAnonymous]
+    public IActionResult PaymentSuccess()
+    {
+        return View();
+    }
+    [AllowAnonymous]
+
+    // public IActionResult PaymentCallBack()
+    // {
+    //     var response = _vnPayService.PaymentExecute(Request.Query);
+
+    //     if (response == null || response.VnPayResponseCode != "00")
+    //     {
+    //         TempData["Message"] = $"Lỗi thanh toán VnPay: {response.VnPayResponseCode}";
+    //         return RedirectToAction("PaymentFail");
+    //     }
+    //     // Lưu đơn hàng vô database
+    //     TempData["Message"] = $"Thanh toán VnPay thành công";
+    //     return RedirectToAction("PaymentSuccess");
+    // }
+
+    public async Task<IActionResult> PaymentCallBack()
+    {
+        var response = _vnPayService.PaymentExecute(Request.Query);
+        if (response == null || response.VnPayResponseCode != "00")
+        {
+            TempData["Message"] = $"Lỗi thanh toán VnPay: {response?.VnPayResponseCode}";
+            return RedirectToAction("PaymentFail");
+        }
+        var vnPayModel = JsonConvert.DeserializeObject<ViewModels.VnPaymentRequestModel>(HttpContext.Session.GetString("VnPayModel"));
+        if (vnPayModel == null)
+        {
+            TempData["Message"] = "Thông tin thanh toán không hợp lệ.";
+            return RedirectToAction("PaymentFail");
+        }
+        try
+        {
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
+            {
+                await connection.OpenAsync();
+
+                string sql = @"
+                INSERT INTO [Order] (UserID, FullName, Address, PhoneNumber, Total, Status, DateOrder, Ghichu, PaymentMethod)
+                VALUES (@UserID, @FullName, @Address, @PhoneNumber, @Total, @Status, @DateOrder, @Ghichu, @PaymentMethod)";
+
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", vnPayModel.UserId);
+                    command.Parameters.AddWithValue("@FullName", vnPayModel.FullName);
+                    command.Parameters.AddWithValue("@Address", vnPayModel.Address);
+                    command.Parameters.AddWithValue("@PhoneNumber", vnPayModel.PhoneNumber);
+                    command.Parameters.AddWithValue("@Total", (decimal)vnPayModel.Amount / 1000);
+                    command.Parameters.AddWithValue("@Status", "Đang chuẩn bị");
+                    command.Parameters.AddWithValue("@DateOrder", DateTime.Now);
+                    command.Parameters.AddWithValue("@Ghichu", vnPayModel.Description);
+                    command.Parameters.AddWithValue("@PaymentMethod", "VnPay");
+                    await command.ExecuteNonQueryAsync();
+                }
+            }
+            TempData["Message"] = "Thanh toán VnPay thành công";
+            return RedirectToAction("PaymentSuccess");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+            TempData["Message"] = $"Lỗi khi lưu đơn hàng: {ex.Message}";
+            return RedirectToAction("PaymentFail");
+        }
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

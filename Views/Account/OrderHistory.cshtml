@@ -24,6 +24,7 @@
                         <th class="py-3 px-6 text-left">Ngày đặt hàng</th>
                         <th class="py-3 px-6 text-left">Tổng số tiền</th>
                         <th class="py-3 px-6 text-left">Trạng thái</th>
+                        <th class="py-3 px-6 text-left">Phương thức thanh toán</th>
                         <th class="py-3 px-6 text-left">Chi tiết</th>
                     </tr>
                 </thead>
@@ -39,6 +40,7 @@
                                 <span
                                     class="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">@item.Status</span>
                             </td>
+                            <td class="py-3 px-6 text-left">@item.PaymentMethod</td>
                             <td class="py-3 px-6 text-left">
                                 <a href="/orderdetailhistory/@item.OrderId"
                                     class="text-indigo-600 hover:text-indigo-900">Xem chi tiết</a>

@@ -53,10 +53,6 @@ namespace HUFLITCOFFEE.Controllers
 
             return View(profileViewModel); // Đảm bảo rằng bạn đang trả về view model
         }
-
-
-
-
         [HttpGet]
         public IActionResult Login()
         {
@@ -116,7 +112,7 @@ namespace HUFLITCOFFEE.Controllers
                 try
                 {
 
-                    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+                    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
                     {
                         await connection.OpenAsync();
 
@@ -181,7 +177,7 @@ VALUES (@Username, @PasswordHash, @Email, @FullName, @Address, @PhoneNumber ,@Cr
         [Route("OrderDetailHistory/{id}")]
         public async Task<IActionResult> OrderDetailHistory(int id)
         {
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
             {
                 await connection.OpenAsync();
 
