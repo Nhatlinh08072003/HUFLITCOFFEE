@@ -110,7 +110,7 @@ public class ProductController : Controller
                 }
                 var userId = int.Parse(userIdClaim.Value);
 
-                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
                 {
                     await connection.OpenAsync();
 
@@ -152,7 +152,7 @@ public class ProductController : Controller
         try
         {
             // Thực hiện kết nối đến cơ sở dữ liệu
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
             {
                 await connection.OpenAsync();
 
@@ -200,7 +200,7 @@ public class ProductController : Controller
             }
             var userId = int.Parse(userIdClaim.Value);
             // Thực hiện kết nối đến cơ sở dữ liệu
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
             {
                 await connection.OpenAsync();
 
@@ -295,7 +295,8 @@ public class ProductController : Controller
             var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
             if (userIdClaim == null)
             {
-                return Json(new { success = false, message = "Không tìm thấy thông tin người dùng." });
+                TempData["ErrorMessage"] = "Không tìm thấy thông tin người dùng.";
+                return RedirectToAction("Shipping", "Product");
             }
             var userId = int.Parse(userIdClaim.Value);
 
@@ -327,10 +328,11 @@ public class ProductController : Controller
                 {
                     if (carts.Count == 0)
                     {
-                        return Json(new { success = false, message = "Giỏ hàng của bạn đang trống. Vui lòng thêm sản phẩm vào giỏ hàng trước khi đặt hàng." });
+                        TempData["ErrorMessage"] = "Giỏ hàng của bạn đang trống. Vui lòng thêm sản phẩm vào giỏ hàng trước khi đặt hàng.";
+                        return RedirectToAction("Shipping", "Product");
                     }
 
-                    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+                    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
                     {
                         await connection.OpenAsync();
 
@@ -343,7 +345,7 @@ public class ProductController : Controller
                             command.Parameters.AddWithValue("@UserID", userId);
                             command.Parameters.AddWithValue("@FullName", fullname);
                             command.Parameters.AddWithValue("@Address", address);
-                            command.Parameters.AddWithValue("@PhoneNumber", phone);
+                            command.Parameters.AddWithValue("@PhoneNumber", int.Parse(phone));
                             command.Parameters.AddWithValue("@Total", decimal.Parse(price));
                             command.Parameters.AddWithValue("@Status", status);
                             command.Parameters.AddWithValue("@DateOrder", DateTime.Now);
@@ -353,17 +355,21 @@ public class ProductController : Controller
                         }
                     }
 
-                    return Json(new { success = true, message = "Đặt hàng thành công." });
+                    TempData["SuccessMessage"] = "Đặt hàng thành công.";
+                    return RedirectToAction("Shipping", "Product");
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.ToString());
-                    return Json(new { success = false, message = $"Lỗi khi lưu sản phẩm: {ex.Message}" });
+                    TempData["ErrorMessage"] = $"Lỗi khi lưu sản phẩm: {ex.Message}";
+                    return RedirectToAction("Shipping", "Product");
                 }
             }
         }
 
-        return Json(new { success = false, message = "Dữ liệu không hợp lệ." });
+        TempData["ErrorMessage"] = "Dữ liệu không hợp lệ.";
+        return RedirectToAction("Shipping", "Product");
+
     }
 
     [AllowAnonymous]
@@ -408,7 +414,7 @@ public class ProductController : Controller
         }
         try
         {
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
             {
                 await connection.OpenAsync();
 

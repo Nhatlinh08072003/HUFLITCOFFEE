@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Success";
+}
+<link rel="stylesheet" href="~/css/paymentsuccess.css">
+<style>
+    .Home_vertical_container {
+        display: none;
+    }
+
+    .Home_layout_header {
+        display: none;
+    }
+</style>
+<div style="text-align: center;"><img
+        src="https://vinadesign.vn/uploads/images/2023/05/vnpay-logo-vinadesign-25-12-57-55.jpg" width="100%"
+        height="auto" alt="" aria-label="Tải VNPay logo file vector AI, EPS, JPEG, SVG, PNG không nền"
+        id="yui_3_5_1_1_1720785126504_738" style="width: 300px; height: 300px;margin: auto;margin-top: 0;"></div>
+<div style="width:50%; margin: auto;text-align: center;display:flex;flex-direction: column;gap:10px">
+    <h1>Success</h1>
+
+    <h3 class="text-danger">@TempData["Message"]</h3>
+
+    <h1>Xem đơn hàng của bạn tại đây</h1>
+
+    <button style="border: 1px solid black;"> <a href="/orderhistory"
+            class="block px-4 py-2 text-black hover:bg-gray-100">Lịch sử mua
+            hàng</a></button>
+</div>
