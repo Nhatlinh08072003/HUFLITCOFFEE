@@ -59,36 +59,41 @@ namespace HUFLITCOFFEE.Controllers
             return View();
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel model)
+      [HttpPost]
+public async Task<IActionResult> Login(LoginViewModel model)
+{
+    if (ModelState.IsValid)
+    {
+        var user = await _huflitcoffeeContext.Users
+            .FirstOrDefaultAsync(u => u.Username == model.Username && u.PasswordHash == model.Password);
+
+        if (user != null && user.Username != null && user.Email != null)
         {
-            if (ModelState.IsValid)
+            var claims = new List<Claim>
             {
-                var user = await _huflitcoffeeContext.Users
-                    .FirstOrDefaultAsync(u => u.Username == model.Username && u.PasswordHash == model.Password);
+                new Claim(ClaimTypes.Name, user.Username),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString())
+            };
 
-                if (user != null && user.Username != null && user.Email != null)
-                {
-                    var claims = new List<Claim>
-                    {
-                        new Claim(ClaimTypes.Name, user.Username),
-                        new Claim(ClaimTypes.Email, user.Email),
-                        new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString())
-                    };
-
-                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-
-                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
-
-                    ViewBag.Username = user.Username;
-                    return RedirectToAction("Index", "Home");
-                }
-
-                ModelState.AddModelError(string.Empty, "Tên đăng nhập hoặc mật khẩu không chính xác. Vui lòng thử lại.");
+            if (user.IsAdmin) // Kiểm tra xem người dùng có phải là admin không
+            {
+                claims.Add(new Claim(ClaimTypes.Role, "Admin"));
             }
 
-            return View(model);
+            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+
+            ViewBag.Username = user.Username;
+            return RedirectToAction("Index", "Home");
         }
+
+        ModelState.AddModelError(string.Empty, "Tên đăng nhập hoặc mật khẩu không chính xác. Vui lòng thử lại.");
+    }
+
+    return View(model);
+}
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);

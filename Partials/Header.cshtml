@@ -42,31 +42,34 @@
             <img src="~/images/Logo.png" loading="lazy" alt="Logo Shop " title="Shopping cart " width="80" height="80">
         </div>
         <div class="Home_register_cart">
-            @if (isAuthenticated)
+           @if (isAuthenticated)
+{
+    <div class="relative">
+        <button id="dropdownButton" class="text-black bg-white px-4 py-2 rounded focus:outline-none">
+            Welcome, @userName
+        </button>
+        <div id="dropdownMenu" class="hidden w-full absolute right-0  bg-white border rounded shadow-md">
+            <a href="/profile" class="block px-4 py-2 text-black hover:bg-gray-100">Profile</a>
+            <a href="/orderhistory" class="block px-4 py-2 text-black hover:bg-gray-100">Lịch sử mua hàng</a>
+            <a href="/resetpassword" class="block px-4 py-2 text-black hover:bg-gray-100">Đổi mật khẩu</a>
+            @if (User.IsInRole("Admin"))
             {
-                <div class="relative">
-                    <button id="dropdownButton" class="text-black bg-white px-4 py-2 rounded focus:outline-none">
-                        Welcome, @userName
-                    </button>
-                    <div id="dropdownMenu" class="hidden w-full absolute right-0  bg-white border rounded shadow-md">
-                        <a href="/profile" class="block px-4 py-2 text-black hover:bg-gray-100">Profile</a>
-                        <a href="/orderhistory" class="block px-4 py-2 text-black hover:bg-gray-100">Lịch sử mua
-                            hàng</a>
-                        <a href="/resetpassword" class="block px-4 py-2 text-black hover:bg-gray-100">Đổi mật khẩu</a>
-                    </div>
-                </div>
-                <a href="@Url.Action("Logout", "Account")" onclick="confirmLogout(event)">
-                    <div class="Orther-login">Đăng xuất</div>
-                </a>
+                <a href="/admin" class="block px-4 py-2 text-black hover:bg-gray-100">Admin</a>
             }
-            else
-            {
-                <div>
-                    <a id="Homepage_login" href="/Account/Login" style="color:#000;text-decoration: none;">
-                        Đăng nhập
-                    </a>
-                </div>
-            }
+        </div>
+    </div>
+    <a href="@Url.Action("Logout", "Account")" onclick="confirmLogout(event)">
+        <div class="Orther-login">Đăng xuất</div>
+    </a>
+}
+else
+{
+    <div>
+        <a id="Homepage_login" href="/Account/Login" style="color:#000;text-decoration: none;">
+            Đăng nhập
+        </a>
+    </div>
+}
             <div class="Home_shopping_cart">
                 <div>
                     <a href="/cart">Giỏ hàng</a>

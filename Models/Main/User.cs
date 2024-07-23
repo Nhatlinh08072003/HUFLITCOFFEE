@@ -5,6 +5,7 @@ namespace HUFLITCOFFEE.Models.Main;
 
 public partial class User
 {
+    public bool IsAdmin { get; set; }
     public int UserId { get; set; }
 
     public string Username { get; set; } = null!;

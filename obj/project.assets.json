@@ -4611,7 +4611,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kimla\\.nuget\\packages\\": {}
+    "C:\\Users\\letie\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -4619,18 +4619,16 @@
       "projectUniqueName": "D:\\HUFLITCOFFEE\\HUFLITCOFFEE.csproj",
       "projectName": "HUFLITCOFFEE",
       "projectPath": "D:\\HUFLITCOFFEE\\HUFLITCOFFEE.csproj",
-      "packagesPath": "C:\\Users\\kimla\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\letie\\.nuget\\packages\\",
       "outputPath": "D:\\HUFLITCOFFEE\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kimla\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\letie\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4643,6 +4641,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4697,7 +4700,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
