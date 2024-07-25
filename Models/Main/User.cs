@@ -5,7 +5,6 @@ namespace HUFLITCOFFEE.Models.Main;
 
 public partial class User
 {
-    public bool IsAdmin { get; set; }
     public int UserId { get; set; }
 
     public string Username { get; set; } = null!;
@@ -21,6 +20,8 @@ public partial class User
     public string? PhoneNumber { get; set; }
 
     public DateTime CreatedAt { get; set; }
+    // Thêm thuộc tính Role vào mô hình User
+        public string? Role { get; set; } 
 
     public virtual ICollection<Blog> Blogs { get; set; } = new List<Blog>();
 

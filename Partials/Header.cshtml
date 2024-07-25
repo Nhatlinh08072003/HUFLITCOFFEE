@@ -52,10 +52,10 @@
             <a href="/profile" class="block px-4 py-2 text-black hover:bg-gray-100">Profile</a>
             <a href="/orderhistory" class="block px-4 py-2 text-black hover:bg-gray-100">Lịch sử mua hàng</a>
             <a href="/resetpassword" class="block px-4 py-2 text-black hover:bg-gray-100">Đổi mật khẩu</a>
-            @if (User.IsInRole("Admin"))
-            {
-                <a href="/admin" class="block px-4 py-2 text-black hover:bg-gray-100">Admin</a>
-            }
+              @if (User.IsInRole("Admin"))
+    {
+        <a href="/admin" class="block px-4 py-2 text-black hover:bg-gray-100">Admin</a>
+    }
         </div>
     </div>
     <a href="@Url.Action("Logout", "Account")" onclick="confirmLogout(event)">
