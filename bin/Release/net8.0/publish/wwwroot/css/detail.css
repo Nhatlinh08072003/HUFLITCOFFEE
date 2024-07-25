@@ -1,0 +1,400 @@
+.breadcrumb {
+   list-style: none;
+   padding-left: 0;
+   display: flex;
+   align-items: center;
+   padding-left: 20px;
+}
+
+.breadcrumb .bd-cate {
+   display: inline;
+}
+
+.breadcrumb .bd-cate:not(:last-child)::after {
+   content: " /";
+   padding: 0 5px;
+}
+
+.pro-product {
+   display: flex;
+   margin-left: 20px;
+   margin-top: 50px;
+   margin-bottom: 10px;
+}
+
+.option-size {
+   margin-left: 20px;
+   width: 70%;
+}
+
+.pro-product-img {
+   width: 50%;
+   overflow: hidden;
+   display: inline-block;
+   border-radius: 20px;
+   display: flex;
+   /* Sử dụng flexbox để căn giữa */
+   justify-content: center;
+   /* Căn giữa theo chiều ngang */
+   align-items: center;
+}
+
+.img_pro {
+   width: 50%;
+   transition: transform 0.5s;
+   border-radius: 20px;
+   text-align: center;
+}
+
+.img_pro:hover {
+   transform: scale(1.1);
+}
+
+.pro-prodcut-title {
+   width: 40%;
+}
+
+.titleee {
+   font-size: 22px;
+   font-weight: 700;
+}
+
+.pro-price {
+   font-size: 20px;
+   font-weight: 400;
+   color: red;
+}
+
+.size-text-tit {
+   font-size: 20px;
+   margin-left: -20px;
+   font-weight: 600;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+      Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.size-size {
+   display: flex;
+   gap: 10px;
+   /* Khoảng cách giữa các thẻ */
+}
+
+.size-zzz {
+   width: 100%;
+   padding: 10px 0px;
+   background-color: #f0f0f0;
+   border-radius: 5px;
+   border: 1px solid black;
+   font-size: 13px;
+   text-align: center;
+   cursor: pointer;
+   transition: background-color 0.3s, color 0.3s;
+}
+
+.size-zzz {
+   flex: 1;
+}
+
+/* .size-zzz:hover {
+    background-color: #e78585; 
+    color: #ff0000; 
+    font-weight: bold;
+} */
+/* .size-zzz input[type="checkbox"]:checked + .circle {
+    background-color: #ff0000; 
+    color: #000; 
+} */
+
+/* .topping-name:hover {
+    background-color: #e78585; 
+    color: #ff0000; 
+    font-weight: bold;
+} */
+
+.checkbox-topping {
+   flex: 0 0 50%;
+   box-sizing: border-box;
+   padding: 10px;
+}
+
+.topping-option {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.topping-name {
+   background-color: #f0f0f0;
+   border-radius: 5px;
+   text-align: center;
+   border: 1px solid black;
+   font-size: 15px;
+   cursor: pointer;
+   transition: background-color 0.3s, color 0.3s, transform 0s;
+   /* Chắc chắn không có chuyển đổi nào ảnh hưởng đến vị trí */
+}
+
+.topping-text {
+   font-size: 13px;
+   padding: 10px 0px;
+}
+
+.pro-topping-title {
+   font-size: 22px;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+      Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.checkbox-topping input[type="checkbox"]:checked+.topping-name {
+   background-color: #ff0000;
+   color: #000;
+}
+
+/* Đảm bảo padding không thay đổi khi hover */
+.topping-name:hover {
+   border-radius: 5px;
+   /* Giữ nguyên border-radius */
+}
+
+.size-zzz:hover {
+   background-color: #dd9a1d;
+   color: white;
+   /* Thay đổi màu chữ nếu cần */
+}
+
+.topping-name:hover {
+   background-color: #dd9a1d;
+   color: white;
+   /* Thay đổi màu chữ nếu cần */
+}
+
+.topping-name {
+   padding: 10px;
+}
+
+.pro-cart {
+   width: 100%;
+}
+
+.method-pro {
+   display: flex;
+   text-decoration: none;
+   /* Tắt gạch chân cho thẻ a */
+}
+
+.method-btn {
+   flex: 1;
+   text-align: center;
+   margin: 0 5px;
+   border: 0px;
+   text-decoration: none;
+}
+
+.btn-des {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 97%;
+   height: 50px;
+   font-size: 18px;
+   font-weight: bold;
+   margin-left: 10px;
+   background-color: #dd9a1d;
+   border: 0px;
+   border-radius: 10px;
+   white-space: nowrap;
+   text-decoration: none;
+}
+
+.Admin_addtocard {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: auto;
+   width: 50%;
+   height: 50px;
+   font-size: 18px;
+   font-weight: bold;
+   /* margin-left: 10px; */
+   background-color: #dd9a1d;
+   border: 0px;
+   border-radius: 10px;
+   white-space: nowrap;
+   text-decoration: none;
+}
+
+.pro-describe {
+   border-top: 1px solid #6b6666;
+   height: auto;
+}
+
+.des-title {
+   font-size: 24px;
+   font-weight: bold;
+}
+
+.des-text {
+   font-size: 18px;
+}
+
+.describe {
+   margin-left: 30px;
+}
+
+/* related -product */
+.related-product {
+   border-top: 1px solid #6b6666;
+   margin-top: 10px;
+}
+
+.title-rlt {
+   margin-left: 24px;
+   font-size: 25px;
+}
+
+.related-img img {
+   width: 100%;
+   height: auto;
+}
+
+.related-title .tttl {
+   font-weight: 500;
+   font-size: 20px;
+}
+
+.related-pro-box {
+   flex: 1 1 calc(25% - 32px);
+   box-sizing: border-box;
+   border: 1px solid #ddd;
+   padding: 16px;
+   text-align: center;
+   max-width: calc(20% - 16px);
+}
+
+.related-pro-list {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 16px;
+   padding: 0 16px;
+   margin-bottom: 50px;
+}
+
+.okokok {
+   display: flex;
+   margin-bottom: 20px;
+   align-items: center;
+}
+
+.pro-quantity {
+   margin-left: 150px;
+   font-size: 25px;
+}
+
+.pro-prevous {
+   width: 40px;
+   height: auto;
+   align-items: center;
+   border: 0px;
+   border-right: 1px solid #000;
+   background-color: #dd9a1d;
+}
+
+.pro-next {
+   width: 40px;
+   height: auto;
+   align-items: center;
+   border: 0px;
+   border-left: 1px solid #000;
+   background-color: #dd9a1d;
+}
+
+.n-pre {
+   border: 1px solid #000;
+   border-radius: 10px;
+   overflow: hidden;
+   background-color: #dd9a1d;
+}
+
+.method-pro {
+   display: flex;
+}
+
+@media screen and (max-width: 991px) {
+   .pro-product {
+      display: block;
+   }
+
+   .pro-product-img {
+      width: 100%;
+   }
+
+   .img_pro {
+      width: 50%;
+   }
+
+   .pro-prodcut-title {
+      width: 100%;
+   }
+
+   .pro-title {
+      text-align: center;
+   }
+}
+
+@media screen and (max-width: 500px) {
+   .titleee {
+      font-size: 15px;
+   }
+
+   .size-text-tit {
+      font-weight: 600;
+      font-size: 14px;
+   }
+
+   .pro-topping-title {
+      font-size: 14px;
+      font-weight: 600;
+   }
+
+   .size-zzz {
+      font-size: 10px;
+   }
+
+   .topping-text {
+      font-size: 10px;
+   }
+
+   .btn-des {
+      font-size: 15px;
+   }
+
+   .pro-quantity {
+      margin-left: 30px;
+      font-size: 20px;
+   }
+
+   .method-pro {
+      display: block;
+   }
+
+   .pro-product {
+      margin-left: 5px;
+      margin-right: 5px;
+   }
+
+   .related-title .tttl {
+      font-weight: 0;
+      font-size: 10px;
+   }
+
+   .related-price {
+      font-size: 10px;
+   }
+
+   .des-title {
+      font-size: 20px;
+   }
+
+   .title-rlt {
+      font-size: 20px;
+   }
+}

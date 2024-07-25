@@ -33,8 +33,8 @@ public partial class HuflitcoffeeContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 
-        => optionsBuilder.UseSqlServer("Server=NHATLINH\\NHATLINH;Database=HUFLITCOFFEE;MultipleActiveResultSets=true;User ID=admin;Password=asdasd;Trusted_Connection=True;TrustServerCertificate=Yes;Connect Timeout=60");
-    // => optionsBuilder.UseSqlServer("Server=tcp:uinlan.database.windows.net,1433;Initial Catalog=huflitcoffee;Persist Security Info=False;User ID=uinlan;Password=AnhthuongAnh@2;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+    // => optionsBuilder.UseSqlServer("Server=UINLAN\\SQLEXPRESS;Database=HUFLITCOFFEE;MultipleActiveResultSets=true;User ID=admin;Password=asdasd;Trusted_Connection=True;TrustServerCertificate=Yes;Connect Timeout=60");
+    => optionsBuilder.UseSqlServer("Server=tcp:uinlan.database.windows.net,1433;Initial Catalog=huflitcoffee;Persist Security Info=False;User ID=uinlan;Password=AnhthuongAnh@2;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
