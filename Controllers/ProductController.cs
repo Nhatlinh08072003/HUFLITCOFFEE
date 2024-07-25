@@ -110,7 +110,7 @@ public class ProductController : Controller
                 }
                 var userId = int.Parse(userIdClaim.Value);
 
-                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
+                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
                 {
                     await connection.OpenAsync();
 
@@ -152,7 +152,7 @@ public class ProductController : Controller
         try
         {
             // Thực hiện kết nối đến cơ sở dữ liệu
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
             {
                 await connection.OpenAsync();
 
@@ -200,7 +200,7 @@ public class ProductController : Controller
             }
             var userId = int.Parse(userIdClaim.Value);
             // Thực hiện kết nối đến cơ sở dữ liệu
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
             {
                 await connection.OpenAsync();
 
@@ -332,7 +332,7 @@ public class ProductController : Controller
                         return RedirectToAction("Shipping", "Product");
                     }
 
-                    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
+                    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
                     {
                         await connection.OpenAsync();
 
@@ -348,7 +348,7 @@ public class ProductController : Controller
                             command.Parameters.AddWithValue("@PhoneNumber", int.Parse(phone));
                             command.Parameters.AddWithValue("@Total", decimal.Parse(price));
                             command.Parameters.AddWithValue("@Status", status);
-                            command.Parameters.AddWithValue("@DateOrder", DateTime.Now);
+                            command.Parameters.AddWithValue("@DateOrder", TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTime.UtcNow, "SE Asia Standard Time"));
                             command.Parameters.AddWithValue("@Ghichu", ghichu);
                             command.Parameters.AddWithValue("@PaymentMethod", payment);
                             await command.ExecuteNonQueryAsync();
@@ -414,7 +414,7 @@ public class ProductController : Controller
         }
         try
         {
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
             {
                 await connection.OpenAsync();
 
@@ -430,7 +430,7 @@ public class ProductController : Controller
                     command.Parameters.AddWithValue("@PhoneNumber", vnPayModel.PhoneNumber);
                     command.Parameters.AddWithValue("@Total", (decimal)vnPayModel.Amount / 1000);
                     command.Parameters.AddWithValue("@Status", "Đang chuẩn bị đơn hàng");
-                    command.Parameters.AddWithValue("@DateOrder", DateTime.Now);
+                    command.Parameters.AddWithValue("@DateOrder", TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTime.UtcNow, "SE Asia Standard Time"));
                     command.Parameters.AddWithValue("@Ghichu", vnPayModel.Description);
                     command.Parameters.AddWithValue("@PaymentMethod", "VnPay");
                     await command.ExecuteNonQueryAsync();

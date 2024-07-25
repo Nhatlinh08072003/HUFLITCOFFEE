@@ -1,0 +1,120 @@
+#Homepage_login {
+   display: none;
+}
+.Login_container {
+   border-radius: 15px;
+   border: 1px solid #ccc;
+   padding: 20px;
+   width: 90%;
+   max-width: 400px;
+   margin: 40px auto;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   box-sizing: border-box;
+}
+
+.Login_imgcontainer {
+   text-align: center;
+   margin: 24px 0 12px 0;
+}
+
+.Login_avatar {
+   width: 40%;
+   border-radius: 50%;
+}
+
+.Login_greeting {
+   margin-top: 10px;
+   font-size: 14px;
+   color: #555;
+}
+
+.Login_innercontainer {
+   padding: 16px;
+}
+
+.Login_input-container {
+   display: flex;
+   align-items: center;
+   margin: 8px 0;
+   width: 90%;
+   margin-top: 20px;
+}
+.Login_input-container_input {
+   border-radius: 20px;
+}
+.Login_icon {
+   width: 20px;
+   height: 20px;
+   margin-right: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+   width: 100%;
+   padding: 12px 20px;
+   display: inline-block;
+   border: 1px solid #ccc;
+   box-sizing: border-box;
+}
+
+button {
+   background-color: #e8e8e8; /* Đổi màu nút Login thành màu đen */
+   color: black;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: 1px solid #000;
+   cursor: pointer;
+   width: 100%;
+   border-radius: 15px; /* Bo tròn các góc của nút */
+}
+
+button:hover {
+   opacity: 0.8;
+}
+
+.Login_cancelbtn {
+   width: auto;
+   padding: 10px 18px;
+   background-color: #f5deb3; /* Đổi màu nút Tạo Tài khoản thành màu kem */
+   color: black; /* Đổi màu chữ thành màu đen */
+   border-radius: 15px; /* Bo tròn các góc của nút */
+}
+
+.Login_psw {
+   float: right;
+   padding-top: 16px;
+   color: red;
+   text-decoration: none;
+}
+hr {
+   width: 80%;
+   height: 2px;
+   background-color: #ccc;
+   margin: 20px 0;
+   border: none; /* Đảm bảo không có border */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+   .Login_container {
+      width: 100%;
+      padding: 15px;
+   }
+
+   .Login_imgcontainer {
+      margin: 20px 0 10px 0;
+   }
+
+   button,
+   .Login_cancelbtn {
+      padding: 12px 15px;
+      font-size: 16px;
+   }
+
+   .Login_psw {
+      float: none;
+      display: block;
+      text-align: center;
+      padding-top: 10px;
+   }
+}

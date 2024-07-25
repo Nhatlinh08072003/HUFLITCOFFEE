@@ -11,9 +11,10 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<HuflitcoffeeContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("localDB"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("azureDB"));
     options.EnableSensitiveDataLogging(false);
 });
+builder.Services.AddSingleton<ITimeZoneService, TimeZoneService>();
 
 // Cấu hình xác thực
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -28,6 +29,12 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.AccessDeniedPath = "/Account/AccessDenied";
         options.SlidingExpiration = true; // Ví dụ: Bật thời gian hết hạn trượt
     });
+
+// Cấu hình phân quyền
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+});
 
 builder.Services.AddControllersWithViews();
 

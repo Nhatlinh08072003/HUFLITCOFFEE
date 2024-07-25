@@ -59,81 +59,81 @@ namespace HUFLITCOFFEE.Controllers
             return View();
         }
 
-//       [HttpPost]
-// public async Task<IActionResult> Login(LoginViewModel model)
-// {
-//     if (ModelState.IsValid)
-//     {
-//         var user = await _huflitcoffeeContext.Users
-//             .FirstOrDefaultAsync(u => u.Username == model.Username && u.PasswordHash == model.Password);
+        //       [HttpPost]
+        // public async Task<IActionResult> Login(LoginViewModel model)
+        // {
+        //     if (ModelState.IsValid)
+        //     {
+        //         var user = await _huflitcoffeeContext.Users
+        //             .FirstOrDefaultAsync(u => u.Username == model.Username && u.PasswordHash == model.Password);
 
-//         if (user != null && user.Username != null && user.Email != null)
-//         {
-//             var claims = new List<Claim>
-//             {
-//                 new Claim(ClaimTypes.Name, user.Username),
-//                 new Claim(ClaimTypes.Email, user.Email),
-//                 new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString())
-//             };
+        //         if (user != null && user.Username != null && user.Email != null)
+        //         {
+        //             var claims = new List<Claim>
+        //             {
+        //                 new Claim(ClaimTypes.Name, user.Username),
+        //                 new Claim(ClaimTypes.Email, user.Email),
+        //                 new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString())
+        //             };
 
 
 
-//             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+        //             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
-//             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+        //             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
 
-//             ViewBag.Username = user.Username;
-//             return RedirectToAction("Index", "Home");
-//         }
+        //             ViewBag.Username = user.Username;
+        //             return RedirectToAction("Index", "Home");
+        //         }
 
-//         ModelState.AddModelError(string.Empty, "Tên đăng nhập hoặc mật khẩu không chính xác. Vui lòng thử lại.");
-//     }
+        //         ModelState.AddModelError(string.Empty, "Tên đăng nhập hoặc mật khẩu không chính xác. Vui lòng thử lại.");
+        //     }
 
-//     return View(model);
-// }
-[HttpPost]
-public async Task<IActionResult> Login(LoginViewModel model)
-{
-    if (ModelState.IsValid)
-    {
-        var user = await _huflitcoffeeContext.Users
-            .FirstOrDefaultAsync(u => u.Username == model.Username && u.PasswordHash == model.Password);
-
-        if (user != null && user.Username != null && user.Email != null)
+        //     return View(model);
+        // }
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginViewModel model)
         {
-            var claims = new List<Claim>
+            if (ModelState.IsValid)
+            {
+                var user = await _huflitcoffeeContext.Users
+                    .FirstOrDefaultAsync(u => u.Username == model.Username && u.PasswordHash == model.Password);
+
+                if (user != null && user.Username != null && user.Email != null)
+                {
+                    var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, user.Username),
                 new Claim(ClaimTypes.Email, user.Email),
                 new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
-               
+
             };
-// Chỉ thêm Claim cho Role nếu Role không phải là null
-    if (!string.IsNullOrEmpty(user.Role))
-    {
-        claims.Add(new Claim(ClaimTypes.Role, user.Role));
-    }
-            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    // Chỉ thêm Claim cho Role nếu Role không phải là null
+                    if (!string.IsNullOrEmpty(user.Role))
+                    {
+                        claims.Add(new Claim(ClaimTypes.Role, user.Role));
+                    }
+                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
-            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
 
-            ViewBag.Username = user.Username;
+                    ViewBag.Username = user.Username;
 
-            if (user.Role == "Admin")
-            {
-                return RedirectToAction("Index", "Admin"); // Chuyển hướng đến trang admin
+                    if (user.Role == "Admin")
+                    {
+                        return RedirectToAction("Index", "Admin"); // Chuyển hướng đến trang admin
+                    }
+                    else
+                    {
+                        return RedirectToAction("Index", "Home"); // Chuyển hướng đến trang chủ
+                    }
+                }
+
+                ModelState.AddModelError(string.Empty, "Tên đăng nhập hoặc mật khẩu không chính xác. Vui lòng thử lại.");
             }
-            else
-            {
-                return RedirectToAction("Index", "Home"); // Chuyển hướng đến trang chủ
-            }
+
+            return View(model);
         }
-
-        ModelState.AddModelError(string.Empty, "Tên đăng nhập hoặc mật khẩu không chính xác. Vui lòng thử lại.");
-    }
-
-    return View(model);
-}
 
         public async Task<IActionResult> Logout()
         {
@@ -158,7 +158,7 @@ public async Task<IActionResult> Login(LoginViewModel model)
                 try
                 {
 
-                    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
+                    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
                     {
                         await connection.OpenAsync();
 
@@ -174,7 +174,7 @@ VALUES (@Username, @PasswordHash, @Email, @FullName, @Address, @PhoneNumber ,@Cr
                             command.Parameters.AddWithValue("@FullName", fullname);
                             command.Parameters.AddWithValue("@Address", address);
                             command.Parameters.AddWithValue("@PhoneNumber", phone);
-                            command.Parameters.AddWithValue("@CreatedAt", DateTime.Now);
+                            command.Parameters.AddWithValue("@CreatedAt", TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTime.UtcNow, "SE Asia Standard Time"));
                             await command.ExecuteNonQueryAsync();
                         }
                     }
@@ -223,7 +223,7 @@ VALUES (@Username, @PasswordHash, @Email, @FullName, @Address, @PhoneNumber ,@Cr
         [Route("OrderDetailHistory/{id}")]
         public async Task<IActionResult> OrderDetailHistory(int id)
         {
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
             {
                 await connection.OpenAsync();
 
@@ -360,6 +360,11 @@ VALUES (@Username, @PasswordHash, @Email, @FullName, @Address, @PhoneNumber ,@Cr
             }
 
             return View(model);
+        }
+        [HttpGet]
+        public IActionResult AccessDenied()
+        {
+            return View();
         }
     }
 }

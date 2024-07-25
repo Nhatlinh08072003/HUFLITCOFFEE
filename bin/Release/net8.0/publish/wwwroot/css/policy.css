@@ -1,0 +1,38 @@
+.Address {
+    display: flex;
+    justify-content: center;
+}
+
+.Content {
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.Heading {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+span {
+    text-decoration: underline;
+}
+
+h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}

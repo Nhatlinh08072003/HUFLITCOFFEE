@@ -3,46 +3,66 @@
 <div class="Admin_vertical_all">
     <div class="Admin_toolbar">
         <h1 style="text-align: center;">Coffee</h1>
-        <ul class="Admin_list_toolbar">
-            <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/2550/2550264.png"
-                    loading="lazy" alt="Home " title="Home " width="20" height="20"> <span id="Admin_overview"><a
-                        href="/admin">Tổng
-                        quan</a></span> </li>
-            <li class="Admin_list_toolbar_item"> <img src="https://cdn-icons-png.flaticon.com/128/888/888034.png"
-                    loading="lazy" alt="Document " title="Document " width="20" height="20">
-                <Span id="Admin_order"><a href="/admin/adminorder">Đơn hàng</a></Span> <img
-                    src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
-                    title="Right arrow " width="10" height="10">
+        <ul class="Admin_list_toolbar" style="display: flex; flex-direction: column; gap:40px">
+            <li class="Admin_list_toolbar_item">
+                <div style="display: flex; align-items: center; gap:2px"><img
+                        src="https://cdn-icons-png.flaticon.com/128/2550/2550264.png" loading="lazy" alt="Home "
+                        title="Home " width="20" height="20"> <span id="Admin_overview"><a href="/admin">Tổng
+                            quan</a></span> </div>
             </li>
-            <li class="Admin_list_toolbar_item"> <img src="https://cdn-icons-png.flaticon.com/128/3128/3128841.png"
-                    loading="lazy" alt="Motorbike " title="Motorbike " width="20" height="20">
-                <span id="Admin_transport"><a href="/admin/admindelivery">Giao hàng</a></span> <img
-                    src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
-                    title="Right arrow " width="10" height="10">
+            <li class="Admin_list_toolbar_item">
+                <div style="display: flex; align-items: center; gap:2px"> <img
+                        src="https://cdn-icons-png.flaticon.com/128/888/888034.png" loading="lazy" alt="Document "
+                        title="Document " width="20" height="20">
+                    <Span id="Admin_order"><a href="/admin/adminorder">Đơn
+                            hàng</a></Span> <img src="https://cdn-icons-png.flaticon.com/128/271/271228.png"
+                        loading="lazy" alt="Right arrow " title="Right arrow " width="10" height="2">
+                </div>
             </li>
-            <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/679/679720.png"
-                    loading="lazy" alt="Box " title="Box " width="20" height="20"><span id="Admin_product"><a
-                        href="/admin/adminproduct">Sản
-                        phẩm</a></span> <img src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy"
-                    alt="Right arrow " title="Right arrow " width="10" height="10"></li>
-            <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/1077/1077063.png"
-                    loading="lazy" alt="User " title="User " width="20" height="20"><span id="Admin_customer"><a
-                        href="/admin/admincustomer">Khách
-                        hàng</a></span> <img src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy"
-                    alt="Right arrow " title="Right arrow " width="10" height="10"></li>
-            <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/2329/2329087.png"
-                    loading="lazy" alt="Dashboard " title="Dashboard " width="20" height="20"><a
-                    href="/admin/thongkebaocao">Báo cáo</a> <img
-                    src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
-                    title="Right arrow " width="10" height="10"></li>
-            <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/702/702455.png"
-                    loading="lazy" alt="Warehouse " title="Warehouse " width="20" height="20">Kho <img
-                    src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
-                    title="Right arrow " width="10" height="10"></li>
+            <li class="Admin_list_toolbar_item">
+                <div style="display: flex; align-items: center; gap:2px"> <img
+                        src="https://cdn-icons-png.flaticon.com/128/3128/3128841.png" loading="lazy" alt="Motorbike "
+                        title="Motorbike " width="20" height="20">
+                    <span id="Admin_transport"><a href="/admin/admindelivery">Giao
+                            hàng</a></span> <img src="https://cdn-icons-png.flaticon.com/128/271/271228.png"
+                        loading="lazy" alt="Right arrow " title="Right arrow " width="10" height="2">
+                </div>
+            </li>
+            <li class="Admin_list_toolbar_item">
+                <div style="display: flex; align-items: center; gap:2px"><img
+                        src="https://cdn-icons-png.flaticon.com/128/679/679720.png" loading="lazy" alt="Box "
+                        title="Box " width="20" height="20">
+                    <span id="Admin_product"><a href="/admin/adminproduct">Sản
+                            phẩm</a></span> <img src="https://cdn-icons-png.flaticon.com/128/271/271228.png"
+                        loading="lazy" alt="Right arrow " title="Right arrow " width="10" height="2">
+                </div>
+            </li>
+            <li class="Admin_list_toolbar_item">
+                <div style="display: flex; align-items: center; gap:2px"><img
+                        src="https://cdn-icons-png.flaticon.com/128/1077/1077063.png" loading="lazy" alt="User "
+                        title="User " width="20" height="20">
+                    <span id="Admin_customer"><a href="/admin/admincustomer">Khách hàng</a></span> <img
+                        src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
+                        title="Right arrow " width="10" height="2">
+                </div>
+            </li>
+            <li class="Admin_list_toolbar_item">
+                <div style="display: flex; align-items: center; gap:2px"><img
+                        src="https://cdn-icons-png.flaticon.com/128/2329/2329087.png" loading="lazy" alt="Dashboard "
+                        title="Dashboard " width="20" height="20">
+                    <a href="/admin/thongkebaocao">Báo cáo</a> <img
+                        src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
+                        title="Right arrow " width="10" height="2">
+                </div>
+            </li>
+            @* <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/702/702455.png"
+            loading="lazy" alt="Warehouse " title="Warehouse " width="20" height="20">Kho <img
+            src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
+            title="Right arrow " width="10" height="10"></li>
             <li class="Admin_list_toolbar_item"><img src="https://cdn-icons-png.flaticon.com/128/5402/5402931.png"
-                    loading="lazy" alt="Recipe book " title="Recipe book " width="20" height="20">Công thức <img
-                    src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
-                    title="Right arrow " width="10" height="10"></li>
+            loading="lazy" alt="Recipe book " title="Recipe book " width="20" height="20">Công thức <img
+            src="https://cdn-icons-png.flaticon.com/128/271/271228.png" loading="lazy" alt="Right arrow "
+            title="Right arrow " width="10" height="10"></li> *@
         </ul>
     </div>
     @* khách hàng *@

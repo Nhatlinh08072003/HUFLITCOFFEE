@@ -1,0 +1,601 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\HUFLITCOFFEE\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\HUFLITCOFFEE.bundle.scp.css",
+      "PackagePath": "staticwebassets\\HUFLITCOFFEE.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\AccountInfo.css",
+      "PackagePath": "staticwebassets\\css\\AccountInfo.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Login.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\Product.css",
+      "PackagePath": "staticwebassets\\css\\Product.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\Register.css",
+      "PackagePath": "staticwebassets\\css\\Register.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\aboutus.css",
+      "PackagePath": "staticwebassets\\css\\aboutus.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\admin.css",
+      "PackagePath": "staticwebassets\\css\\admin.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\caffee.css",
+      "PackagePath": "staticwebassets\\css\\caffee.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\cart.css",
+      "PackagePath": "staticwebassets\\css\\cart.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\detail.css",
+      "PackagePath": "staticwebassets\\css\\detail.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\homepage.css",
+      "PackagePath": "staticwebassets\\css\\homepage.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\input.css",
+      "PackagePath": "staticwebassets\\css\\input.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\output.css",
+      "PackagePath": "staticwebassets\\css\\output.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\paymentsuccess.css",
+      "PackagePath": "staticwebassets\\css\\paymentsuccess.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\policy.css",
+      "PackagePath": "staticwebassets\\css\\policy.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\roots.css",
+      "PackagePath": "staticwebassets\\css\\roots.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\share.css",
+      "PackagePath": "staticwebassets\\css\\share.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\shipping.css",
+      "PackagePath": "staticwebassets\\css\\shipping.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\css\\terms.css",
+      "PackagePath": "staticwebassets\\css\\terms.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\00aad857-c8ab-43de-a89c-c14e057c5064_th (3).jpg",
+      "PackagePath": "staticwebassets\\images\\00aad857-c8ab-43de-a89c-c14e057c5064_th (3).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\083e4ae8-39ae-45f3-8589-1cc5a239aff5_th (1).jpg",
+      "PackagePath": "staticwebassets\\images\\083e4ae8-39ae-45f3-8589-1cc5a239aff5_th (1).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\0891d5af-de68-43ec-aa54-c4a9e3d8d0ca_1-ca-phe-pixels-17109138043411096477098-0-0-640-1024-crop-1710913827842619971152.jpg",
+      "PackagePath": "staticwebassets\\images\\0891d5af-de68-43ec-aa54-c4a9e3d8d0ca_1-ca-phe-pixels-17109138043411096477098-0-0-640-1024-crop-1710913827842619971152.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\0f8d05bc-d529-453e-8dc1-1e2206f02be9_th.jpg",
+      "PackagePath": "staticwebassets\\images\\0f8d05bc-d529-453e-8dc1-1e2206f02be9_th.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\114caa7e-180d-48f6-9f1d-31fcb2cce19f_1675355354_bg-tch-sua-da-no_4fbf208885ed464ab4b5e145336d42a2_large.webp",
+      "PackagePath": "staticwebassets\\images\\114caa7e-180d-48f6-9f1d-31fcb2cce19f_1675355354_bg-tch-sua-da-no_4fbf208885ed464ab4b5e145336d42a2_large.webp"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\12ae859e-6d0b-4767-a959-8aa040c5d6e6_th (4).jpg",
+      "PackagePath": "staticwebassets\\images\\12ae859e-6d0b-4767-a959-8aa040c5d6e6_th (4).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\18ebc255-7f18-476f-9f74-23896c993cb5_th (2).jpg",
+      "PackagePath": "staticwebassets\\images\\18ebc255-7f18-476f-9f74-23896c993cb5_th (2).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\22c1047f-e903-42e0-bf73-2b9f77b3c82f_th.jpg",
+      "PackagePath": "staticwebassets\\images\\22c1047f-e903-42e0-bf73-2b9f77b3c82f_th.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\23be6c51-83c6-4ccd-a099-bf8de56715ed_1-ca-phe-pixels-17109138043411096477098-0-0-640-1024-crop-1710913827842619971152.jpg",
+      "PackagePath": "staticwebassets\\images\\23be6c51-83c6-4ccd-a099-bf8de56715ed_1-ca-phe-pixels-17109138043411096477098-0-0-640-1024-crop-1710913827842619971152.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\3a952107-2cb1-4a11-88a2-742b957c2cc2_th.jpg",
+      "PackagePath": "staticwebassets\\images\\3a952107-2cb1-4a11-88a2-742b957c2cc2_th.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\43682d8e-a805-41cf-b810-515ab2da125a_th.jpg",
+      "PackagePath": "staticwebassets\\images\\43682d8e-a805-41cf-b810-515ab2da125a_th.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\4734654a-64ee-41cb-b819-269f5080d82b_1-ca-phe-pixels-17109138043411096477098-0-0-640-1024-crop-1710913827842619971152.jpg",
+      "PackagePath": "staticwebassets\\images\\4734654a-64ee-41cb-b819-269f5080d82b_1-ca-phe-pixels-17109138043411096477098-0-0-640-1024-crop-1710913827842619971152.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\5009d910-7ca9-48b0-9f18-da61c7b071fb_th (3).jpg",
+      "PackagePath": "staticwebassets\\images\\5009d910-7ca9-48b0-9f18-da61c7b071fb_th (3).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\50d03112-f4d6-4782-ab47-aaba9982a074_th (2).jpg",
+      "PackagePath": "staticwebassets\\images\\50d03112-f4d6-4782-ab47-aaba9982a074_th (2).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\564f1f8f-e1a5-4a33-8f2a-b6d96f174473_th (4).jpg",
+      "PackagePath": "staticwebassets\\images\\564f1f8f-e1a5-4a33-8f2a-b6d96f174473_th (4).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\565b2983-3b53-40ad-942e-f8f57b4e1fc8_th.jpg",
+      "PackagePath": "staticwebassets\\images\\565b2983-3b53-40ad-942e-f8f57b4e1fc8_th.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\593814e6-3790-414a-a990-314576f32e53_th (4).jpg",
+      "PackagePath": "staticwebassets\\images\\593814e6-3790-414a-a990-314576f32e53_th (4).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\5b29d2b7-f122-4f7c-9af6-21999fbec8b4_th.jpg",
+      "PackagePath": "staticwebassets\\images\\5b29d2b7-f122-4f7c-9af6-21999fbec8b4_th.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\5e774f14-9fc2-4b6b-89cb-889a403c53b4_1-ca-phe-pixels-17109138043411096477098-0-0-640-1024-crop-1710913827842619971152.jpg",
+      "PackagePath": "staticwebassets\\images\\5e774f14-9fc2-4b6b-89cb-889a403c53b4_1-ca-phe-pixels-17109138043411096477098-0-0-640-1024-crop-1710913827842619971152.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\6c7894e6-84d9-49f9-a8a8-4793f7bf00a2_th (3).jpg",
+      "PackagePath": "staticwebassets\\images\\6c7894e6-84d9-49f9-a8a8-4793f7bf00a2_th (3).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\7474a9ec-73e3-4fd2-8261-fc830c45045b_th (2).jpg",
+      "PackagePath": "staticwebassets\\images\\7474a9ec-73e3-4fd2-8261-fc830c45045b_th (2).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\7ecb1415-50e7-4da4-91b9-03fbde5a5043_th (4).jpg",
+      "PackagePath": "staticwebassets\\images\\7ecb1415-50e7-4da4-91b9-03fbde5a5043_th (4).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\8131b59e-692e-4475-a089-30ec5196a73e_th (4).jpg",
+      "PackagePath": "staticwebassets\\images\\8131b59e-692e-4475-a089-30ec5196a73e_th (4).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\83dfa013-e635-4101-a161-2e676cbc320d_th.jpg",
+      "PackagePath": "staticwebassets\\images\\83dfa013-e635-4101-a161-2e676cbc320d_th.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\84c4ce75-164d-4b92-b052-031759960e1f_th (1).jpg",
+      "PackagePath": "staticwebassets\\images\\84c4ce75-164d-4b92-b052-031759960e1f_th (1).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\84d990e7-5df1-4de1-bd94-f041b403a72b_th (1).jpg",
+      "PackagePath": "staticwebassets\\images\\84d990e7-5df1-4de1-bd94-f041b403a72b_th (1).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\89c7474c-7ed4-482b-b23e-72ed614a0a01_th.jpg",
+      "PackagePath": "staticwebassets\\images\\89c7474c-7ed4-482b-b23e-72ed614a0a01_th.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\8abbef95-06e5-4e97-bba9-7fb0e1bd676b_th (1).jpg",
+      "PackagePath": "staticwebassets\\images\\8abbef95-06e5-4e97-bba9-7fb0e1bd676b_th (1).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\8b36078e-3833-4ad1-ba67-cb3cf0d05911_th.jpg",
+      "PackagePath": "staticwebassets\\images\\8b36078e-3833-4ad1-ba67-cb3cf0d05911_th.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\8e51c851-9e37-46cb-bb58-f15d6319cf11_th.jpg",
+      "PackagePath": "staticwebassets\\images\\8e51c851-9e37-46cb-bb58-f15d6319cf11_th.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\94b16bbe-bc4f-4f9e-9947-99f66cb33e40_th.jpg",
+      "PackagePath": "staticwebassets\\images\\94b16bbe-bc4f-4f9e-9947-99f66cb33e40_th.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\979f805e-2803-481a-80f7-79b4c044c1b1_th.jpg",
+      "PackagePath": "staticwebassets\\images\\979f805e-2803-481a-80f7-79b4c044c1b1_th.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\981966dd-ac3a-4914-a719-c83be2cf6576_th (1).jpg",
+      "PackagePath": "staticwebassets\\images\\981966dd-ac3a-4914-a719-c83be2cf6576_th (1).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\9b81e5c9-941c-4911-94fd-6e51a401db33_1638440015_banh-mi-vietnam_6dee0f61fe3640b5bba43089c5665a60_large.webp",
+      "PackagePath": "staticwebassets\\images\\9b81e5c9-941c-4911-94fd-6e51a401db33_1638440015_banh-mi-vietnam_6dee0f61fe3640b5bba43089c5665a60_large.webp"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\9dcbcdba-bb0d-4a37-a194-63c8846f51a9_th (4).jpg",
+      "PackagePath": "staticwebassets\\images\\9dcbcdba-bb0d-4a37-a194-63c8846f51a9_th (4).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\9f3ce4f2-8133-432c-b1f2-3e8961eb17e0_th.jpg",
+      "PackagePath": "staticwebassets\\images\\9f3ce4f2-8133-432c-b1f2-3e8961eb17e0_th.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\BanhMi.webp",
+      "PackagePath": "staticwebassets\\images\\BanhMi.webp"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\CoffeeHatRang.jpg",
+      "PackagePath": "staticwebassets\\images\\CoffeeHatRang.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\CoffeeSuaDa.webp",
+      "PackagePath": "staticwebassets\\images\\CoffeeSuaDa.webp"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\CouterService.jpg",
+      "PackagePath": "staticwebassets\\images\\CouterService.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\Desk.webp",
+      "PackagePath": "staticwebassets\\images\\Desk.webp"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\DoiThoai.webp",
+      "PackagePath": "staticwebassets\\images\\DoiThoai.webp"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\HaiCaPhe.jpg",
+      "PackagePath": "staticwebassets\\images\\HaiCaPhe.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\Logo.png",
+      "PackagePath": "staticwebassets\\images\\Logo.png"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\LogoCoffeeHouse.jpg",
+      "PackagePath": "staticwebassets\\images\\LogoCoffeeHouse.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\MoChi.webp",
+      "PackagePath": "staticwebassets\\images\\MoChi.webp"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\a1ea16d3-d649-4f65-849a-6a6db5e16eda_1-ca-phe-pixels-17109138043411096477098-0-0-640-1024-crop-1710913827842619971152.jpg",
+      "PackagePath": "staticwebassets\\images\\a1ea16d3-d649-4f65-849a-6a6db5e16eda_1-ca-phe-pixels-17109138043411096477098-0-0-640-1024-crop-1710913827842619971152.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\a5e41b48-95b9-42d0-8d57-19c30b3f098e_th (3).jpg",
+      "PackagePath": "staticwebassets\\images\\a5e41b48-95b9-42d0-8d57-19c30b3f098e_th (3).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\afc451c7-acfb-4bd8-bcff-f14a8d709b07_th.jpg",
+      "PackagePath": "staticwebassets\\images\\afc451c7-acfb-4bd8-bcff-f14a8d709b07_th.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\b032931c-bbd7-4705-9f64-fe933bdc983a_th (4).jpg",
+      "PackagePath": "staticwebassets\\images\\b032931c-bbd7-4705-9f64-fe933bdc983a_th (4).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\b1a042b3-9197-4c46-94df-719511ccb334_1-ca-phe-pixels-17109138043411096477098-0-0-640-1024-crop-1710913827842619971152.jpg",
+      "PackagePath": "staticwebassets\\images\\b1a042b3-9197-4c46-94df-719511ccb334_1-ca-phe-pixels-17109138043411096477098-0-0-640-1024-crop-1710913827842619971152.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\b8b298a7-865e-4e1f-82d7-af8a4bff1ad5_th.jpg",
+      "PackagePath": "staticwebassets\\images\\b8b298a7-865e-4e1f-82d7-af8a4bff1ad5_th.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\ba3d4125-9ce5-4591-8110-022e90a11201_th (1).jpg",
+      "PackagePath": "staticwebassets\\images\\ba3d4125-9ce5-4591-8110-022e90a11201_th (1).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\bab17ea6-b91d-4138-840e-3cf08b70ec8a_th.jpg",
+      "PackagePath": "staticwebassets\\images\\bab17ea6-b91d-4138-840e-3cf08b70ec8a_th.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\c21607d0-2b15-4817-b17f-0e28c9d1ce91_1675355354_bg-tch-sua-da-no_4fbf208885ed464ab4b5e145336d42a2_large.webp",
+      "PackagePath": "staticwebassets\\images\\c21607d0-2b15-4817-b17f-0e28c9d1ce91_1675355354_bg-tch-sua-da-no_4fbf208885ed464ab4b5e145336d42a2_large.webp"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\c55b0db3-f8c8-4ea2-af5c-d09fbdaf0436_th (4).jpg",
+      "PackagePath": "staticwebassets\\images\\c55b0db3-f8c8-4ea2-af5c-d09fbdaf0436_th (4).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\cccf5819-01b0-4a5e-8178-14eb03b8c557_001-cf3.jpg",
+      "PackagePath": "staticwebassets\\images\\cccf5819-01b0-4a5e-8178-14eb03b8c557_001-cf3.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\d09f9b8f-7f5e-42f7-963e-5ec268bbcc1c_th.jpg",
+      "PackagePath": "staticwebassets\\images\\d09f9b8f-7f5e-42f7-963e-5ec268bbcc1c_th.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\d59ee48a-1e37-4bcf-931a-cbef3453dd5b_th.jpg",
+      "PackagePath": "staticwebassets\\images\\d59ee48a-1e37-4bcf-931a-cbef3453dd5b_th.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\dacc2685-3862-4fbc-891e-3d059673b308_th (2).jpg",
+      "PackagePath": "staticwebassets\\images\\dacc2685-3862-4fbc-891e-3d059673b308_th (2).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\e1532a3f-1acd-4b62-bba6-d293f063a111_th.jpg",
+      "PackagePath": "staticwebassets\\images\\e1532a3f-1acd-4b62-bba6-d293f063a111_th.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\f146ff3a-1f88-4ce0-ad19-7869f1f239ef_th (4).jpg",
+      "PackagePath": "staticwebassets\\images\\f146ff3a-1f88-4ce0-ad19-7869f1f239ef_th (4).jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\f328d91a-90cc-4e28-a924-4ee6c6e7f05e_th.jpg",
+      "PackagePath": "staticwebassets\\images\\f328d91a-90cc-4e28-a924-4ee6c6e7f05e_th.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\images\\hinh-tach-ca-phe-va-hat.jpg",
+      "PackagePath": "staticwebassets\\images\\hinh-tach-ca-phe-va-hat.jpg"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\js\\chart.js",
+      "PackagePath": "staticwebassets\\js\\chart.js"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\js\\homepage.js",
+      "PackagePath": "staticwebassets\\js\\homepage.js"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\HUFLITCOFFEE\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.HUFLITCOFFEE.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.HUFLITCOFFEE.props",
+      "PackagePath": "build\\HUFLITCOFFEE.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.HUFLITCOFFEE.props",
+      "PackagePath": "buildMultiTargeting\\HUFLITCOFFEE.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.HUFLITCOFFEE.props",
+      "PackagePath": "buildTransitive\\HUFLITCOFFEE.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
