@@ -110,7 +110,7 @@ public class ProductController : Controller
                 }
                 var userId = int.Parse(userIdClaim.Value);
 
-                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+                using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
                 {
                     await connection.OpenAsync();
 
@@ -152,7 +152,7 @@ public class ProductController : Controller
         try
         {
             // Thực hiện kết nối đến cơ sở dữ liệu
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
             {
                 await connection.OpenAsync();
 
@@ -200,7 +200,7 @@ public class ProductController : Controller
             }
             var userId = int.Parse(userIdClaim.Value);
             // Thực hiện kết nối đến cơ sở dữ liệu
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
             {
                 await connection.OpenAsync();
 
@@ -332,7 +332,7 @@ public class ProductController : Controller
                         return RedirectToAction("Shipping", "Product");
                     }
 
-                    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+                    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
                     {
                         await connection.OpenAsync();
 
@@ -414,7 +414,7 @@ public class ProductController : Controller
         }
         try
         {
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("azureDB")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("localDB")))
             {
                 await connection.OpenAsync();
 
